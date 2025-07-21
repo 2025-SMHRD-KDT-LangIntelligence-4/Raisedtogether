@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<div style="width: 430px; height: 932px; position: relative; background: rgba(242.99, 242.99, 242.99, 0.20); border-radius: 2px; outline: 1px rgba(0, 0, 0, 0.10) solid; outline-offset: -1px">
+div style="width: 430px; height: 932px; position: relative; background: rgba(242.99, 242.99, 242.99, 0.20); border-radius: 2px; outline: 1px rgba(0, 0, 0, 0.10) solid; outline-offset: -1px">
   <div style="width: 430px; height: 2227px; left: 0px; top: 0px; position: absolute; background: white">
     <div style="width: 430px; height: 445px; left: 0px; top: 448px; position: absolute; background: #F7F7FF">
       <div style="width: 332px; height: 20px; left: 20px; top: 40px; position: absolute"><span style="color: black; font-size: 20px; font-family: NanumSquare Neo; font-weight: 700; word-wrap: break-word">같이키움이 </span><span style="color: #534DFA; font-size: 20px; font-family: NanumSquare Neo; font-weight: 800; word-wrap: break-word">콕</span><span style="color: black; font-size: 20px; font-family: NanumSquare Neo; font-weight: 700; word-wrap: break-word"> 집은 돌보미</span></div>
