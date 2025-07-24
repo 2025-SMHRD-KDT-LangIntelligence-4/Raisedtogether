@@ -16,11 +16,16 @@
 <body>
   <div class="container">
     <!-- 인삿말 및 신청 버튼 -->
-    <div class="greeting-card">
-      <h2>안녕하세요!</h2>
-      <p>오늘의 당신에게는 휴식을, <br>아이에게는 특별한 하루를 선물하세요!</p>
-      <button class="apply-button">돌봄 신청하기</button>
-    </div>
+    <div class="care-card">
+		<div class="care-button">
+			<div class="care-button-text">돌봄 신청하기</div>
+		</div>
+		<div class="care-description">
+			오늘의 당신에게는 휴식을, <br /> 아이에게는 특별한 하루를 선물하세요!
+		</div>
+		<div class="care-greeting">안녕하세요!</div>
+		<img class="care-image" src="/images/cat.svg" alt="케어 이미지" />
+	</div>
 
     <!-- 기능 카드 -->
     <div class="feature-card">

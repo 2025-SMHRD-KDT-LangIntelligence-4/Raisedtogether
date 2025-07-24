@@ -6,5 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 public interface RegisterMapper {
 
 	public int isParentIdExists(String inputId);
+
+	public int isParentNicknameExists(String inputNickname);
 	
 }

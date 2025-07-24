@@ -11,6 +11,13 @@
 		WHERE PARENT_ID = #{inputId};
 	</select>
 	
+	<!-- 부모 NICKNAME 중복확인 중복1, 없음0 -->
+	<select id="isParentNicknameExists" resultType="int" parameterType="String">
+		SELECT COUNT(*)
+		FROM T_PARENT
+		WHERE PARENT_NICKNAME = #{inputNickname};
+	</select>
+	
 	<!-- 부모 정보 DB에 입력 -->
 	<insert id="insertParent" parameterType="String">
 		INSERT INTO T_PARENT (PARENT_ID, PARENT_PW, PARENT_NICKNAME, PARENT_PHONE])
