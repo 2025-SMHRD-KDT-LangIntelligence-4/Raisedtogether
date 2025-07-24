@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+/* static/css/style.css */
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: url('/fonts/NanumSquareNeo-aLt.ttf') format('ttf');
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: url('/fonts/NanumSquareNeo-bRg.ttf') format('ttf');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: url('/fonts/NanumSquareNeo-cBd.ttf') format('ttf');
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: url('/fonts/NanumSquareNeo-dEb.ttf') format('ttf');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: url('/fonts/NanumSquareNeo-eHv.ttf') format('ttf');
+	font-weight: 800;
+}
+
+body {
+	font-family: NanumSquare Neo, sans-serif;
+	background-color: #EAEAEA;
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+}
+
+.container {
+	max-width: 430px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.greeting-card, .feature-card, .review-card, .caregiver-card {
+	background-color: #ffffff;
+	border-radius: 12px;
+	margin-bottom: 16px;
+	padding: 16px;
+}
+
+.greeting-card h2 {
+	font-size: 20px;
+	margin-bottom: 6px;
+	font-weight: 800;
+}
+
+.apply-button {
+	background-color: #4461f2;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+.scroll-container {
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+.review-card, .caregiver-card {
+	display: inline-block;
+	vertical-align: top;
+	width: 280px;
+	margin-right: 12px;
+}
+
+.card-title {
+	font-weight: bold;
+	margin-bottom: 4px;
+}
+
+.card-desc {
+	font-size: 14px;
+	color: #555;
+}
+
+.feature-grid {
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.feature-button {
+	flex: 1;
+	background-color: #e7f0ff;
+	padding: 16px;
+	border-radius: 8px;
+	text-align: center;
+	font-weight: bold;
+	color: #333;
+	font-size: 14px;
+}

@@ -113,9 +113,15 @@ public class MainController {
 	}
 	
 	
+	@GetMapping("/ViewHaram")
+	public String ViewHaram(){
+		return "ViewHaram";
+	}
 	
-	
-	
+	@GetMapping("/test")
+	public String test(){
+		return "test";
+	}
 	
 	
 	
