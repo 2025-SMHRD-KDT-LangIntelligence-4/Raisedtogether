@@ -31,71 +31,86 @@ public class MainController {
 		return "Login";
 	}
 	
-	@GetMapping("LoginParent")
+	@GetMapping("/LoginParent")
 	public String LoginParent() {
 		return "LoginParent";
 	}
 	
-	@GetMapping("LoginSitter")
+	@GetMapping("/LoginSitter")
 	public String LoginSitter() {
 		return "LoginSitter";
 	}
 	
-	@GetMapping("RegisterParent")
+	@GetMapping("/RegisterParent")
 	public String RegisterParent() {
 		return "RegisterParent";
 	}
 	
-	@GetMapping("RegisterSitter")
+	@GetMapping("/RegisterSitter")
 	public String RegisterSitter() {
 		return "RegisterSitter";
 	}
 	
-	@GetMapping("FindPassword")
+	@GetMapping("/FindPassword")
 	public String FindPassword() {
 		return "FindPassword";
 	}
 	
-	@GetMapping("CareApply")
+	@GetMapping("/CareApply")
 	public String CareApply() {
 		return "CareApply";
 	}
 	
-	@GetMapping("Urgent")
+	@GetMapping("/Urgent")
 	public String Urgent() {
 		return "Urgent";
 	}
 	
-	@GetMapping("CCTV")
+	@GetMapping("/CCTV")
 	public String CCTV() {
 		return "CCTV";
 	}
 	
-	@GetMapping("SitterCare")
+	@GetMapping("/SitterCare")
 	public String SitterCare() {
 		return "SitterCare";
 	}
 	
-	@GetMapping("SitterUrgent")
+	@GetMapping("/SitterUrgent")
 	public String SitterUrgent() {
 		return "SitterUrgent";
 	}
 	
-	@GetMapping("Reservation")
+	@GetMapping("/Reservation")
 	public String Reservation() {
 		return "Reservation";
 	}
 	
-	@GetMapping("Chat")
+	@GetMapping("/Chat")
 	public String Chat() {
 		return "Chat";
 	}
 	
-	@GetMapping("Info")
+	@GetMapping("/Info")
 	public String Info() {
 		return "Info";
 	}
 	
+// 아래는 View 연습용 페이지 주소창에 /View1 쳐서 들어감 -------------------------------	
+	@GetMapping("/View1")
+	public String View1() {
+		return "View1";
+	}
+	
+	@GetMapping("/View2")
+	public String View2() {
+		return "View2";
+	}
+	
+	@GetMapping("/View3")
+	public String View3() {
+		return "View3";
+	}
 	
 	
 	

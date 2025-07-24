@@ -10,8 +10,11 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+
 </head>
 <body>
+
 	<button onclick='location.href="${cpath}/Alert"'>알림확인</button>
 	<button onclick='location.href="${cpath}/CareApply"'>돌봄 신청하기</button>
 	<button onclick='location.href="${cpath}/Urgent"'>긴급돌봄</button>
@@ -22,5 +25,7 @@
 	<button onclick='location.href="${cpath}/Reservation"'>나의예약</button>
 	<button onclick='location.href="${cpath}/Chat"'>채팅</button>
 	<button onclick='location.href="${cpath}/Info"'>내정보</button>
+	<div id="map" style="width:500px; height:400px;"></div>
+
 </body>
 </html>
