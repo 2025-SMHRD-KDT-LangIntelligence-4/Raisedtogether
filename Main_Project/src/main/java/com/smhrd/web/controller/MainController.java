@@ -123,6 +123,11 @@ public class MainController {
 		return "test";
 	}
 	
+	@GetMapping("/ViewHaram2")
+	public String ViewHaram2(){
+		return "ViewHaram2";
+	}
+	
 	
 	
 	
