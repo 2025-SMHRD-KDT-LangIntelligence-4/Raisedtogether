@@ -1,0 +1,148 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #f9f9f9;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+.login-container {
+	width: 350px;
+	background: #fff;
+	border: 1px solid #EDEDED;
+	border-radius: 36px;
+	padding: 40px;
+	position: relative;
+}
+
+.login-header .brand {
+	color: #7672FF;
+	font-size: 22px;
+	font-weight: 900;
+}
+
+.login-header .title {
+	margin-top: 40px;
+	color: #000;
+	font-size: 32px;
+	font-weight: 800;
+}
+
+.login-form {
+	margin-top: 40px;
+}
+
+.form-group {
+	margin-bottom: 24px;
+}
+
+.form-group label {
+	display: block;
+	font-size: 12px;
+	font-weight: 700;
+	color: #6E6E6E;
+	margin-bottom: 8px;
+}
+
+.form-group input {
+	width: 100%;
+	padding: 12px 16px;
+	border: 1px solid #D9D9D9;
+	border-radius: 8px;
+	font-size: 12px;
+	color: #333;
+}
+
+.options {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 12px;
+	margin-bottom: 24px;
+}
+
+.options .checkbox {
+	display: flex;
+	align-items: center;
+	font-weight: 400;
+	color: #6E6E6E;
+}
+
+.options .checkbox input {
+	width: 16px;
+	height: 16px;
+	margin-right: 8px;
+	accent-color: #7672FF;
+}
+
+.options .txt-link {
+	color: #6E6E6E;
+	font-weight: 800;
+	text-decoration: none;
+}
+
+.options .txt-link:last-child {
+	color: #534DFA;
+}
+
+.btn {
+	width: 100%;
+	padding: 12px;
+	border: none;
+	border-radius: 8px;
+	font-size: 18px;
+	font-weight: 800;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	margin-bottom: 16px;
+}
+
+.btn-primary {
+	background-color: #534DFA;
+	color: #fff;
+}
+
+.divider {
+	border-top: 1px solid #D9D9D9;
+	margin: 24px 0;
+}
+
+.btn-kakao {
+	background-color: #FEE233;
+	color: #381E1E;
+	font-size: 16px;
+}
+
+.btn-naver {
+	background-color: #1EC800;
+	color: #fff;
+	font-size: 16px;
+}
+
+.btn-apple {
+	background-color: #000;
+	color: #fff;
+	font-size: 16px;
+}
+
+.login-footer {
+	text-align: center;
+	margin-top: 24px;
+}
+
+.login-footer small {
+	font-size: 10px;
+	color: #8C8C8C;
+}
