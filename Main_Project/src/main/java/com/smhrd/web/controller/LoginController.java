@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import com.smhrd.web.mapper.LoginMapper;
 
 @Controller
-public class LoginContoller {
+public class LoginController {
 	@Autowired
 	LoginMapper mapper;
 }

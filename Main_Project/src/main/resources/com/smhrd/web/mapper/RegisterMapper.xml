@@ -8,7 +8,7 @@
 	<select id="isParentIdExists" resultType="int" parameterType="String">
 		SELECT COUNT(*)
 		FROM T_PARENT
-		WHERE PARENT_ID = #{parentId};
+		WHERE PARENT_ID = #{inputId};
 	</select>
 	
 	<!-- 부모 정보 DB에 입력 -->
