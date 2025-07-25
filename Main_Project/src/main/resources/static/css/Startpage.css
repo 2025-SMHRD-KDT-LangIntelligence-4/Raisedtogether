@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+/* 전체 화면 */
+.start-screen {
+  width: 430px;
+  height: 932px;
+  position: relative;
+  background: white;
+  overflow: hidden;
+  font-family: 'NanumSquare Neo', sans-serif;
+}
+
+/* ================= 로고 영역 ================= */
+
+/* 로고 + 텍스트 묶음 */
+.start-logo-group {
+  position: absolute;
+  top: 160px;
+  left: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+/* 상단 로고 이미지 */
+.start-logo-image {
+  width: 52px;
+  height: auto;
+}
+
+/* 로고 텍스트 */
+.start-logo-text {
+  font-size: 40px;
+  font-weight: 900;
+  background-image: linear-gradient(135deg, #7672FF 0%, #8BA7FF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* ================= 질문 텍스트 ================= */
+.start-question {
+  position: absolute;
+  top: 285px;
+  left: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  color: black;
+}
+
+/* ================= 카드 공통 스타일 ================= */
+.card {
+  width: 165px;
+  height: 228px;
+  position: absolute;
+  background: white;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* 부모 카드 위치 */
+.parent-card {
+  left: 40px;
+  top: 352px;
+}
+
+/* 돌보미 카드 위치 */
+.caregiver-card {
+  left: 225px;
+  top: 352px;
+}
+
+/* 카드 안 이미지 */
+.card-image {
+  width: 141px;
+  height: 94px;
+  position: absolute;
+  top: 25px;
+  left: 12px;
+}
+
+/* 카드 하단 설명 텍스트 */
+.card-subtext {
+  position: absolute;
+  top: 129px;
+  left: 40px;
+  font-size: 14px;
+  color: #6E6E6E;
+  font-weight: 400;
+}
+
+.parent-card .card-subtext {
+  left: 47px;
+}
+
+/* 카드 제목 */
+.card-title {
+  position: absolute;
+  top: 154px;
+  left: 44px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: black;
+  line-height: 24px;
+}
+
+.caregiver-card .card-title {
+  left: 52px;
+}
