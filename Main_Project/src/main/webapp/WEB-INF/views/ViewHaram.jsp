@@ -47,6 +47,8 @@
 
 
 	</div>
+
+
 	<!-- 콕 찝은 카드 리스트 -->
 	<div style="background: #F7F7FF">
 		<div class="container">
@@ -58,144 +60,189 @@
 			</div>
 		</div>
 		<div class="cards-wrapper">
-				<!-- 반복 카드 구조 -->
-				<div class="card">
-					<img src="https://placehold.co/64x64" alt="돌보미 이미지">
-					<div class="location">순천 풍덕동</div>
-					<div class="caregiver">임성윤 돌보미</div>
-					<div class="parent">세레비 부모님</div>
-					<div class="time">11시간 전 작성</div>
-					<div class="content">제가 부탁드린 점 반영하셔서 아이 돌봄 해주셨어요~ 다양한 놀이 패턴으로
-						풍부하게 놀아주셔서 애들이 심심할 틈이 없었어요!! 늘 최선을 ...</div>
-				</div>
-				<!-- 위 카드 복사해서 원하는 만큼 추가 -->
-				
-				<!-- 반복 카드 구조 -->
-				<div class="card">
-					<img src="https://placehold.co/64x64" alt="돌보미 이미지">
-					<div class="location">순천 풍덕동</div>
-					<div class="caregiver">임성윤 돌보미</div>
-					<div class="parent">세레비 부모님</div>
-					<div class="time">11시간 전 작성</div>
-					<div class="content">제가 부탁드린 점 반영하셔서 아이 돌봄 해주셨어요~ 다양한 놀이 패턴으로
-						풍부하게 놀아주셔서 애들이 심심할 틈이 없었어요!! 늘 최선을 ...</div>
-				</div>
-				<!-- 위 카드 복사해서 원하는 만큼 추가 -->
-				
-				<!-- 반복 카드 구조 -->
-				<div class="card">
-					<img src="https://placehold.co/64x64" alt="돌보미 이미지">
-					<div class="location">순천 풍덕동</div>
-					<div class="caregiver">임성윤 돌보미</div>
-					<div class="parent">세레비 부모님</div>
-					<div class="time">11시간 전 작성</div>
-					<div class="content">제가 부탁드린 점 반영하셔서 아이 돌봄 해주셨어요~ 다양한 놀이 패턴으로
-						풍부하게 놀아주셔서 애들이 심심할 틈이 없었어요!! 늘 최선을 ...</div>
-				</div>
-				<!-- 위 카드 복사해서 원하는 만큼 추가 -->
-				
-				<!-- 반복 카드 구조 -->
-				<div class="card">
-					<img src="https://placehold.co/64x64" alt="돌보미 이미지">
-					<div class="location">순천 풍덕동</div>
-					<div class="caregiver">임성윤 돌보미</div>
-					<div class="parent">세레비 부모님</div>
-					<div class="time">11시간 전 작성</div>
-					<div class="content">제가 부탁드린 점 반영하셔서 아이 돌봄 해주셨어요~ 다양한 놀이 패턴으로
-						풍부하게 놀아주셔서 애들이 심심할 틈이 없었어요!! 늘 최선을 ...</div>
-				</div>
-				<!-- 위 카드 복사해서 원하는 만큼 추가 -->
-				
-				<!-- 반복 카드 구조 -->
-				<div class="card">
-					<img src="https://placehold.co/64x64" alt="돌보미 이미지">
-					<div class="location">순천 풍덕동</div>
-					<div class="caregiver">임성윤 돌보미</div>
-					<div class="parent">세레비 부모님</div>
-					<div class="time">11시간 전 작성</div>
-					<div class="content">제가 부탁드린 점 반영하셔서 아이 돌봄 해주셨어요~ 다양한 놀이 패턴으로
-						풍부하게 놀아주셔서 애들이 심심할 틈이 없었어요!! 늘 최선을 ...</div>
-				</div>
-				<!-- 위 카드 복사해서 원하는 만큼 추가 -->
-				
-				<!-- 반복 카드 구조 -->
-				<div class="card">
-					<img src="https://placehold.co/64x64" alt="돌보미 이미지">
-					<div class="location">순천 풍덕동</div>
-					<div class="caregiver">임성윤 돌보미</div>
-					<div class="parent">세레비 부모님</div>
-					<div class="time">11시간 전 작성</div>
-					<div class="content">제가 부탁드린 점 반영하셔서 아이 돌봄 해주셨어요~ 다양한 놀이 패턴으로
-						풍부하게 놀아주셔서 애들이 심심할 틈이 없었어요!! 늘 최선을 ...</div>
-				</div>
-				<!-- 위 카드 복사해서 원하는 만큼 추가 -->
-				
-				<!-- 반복 카드 구조 -->
-				<div class="card">
-					<img src="https://placehold.co/64x64" alt="돌보미 이미지">
-					<div class="location">순천 풍덕동</div>
-					<div class="caregiver">임성윤 돌보미</div>
-					<div class="parent">세레비 부모님</div>
-					<div class="time">11시간 전 작성</div>
-					<div class="content">제가 부탁드린 점 반영하셔서 아이 돌봄 해주셨어요~ 다양한 놀이 패턴으로
-						풍부하게 놀아주셔서 애들이 심심할 틈이 없었어요!! 늘 최선을 ...</div>
-				</div>
-				<!-- 위 카드 복사해서 원하는 만큼 추가 -->
+			<!-- 반복 카드 구조 -->
+			<div class="card">
+				<img src="https://placehold.co/64x64" alt="돌보미 이미지">
+				<div class="location">순천 풍덕동</div>
+				<div class="caregiver">임성윤 돌보미</div>
+				<div class="parent">세레비 부모님</div>
+				<div class="time">11시간 전 작성</div>
+				<div class="content">제가 부탁드린 점 반영하셔서 아이 돌봄 해주셨어요~ 다양한 놀이 패턴으로
+					풍부하게 놀아주셔서 애들이 심심할 틈이 없었어요!! 늘 최선을 ...</div>
+			</div>
+			<!-- 위 카드 복사해서 원하는 만큼 추가 -->
+
+			<!-- 반복 카드 구조 -->
+			<div class="card">
+				<img src="https://placehold.co/64x64" alt="돌보미 이미지">
+				<div class="location">순천 풍덕동</div>
+				<div class="caregiver">임성윤 돌보미</div>
+				<div class="parent">세레비 부모님</div>
+				<div class="time">11시간 전 작성</div>
+				<div class="content">제가 부탁드린 점 반영하셔서 아이 돌봄 해주셨어요~ 다양한 놀이 패턴으로
+					풍부하게 놀아주셔서 애들이 심심할 틈이 없었어요!! 늘 최선을 ...</div>
+			</div>
+			<!-- 위 카드 복사해서 원하는 만큼 추가 -->
+
+			<!-- 반복 카드 구조 -->
+			<div class="card">
+				<img src="https://placehold.co/64x64" alt="돌보미 이미지">
+				<div class="location">순천 풍덕동</div>
+				<div class="caregiver">임성윤 돌보미</div>
+				<div class="parent">세레비 부모님</div>
+				<div class="time">11시간 전 작성</div>
+				<div class="content">제가 부탁드린 점 반영하셔서 아이 돌봄 해주셨어요~ 다양한 놀이 패턴으로
+					풍부하게 놀아주셔서 애들이 심심할 틈이 없었어요!! 늘 최선을 ...</div>
+			</div>
+			<!-- 위 카드 복사해서 원하는 만큼 추가 -->
+
+			<!-- 반복 카드 구조 -->
+			<div class="card">
+				<img src="https://placehold.co/64x64" alt="돌보미 이미지">
+				<div class="location">순천 풍덕동</div>
+				<div class="caregiver">임성윤 돌보미</div>
+				<div class="parent">세레비 부모님</div>
+				<div class="time">11시간 전 작성</div>
+				<div class="content">제가 부탁드린 점 반영하셔서 아이 돌봄 해주셨어요~ 다양한 놀이 패턴으로
+					풍부하게 놀아주셔서 애들이 심심할 틈이 없었어요!! 늘 최선을 ...</div>
+			</div>
+			<!-- 위 카드 복사해서 원하는 만큼 추가 -->
+
+			<!-- 반복 카드 구조 -->
+			<div class="card">
+				<img src="https://placehold.co/64x64" alt="돌보미 이미지">
+				<div class="location">순천 풍덕동</div>
+				<div class="caregiver">임성윤 돌보미</div>
+				<div class="parent">세레비 부모님</div>
+				<div class="time">11시간 전 작성</div>
+				<div class="content">제가 부탁드린 점 반영하셔서 아이 돌봄 해주셨어요~ 다양한 놀이 패턴으로
+					풍부하게 놀아주셔서 애들이 심심할 틈이 없었어요!! 늘 최선을 ...</div>
+			</div>
+			<!-- 위 카드 복사해서 원하는 만큼 추가 -->
+
+			<!-- 반복 카드 구조 -->
+			<div class="card">
+				<img src="https://placehold.co/64x64" alt="돌보미 이미지">
+				<div class="location">순천 풍덕동</div>
+				<div class="caregiver">임성윤 돌보미</div>
+				<div class="parent">세레비 부모님</div>
+				<div class="time">11시간 전 작성</div>
+				<div class="content">제가 부탁드린 점 반영하셔서 아이 돌봄 해주셨어요~ 다양한 놀이 패턴으로
+					풍부하게 놀아주셔서 애들이 심심할 틈이 없었어요!! 늘 최선을 ...</div>
+			</div>
+			<!-- 위 카드 복사해서 원하는 만큼 추가 -->
 
 		</div>
-		
+
 		<div class="container"></div>
-		
+
 	</div>
 
 
 
 
 	<!-- 긴급돌봄 가능 돌보미 -->
-	
+
 	<div class="container">
-			<div class="title">
-				<span class="highlight">긴급돌봄</span>이 가능한 돌보미
-				<div class="more">
-					더보기 <img src="/images/Chevron right.svg" alt="실시간 영상 아이콘" />
-				</div>
+		<div class="title">
+			<span class="highlight">긴급돌봄</span>이 가능한 돌보미
+			<div class="more">
+				더보기 <img src="/images/Chevron right.svg" alt="실시간 영상 아이콘" />
 			</div>
 		</div>
-	
-	
+	</div>
+
+
 	<div class="scroll-container2">
-  <div class="cards-wrapper2">
-    <div class="card-group2">
-      <!-- 상단 줄 카드 -->
-      <div class="card2">
-        <img src="/images/avatar1.png" alt="프로필">
-        <div class="name">심지은 돌보미</div>
-        <div class="checklist">✅ 신청 응답 서류 확인</div>
-        <div class="checklist">✅ 학력 및 경력 증명서 확인</div>
-        <div class="checklist">✅ 현장 검증 서면서 확인</div>
-        <div class="tags">
-          영어놀이 창의미술 그림그리기 #책읽기
-        </div>
-      </div>
-      <!-- 다음 카드 복사해서 추가 -->
-    </div>
-    
-    <div class="card-group2">
-      <!-- 하단 줄 카드 -->
-      <div class="card2">
-        <img src="/images/avatar2.png" alt="프로필">
-        <div class="name">김경화 돌보미</div>
-        <div class="checklist">✅ 신청 응답 서류 확인</div>
-        <div class="checklist">✅ 학력 및 경력 증명서 확인</div>
-        <div class="checklist">✅ 현장 검증 서면서 확인</div>
-        <div class="tags">
-          구연동화 퍼즐놀이 금관놀이
-        </div>
-      </div>
-    </div>
-    <!-- 더 많은 card-group 추가 가능 -->
-  </div>
-</div>
+
+		<div class="cards-wrapper2">
+
+			<!-- 상단 줄 카드 -->
+			<div class="card2">
+				<div class="container2">
+					<img src="https://placehold.co/48x48" alt="돌보미 이미지">
+					<div class="name">심지은 돌보미</div>
+					<img alt="더보기버튼" src="/images/ri_arrow-right-s-line.svg">
+				</div>
+
+				<div class="container3">
+					<div class="checklist">
+						<img src="/images/check2-square.svg" alt="체크박스"> <span>신청
+							응답 서류 확인</span>
+					</div>
+					<div class="checklist">
+						<img src="/images/check2-square.svg" alt="체크박스"> <span>학력
+							및 경력 증명서 확인</span>
+					</div>
+					<div class="checklist">
+						<img src="/images/check2-square.svg" alt="체크박스"> <span>행동
+							강령 서약서 확인</span>
+					</div>
+
+					<div class="tags">
+						<div class="tag">영어돌봄</div>
+						<div class="tag">종이접기</div>
+						<div class="tag">그림그리기</div>
+						<div class="tag">레고</div>
+						<div class="tag">책읽기</div>
+						<div class="tag">역할놀이</div>
+					</div>
+				</div>
+			</div>
+			<!-- 다음 카드 복사해서 추가 -->
+
+			<!-- 상단 줄 카드 -->
+			<div class="card2">
+				<div class="container2">
+					<img src="https://placehold.co/48x48" alt="돌보미 이미지">
+					<div class="name">심지은 돌보미</div>
+					<img alt="더보기버튼" src="/images/ri_arrow-right-s-line.svg">
+				</div>
+
+				<div class="container3">
+					<div class="checklist">
+						<img src="/images/check2-square.svg" alt="체크박스"> <span>신청
+							응답 서류 확인</span>
+					</div>
+					<div class="checklist">
+						<img src="/images/check2-square.svg" alt="체크박스"> <span>학력
+							및 경력 증명서 확인</span>
+					</div>
+					<div class="checklist">
+						<img src="/images/check2-square.svg" alt="체크박스"> <span>행동
+							강령 서약서 확인</span>
+					</div>
+
+					<div class="tags">
+						<div class="tag">영어돌봄</div>
+						<div class="tag">종이접기</div>
+						<div class="tag">그림그리기</div>
+						<div class="tag">레고</div>
+						<div class="tag">책읽기</div>
+						<div class="tag">역할놀이</div>
+					</div>
+				</div>
+			</div>
+			<!-- 다음 카드 복사해서 추가 -->
+
+
+		</div>
+	</div>
+
+	<!-- 프터 위 빈 공간 -->
+	<div class="nothing"></div>
+
+	<!-- 프터 -->
+	<footer class="footer">
+		<div class="footer-content">
+			<div class="footer-links">
+				<a href="#">이용약관</a> <a href="#">개인정보 처리방침</a> <a href="#">고객센터</a>
+			</div>
+			<div class="footer-info">
+				<p>© 2025 같이키움. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
 
 
 </body>
