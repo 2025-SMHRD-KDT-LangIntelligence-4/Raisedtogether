@@ -1,3 +1,4 @@
+// 아이디, 닉네임 중복체크 함수
 function checkDuplicate(type){
 	let value;
 	
@@ -27,3 +28,22 @@ function checkDuplicate(type){
 		}
 	});
 }
+
+// 
+$(document).ready(function () {
+  $("#inputPw, #inputPwConfirm").on("input", function () {
+    let pw = $("#inputPw").val();
+    let pwConfirm = $("#inputPwConfirm").val();
+
+    if (pw === "" || pwConfirm === "") {
+      $("#pwMatchMsg").text("").css("color", "");
+      return;
+    }
+
+    if (pw === pwConfirm) {
+      $("#pwMatchMsg").text("비밀번호가 일치합니다").css("color", "green");
+    } else {
+      $("#pwMatchMsg").text("비밀번호가 일치하지 않습니다").css("color", "red");
+    }
+  });
+});

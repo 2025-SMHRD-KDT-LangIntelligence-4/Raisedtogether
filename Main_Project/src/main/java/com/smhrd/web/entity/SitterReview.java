@@ -10,8 +10,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SitterReview {
-	private int SitterReviewIdx;
-	private float SitterReviewRatings;
-	private String SitterReviewOpinion;
-	private LocalDateTime SitterReviewCreatedAt;
+	private int ReviewIdx;
+	private float ReviewRatings;
+	private String ReviewOpinion;
+	private LocalDateTime ReviewCreatedAt;
 }
