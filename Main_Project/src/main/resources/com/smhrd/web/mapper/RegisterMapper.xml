@@ -8,34 +8,40 @@
 	<select id="isParentIdExists" resultType="int" parameterType="String">
 		SELECT COUNT(*)
 		FROM T_PARENT
-		WHERE PARENT_ID = #{inputId};
+		WHERE PARENT_ID = #{value};
 	</select>
 	
 	<!-- 부모 NICKNAME 중복확인 중복1, 없음0 -->
 	<select id="isParentNicknameExists" resultType="int" parameterType="String">
 		SELECT COUNT(*)
 		FROM T_PARENT
-		WHERE PARENT_NICKNAME = #{inputNickname};
+		WHERE PARENT_NICKNAME = #{value};
 	</select>
 	
 	<!-- 부모 정보 DB에 입력 -->
-	<insert id="insertParent" parameterType="String">
-		INSERT INTO T_PARENT (PARENT_ID, PARENT_PW, PARENT_NICKNAME, PARENT_PHONE])
+	<insert id="insertParent" parameterType="com.smhrd.web.entity.Parent">
+		INSERT INTO T_PARENT (PARENT_ID, PARENT_PW, PARENT_NICKNAME, PARENT_PHONE)
 		VALUES (#{parentId}, #{parentPw}, #{parentNickname}, #{parentPhone})
 	</insert>
-	
-	<!-- 돌보미 ID 중복확인 중복1, 없음0 -->
-	<select id="isSitterIdExists" resultType="int" parameterType="String">
+
+
+
+<!--
+	돌보미 ID 중복확인 중복1, 없음0
+	<select id="isSitterIdExists" resultType="int" parameterType="com.smhrd.web.entity.Sitter">
 	SELECT COUNT(*)
 	FROM T_SITTER
 	WHERE SITTER_ID = #{sitterId};
 	</select>
 	
-	<!-- 돌보미 정보 DB에 입력 -->
+	 돌보미 정보 DB에 입력
 	<insert id="insertSitter" parameterType="String">
 	INSERT INTO T_SITTER (SITTER_ID, SITTER_PW, SITTER_NAME, SITTER_PHONE,
 	SITTER_CARE_TYPE, SITTER_PHOTO_IMG, SITTER_INTRODUCTION)
 	VALUES (#{sitterId}, #{sitterPw}, #{sitterName}, #{sitterPhone},
 	#{sitterCareType}, #{sitterPhotoImg}, #{sitterIntroduction})
 	</insert>
+-->
+	
+
 </mapper>

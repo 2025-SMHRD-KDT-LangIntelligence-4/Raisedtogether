@@ -10,7 +10,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Chatting {
-	private int chattingIdx;
-	private String chattingChatter;
-	private LocalDateTime chattingCreatedAt;
+	private int chatIdx;
+	private String chatChatter;
+	private String chatContent;
+	private String chatEmotion;
+	private String chatFile;
+	private LocalDateTime chatCreatedAt;
 }

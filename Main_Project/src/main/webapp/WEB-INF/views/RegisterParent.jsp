@@ -17,40 +17,40 @@
   <div class="container">
   	
     <div class="logo">같이키움</div>
-    <img class="profile-image" src="/image/같이키움 로고.png" alt="프로필이미지"/>
+    <img class="profile-image" src="/images/같이키움 로고.png" alt="프로필이미지"/>
 
     <div class="title">부모 회원가입</div>
 
     <!-- 이메일 -->
     <div class="label" style="top: 191px">이메일</div>
     <div class="input-box small" style="top: 214px">
-      <input type="email" name="email" placeholder="eeemail@gacikium.com">
+      <input type="email" name="parentId" placeholder="eeemail@gacikium.com">
     </div>
     <button type="button" class="check-btn" style="top: 217px">중복확인</button>
 
     <!-- 비밀번호 -->
     <div class="label" style="top: 271px">비밀번호</div>
     <div class="input-box large" style="top: 294px">
-      <input type="password" name="password" placeholder="영문, 숫자, 특수문자를 사용한 8~20자">
+      <input type="password" name="parentPw" placeholder="영문, 숫자, 특수문자를 사용한 8~20자">
     </div>
 
     <!-- 비밀번호 확인 -->
     <div class="label" style="top: 351px">비밀번호 확인</div>
     <div class="input-box large" style="top: 374px">
-      <input type="password" name="confirmPassword" placeholder="위의 비밀번호를 다시 입력해주세요.">
+      <input type="password" name="parentPw" placeholder="위의 비밀번호를 다시 입력해주세요.">
     </div>
 
     <!-- 닉네임 -->
     <div class="label" style="top: 431px">닉네임</div>
     <div class="input-box small" style="top: 454px">
-      <input type="text" name="nickname" placeholder="닉네임을 입력해주세요">
+      <input type="text" name="parentNickname" placeholder="닉네임을 입력해주세요">
     </div>
     <button type="button" class="check-btn" style="top: 457px">중복확인</button>
 
     <!-- 전화번호 -->
     <div class="label" style="top: 511px">전화번호</div>
     <div class="input-box large" style="top: 534px">
-      <input type="tel" name="phone" placeholder="01012345678">
+      <input type="tel" name="parentPhone" placeholder="01012345678">
     </div>
 
     <!-- 가입하기 버튼 -->
