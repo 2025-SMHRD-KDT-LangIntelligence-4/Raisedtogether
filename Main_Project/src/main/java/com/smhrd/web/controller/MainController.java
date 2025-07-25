@@ -129,6 +129,11 @@ public class MainController {
 	}
 	
 	
+	@GetMapping("/LoginParent2")
+	public String LoginParent2() {
+		return "LoginParent2";
+	}
+	
 	
 	
 	
