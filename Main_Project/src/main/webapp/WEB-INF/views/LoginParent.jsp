@@ -3,9 +3,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <c:set var="cpath" value="${pageContext.request.contextPath}" />
+
 <!DOCTYPE html>
 <html lang="ko">
-
 
 <head>
   <meta charset="UTF-8">
@@ -15,7 +15,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="/css/LoginParent.css">
 </head>
-
 
 <body class="page">
 
@@ -65,46 +64,55 @@
     </div>
   </footer>
 
-
   <div class="login-container">
-    <div class="login-header">
-      <!-- 1. 상단 로고 -->
-      <img src="/images/같이키움 로고.svg" alt="같이키움 로고" class="brand-logo">
-      <div class="brand">같이키움</div>
-    </div>
-    <br>
-    <br>
+    <!-- 1. 상단 로고 -->
+    <img src="/images/같이키움 로고.svg" alt="같이키움 로고" class="brand-logo">
+    <div class="brand">같이키움</div>
+
+    <br><br>
     <h1 class="title">부모 로그인</h1>
-    <form  action= "${capth}/login" method="login-form">
+
+    <!-- 로그인 메시지 출력 -->
+    <c:if test="${not empty message}">
+      <div style="color: red; text-align: center; margin-bottom: 10px;">${message}</div>
+    </c:if>
+
+    <form action="${cpath}/login" method="post">
       <div class="form-group">
         <label for="email">이메일</label>
-        <input type="email" id="email" placeholder="eeemail@gacikium.com">
+        <input type="email" id="email" name="parentId" placeholder="eeemail@gacikium.com" required>
       </div>
+
       <div class="form-group">
         <label for="password">비밀번호</label>
-        <input type="password" id="password" placeholder="영문, 숫자, 특수문자를 사용한 8~20자">
+        <input type="password" id="password" name="parentPw" placeholder="영문, 숫자, 특수문자를 사용한 8~20자" required>
       </div>
+
       <div class="options">
         <label class="checkbox">
           <input type="checkbox" id="remember">
           아이디 저장
         </label>
       </div>
+
       <button type="submit" class="btn btn-primary">로그인</button>
-    <div class="link-group">
-      <a href="#">비밀번호 찾기</a>
-      <span class="separator">ㅣ</span>
-      <a href="#">회원가입</a>
-    </div>
+
+      <div class="link-group">
+        <a href="#">비밀번호 찾기</a>
+        <span class="separator">ㅣ</span>
+        <a href="#">회원가입</a>
+      </div>
+
       <div class="divider"></div>
-      <!-- 2~4. 소셜 버튼 로고 삽입 -->
+
+      <!-- 소셜 로그인 버튼 -->
       <button type="button" class="btn btn-social btn-kakao">
         <img src="/images/Kakao Talk.svg" alt="카카오 로고" class="btn-icon">카카오로 시작하기
       </button>
       <button type="button" class="btn btn-social btn-naver">
         <img src="/images/Nintendo.svg" alt="네이버 로고" class="btn-icon">네이버로 시작하기
       </button>
-      <button onclick="location.href='${cpath}/FindPassword';"  class="btn btn-social btn-apple">
+      <button onclick="location.href='${cpath}/FindPassword';" class="btn btn-social btn-apple">
         <img src="/images/Apple Inc.svg" alt="Apple 로고" class="btn-icon">Apple로 시작하기
       </button>
     </form>
@@ -113,8 +121,6 @@
       <small>Copyright ⓒ 24.5 Corp. All rights reserved.</small>
     </footer>
   </div>
-</div>
-  
+
 </body>
-</div>
 </html>
