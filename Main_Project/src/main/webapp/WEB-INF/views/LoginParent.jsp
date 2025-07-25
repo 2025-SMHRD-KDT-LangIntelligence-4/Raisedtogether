@@ -17,7 +17,7 @@
 </head>
 
 
-<body>
+<body class="page">
 
   <header class="status-bar">
     <div class="status-left">
@@ -32,6 +32,10 @@
       <span class="icon battery-fill"></span>
     </div>
   </header>
+
+  <main>
+    <section class="login-card">…</section>
+  </main>
 
   <footer class="contact-section">
     <div class="inner">
