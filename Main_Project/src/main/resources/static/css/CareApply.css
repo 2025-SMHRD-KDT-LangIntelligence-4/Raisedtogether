@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    font-family: 'NanumSquare Neo', sans-serif;
+    background: white;
+}
+
+.container {
+    width: 430px;
+    height: 932px;
+    position: relative;
+    margin: 0 auto;
+    background: white;
+    overflow: hidden;
+}
+/* 상태바 아이콘 */
+.icon {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    overflow: hidden;
+}
+.top-right {
+    top: 68px;
+    left: 382px;
+}
+.top-left {
+    top: 68px;
+    left: 20px;
+}
+.icon-outer {
+    width: 21px;
+    height: 23.33px;
+    position: absolute;
+    left: 3.5px;
+    top: 2.33px;
+}
+.icon-inner-small {
+    width: 16.33px;
+    height: 16.33px;
+    position: absolute;
+    left: 5.83px;
+    top: 5.83px;
+}
+
+/* 제목 */
+.title {
+    position: absolute;
+    top: 136px;
+    left: 20px;
+    font-size: 22px;
+    font-weight: 800;
+    color: black;
+}
+
+/* 아이 등록 박스 */
+.register-box {
+    width: 387px;
+    height: 80px;
+    position: absolute;
+    top: 196px;
+    left: 20px;
+    background: #F7F7FF;
+    border-radius: 26px;
+    position: relative;
+}
+
+.register-text {
+    position: absolute;
+    top: 30px;
+    left: 157px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #6E6E6E;
+}
+
+.checkbox {
+    position: absolute;
+    top: 26px;
+    left: 30px;
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+}
+
+.checkbox-inner {
+    width: 16.33px;
+    height: 16.33px;
+    position: absolute;
+    top: 5.83px;
+    left: 5.83px;
+    outline: 2px solid #6E6E6E;
+    outline-offset: -1px;
+}
+
+/* 안내사항 박스 */
+.info-box {
+    width: 390px;
+    height: 177px;
+    position: absolute;
+    top: 715px;
+    left: 20px;
+    background: #F2F2F7;
+    border-radius: 16px;
+    position: relative;
+}
+
+.info-title {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #6E6E6E;
+}
+
+.info-line {
+    position: absolute;
+    top: 65px;
+    left: 20px;
+    width: 350px;
+    height: 0;
+    outline: 1px solid #D9D9D9;
+    outline-offset: -0.5px;
+}
+
+.info-description {
+    position: absolute;
+    top: 85px;
+    left: 30px;
+    width: 330px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #6E6E6E;
+}
+
+.info-icon {
+    width: 24px;
+    height: 25px;
+    position: absolute;
+    top: 20px;
+    left: 346px;
+    overflow: hidden;
+}
+
+.info-icon-inner {
+    width: 20px;
+    height: 20.83px;
+    position: absolute;
+    top: 2.08px;
+    left: 2px;
+    outline: 2px solid #EC221F;
+    outline-offset: -1px;
+}
