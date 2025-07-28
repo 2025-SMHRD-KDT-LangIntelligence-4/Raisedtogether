@@ -22,4 +22,5 @@ public class Sitter {
 	private String sitterPhotoImg;
 	private String sitterIntroduction;
 	private LocalDateTime sitterJoinedAt;
+	// 총 돌봄시간 추가
 }

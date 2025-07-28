@@ -8,15 +8,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="${cpath}/css/SitterDetail(하람).css">
+<title>시터 디테일</title>
+<link rel="stylesheet" href="${cpath}/css/SitterDetail.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
 	<div class="start-screen">
 		<div class="backAlert">
-			<a href="#"><img class="back"
+			<a href="${cpath}/Mainpage"><img class="back"
 				src="${cpath}/images/Arrow left.png" alt="뒤로가기버튼" /></a> <a href="#"><img
 				class="alert-image" src="${cpath}/images/알림버튼.svg" alt="알림버튼" /> </a>
 		</div>
@@ -164,7 +164,7 @@
 		</div>
 
 
-<button onclick="#"  class="select-button">돌봄 신청하기</button>
+<button onclick="location.href='${cpath}/CareApply'"  class="select-button">돌봄 신청하기</button>
 
 
 	</div>

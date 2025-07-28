@@ -81,6 +81,11 @@ public class MainController {
 		return "SitterUrgent";
 	}
 	
+	@GetMapping("/SitterDetail")
+	public String SitterDetail() {
+		return "SitterDetail";
+	}
+	
 	@GetMapping("/Reservation")
 	public String Reservation() {
 		return "Reservation";
@@ -116,19 +121,9 @@ public class MainController {
 	}
 	
 	
-	@GetMapping("/ViewHaram")
-	public String ViewHaram(){
-		return "ViewHaram";
-	}
-	
 	@GetMapping("/test")
 	public String test(){
 		return "test";
-	}
-	
-	@GetMapping("/ViewHaram2")
-	public String ViewHaram2(){
-		return "ViewHaram2";
 	}
 	
 	
@@ -137,17 +132,6 @@ public class MainController {
 		return "LoginParent2";
 	}
 	
-	// 하람 긴급돌봄 페이지 만듬
-	@GetMapping("/Emergency_긴급돌봄(하람)")
-	public String Emergency() {
-		return "Emergency_긴급돌봄(하람)";
-	}
-	
-	// 하람 돌보미 디테일 페이지 만듬
-		@GetMapping("/SitterDetail(하람)")
-		public String SitterDetail() {
-			return "SitterDetail(하람)";
-		}
 	
 	
 }
