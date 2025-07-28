@@ -24,16 +24,14 @@
 		VALUES (#{parentId}, #{parentPw}, #{parentNickname}, #{parentPhone})
 	</insert>
 
-
-
-<!--
-	돌보미 ID 중복확인 중복1, 없음0
+	<!-- 돌보미 ID 중복확인 중복1, 없음0 -->
 	<select id="isSitterIdExists" resultType="int" parameterType="com.smhrd.web.entity.Sitter">
 	SELECT COUNT(*)
 	FROM T_SITTER
 	WHERE SITTER_ID = #{sitterId};
 	</select>
 	
+<!-- 
 	 돌보미 정보 DB에 입력
 	<insert id="insertSitter" parameterType="String">
 	INSERT INTO T_SITTER (SITTER_ID, SITTER_PW, SITTER_NAME, SITTER_PHONE,

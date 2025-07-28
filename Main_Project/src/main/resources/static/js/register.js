@@ -1,4 +1,4 @@
-// 아이디, 닉네임 중복체크 함수
+// 부모 아이디, 닉네임 중복체크 함수
 function parentDuplicate(type){
 	let value;
 	
@@ -56,3 +56,35 @@ $(document).ready(function() {
 		this.value = this.value.replace(/[^0-9]/g, "");
 	});
 });
+
+//--------------------------------------------------------------------------
+// 돌보미 아이디 중복 확인
+function sitterDuplicate(type){
+	let value;
+	
+	// type이 id인지 nickname인지에 따라 적절한 input값을 가져옴
+	if (type === "id") {
+		value = $("#id").val().trim();
+	} else if (type === "nickname") {
+		value = $("#nickname").val().trim();
+	}
+	
+	// 값이 비어있으면 값을 입력하라고 알려줌
+	if (!value) {
+		alert("값을 입력해주세요.");
+		return;
+	}
+	
+	$.ajax({
+		url : "/sitterDuplicate",
+		type : "POST",
+		contentType : "application/json",
+		data : JSON.stringify({type : type, value : value}),
+		success : function(msg){
+			alert(msg);
+		},
+		error: function() {
+			alert("중복확인 중 오류 발생");
+		}
+	});
+}

@@ -13,4 +13,5 @@ public interface RegisterMapper {
 	
 	public void insertParent(Parent parent);
 	
+	public void isSitterIdExists(String sitterId);
 }
