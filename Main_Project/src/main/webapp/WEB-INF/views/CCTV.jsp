@@ -7,10 +7,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <meta charset="UTF-8">
+    <title>CCTV 실시간 영상</title>
 </head>
 <body>
-	<h1>CCTV영상올릴페이지</h1>
+    <h2>CCTV 실시간 스트리밍</h2>
+    <img src="http://localhost:8000/video_feed" width="640" height="480" />
 </body>
 </html>
