@@ -21,8 +21,8 @@
     </style>
 </head>
 <body>
-    <h2>🔔 실시간 알림 로그 (디버그 모드)</h2>
-    <div id="alertLog">⏳ 알림을 불러오는 중...</div>
+    <h2>🔔 실시간 알림 </h2>
+    <div id="alertLog"> 알림을 불러오는 중...</div>
 
     <script>
         let previousData = "";
