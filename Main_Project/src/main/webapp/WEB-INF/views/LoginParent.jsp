@@ -12,39 +12,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>부모 로그인 - 같이키움</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="/css/LoginParent.css">
 </head>
 
 <body class="page">
-<div class="login-container">
-    <div class="login-header">
-      <!-- 1. 상단 로고 -->
-      <img src="/images/같이키움 로고.svg" alt="같이키움 로고" class="brand-logo">
-      <br>
-      <br>
-      <br>
-      <br>
-      <div class="brand">같이키움</div>
-    </div>
-
-  <header class="status-bar">
-    <div class="status-left">
-      <span class="time">9:41</span>
-    </div>
-    <div class="status-spacer"></div>
-    <div class="status-right">
-      <span class="icon signal"></span>
-      <span class="icon wifi"></span>
-      <span class="icon battery-outline"></span>
-      <span class="icon battery-notch"></span>
-      <span class="icon battery-fill"></span>
-    </div>
-  </header>
-
-  <main>
-    <section class="login-card">…</section>
-  </main>
 
   <div class="login-container">
     <!-- 1. 상단 로고 -->
@@ -61,7 +33,6 @@
       <div style="color: red; text-align: center; margin-bottom: 10px;">${message}</div>
     </c:if>
 
-    <form action="${cpath}/login" method="post">
 
       <div class="form-group">
         <label for="email">이메일</label>
@@ -99,11 +70,11 @@
         <img src="/images/Nintendo.svg" alt="네이버 로고" class="btn-icon">네이버로 시작하기
       </button>
       <button type="button" class="btn btn-social btn-apple">
-      <button onclick="location.href='${cpath}/FindPassword';" class="btn btn-social btn-apple">
-
         <img src="/images/Apple Inc.svg" alt="Apple 로고" class="btn-icon">Apple로 시작하기
       </button>
     </form>
+    
+    
     <div class="link-group">
       <a href="#">비밀번호 찾기</a>
       <span class="separator">ㅣ</span>
