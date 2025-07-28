@@ -5,17 +5,53 @@ body {
   font-family: 'NanumSquare Neo', sans-serif;
   background-color: #F7F7FF;
 }
+.start-screen {
+	margin: 0;
+	padding: 0;
+	background: white;
+	overflow: hidden;
+	font-family: 'NanumSquare Neo', sans-serif;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-width: 430px;
+	justify-content: space-around;
+	align-items: center;
+	z-index: 1000; /* 항상 위에 */
+}
+
+.logoAlert {
+	max-width: 430px;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between; /* 좌우 끝으로 배치 */
+	align-items: center; /* 수직 가운데 정렬 */
+}
+
+.logo-image {
+	width: 36px;
+	height: 36px;
+}
 
 .container {
   width: 430px;
   height: 695px;
   position: relative;
-  background: #F7F7FF;
+  background: #FFFFFF;
   border-radius: 60px;
   margin: 0 auto;
   position: relative;
+  top: 116px;
 }
-
+.container2 {
+	height: 932px;
+	padding: 0;
+	border-radius: 60px;
+	background: #F7F7FF;
+	position: relative;
+}
 .logo {
   position: absolute;
   left: 81px;

@@ -6,6 +6,10 @@
 	padding: 0;
 }
 
+* {
+   box-sizing: border-box;
+}
+
 body {
 	display: flex;
 	justify-content: center;
@@ -16,11 +20,13 @@ body {
 }
 
 .login-container {
+	right: 40px;
 	width: 350px;
 	background: #fff;
 	border: 1px solid #EDEDED;
 	border-radius: 36px;
 	padding: 40px;
+	
 }
 
 .login-header {

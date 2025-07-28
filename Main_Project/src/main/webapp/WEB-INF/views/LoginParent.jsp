@@ -10,7 +10,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>부모 로그인</title>
+  <title>부모 로그인 - 같이키움</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="/css/LoginParent.css">
@@ -54,9 +54,9 @@
       <button type="submit" class="btn btn-primary">로그인</button>
 
       <div class="link-group">
-        <a href="${cpath}/FindPassword">비밀번호 찾기</a>
+        <a href="#">비밀번호 찾기</a>
         <span class="separator">ㅣ</span>
-        <a href="${cpath}/RegisterParent">회원가입</a>
+        <a href="#">회원가입</a>
       </div>
 
 
@@ -73,6 +73,13 @@
         <img src="/images/Apple Inc.svg" alt="Apple 로고" class="btn-icon">Apple로 시작하기
       </button>
     </form>
+    
+    
+    <div class="link-group">
+      <a href="#">비밀번호 찾기</a>
+      <span class="separator">ㅣ</span>
+      <a href="#">회원가입</a>
+    </div>
     
     <!-- 프터 -->
    <footer class="footer">
