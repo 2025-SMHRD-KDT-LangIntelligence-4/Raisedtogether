@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <c:set var="cpath" value="${pageContext.request.contextPath}" />
@@ -9,10 +9,48 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="/css/Startpage.css">
 </head>
 <body>
+	<!-- 임시 테스트용 버튼 -->
 	<button onclick='location.href="${cpath}/LoginParent"'>저는 부모예요</button>
-	<button onclick='location.href="${cpath}/LoginSitter"'>저는 돌보미예요</button>
-	<button onclick='location.href="${cpath}/Mainpage"'>메인페이지로(추후 삭제 후 세션확인해서 자동으로 메인연결예정)</button>
+	<button onclick='location.href="${cpath}/LoginSitter"'>저는
+		돌보미예요</button>
+	<button onclick='location.href="${cpath}/Mainpage"'>메인페이지로</button>
+
+	<!-- 앱 시작 화면 -->
+	<div class="start-screen">
+
+		<!-- 상단 로고 및 질문 문구 -->
+		<!-- 로고 + 텍스트 묶기 -->
+		<div class="start-logo-group">
+      <img class="start-logo-image" src="/images/같이키움 로고2.svg" alt="로고" />
+      <div class="start-logo-text">같이키움</div>
+    </div>
+
+		<div class="start-question">어떤 돌봄을 시작해볼까요?</div>
+
+		<!-- 부모 카드 -->
+		<div class="card parent-card">
+			<div class="card-subtext">돌봄을 맡길</div>
+			<div class="card-title">
+				부모님으로<br />시작하기
+			</div>
+			<img class="card-image parent-image"
+				src="/images/Happy family with a child.svg" alt="부모님 이미지" />
+		</div>
+
+		<!-- 돌보미 카드 -->
+		<div class="card caregiver-card">
+			<div class="card-subtext">아이를 돌봐줄</div>
+			<div class="card-title">
+				돌보미로<br />시작하기
+			</div>
+			<img class="card-image"
+				src="/images/Colleagues reinforcing agreement with a handshake.svg"
+				alt="돌보미 이미지" />
+		</div>
+
+	</div>
 </body>
 </html>
