@@ -12,6 +12,6 @@
 </head>
 <body>
     <h2>CCTV 실시간 스트리밍</h2>
-    <img src="http://localhost:8000/video_feed" width="640" height="480" />
+    <img src="http://192.168.205.129:8000/video_feed" width="640" height="480" />
 </body>
 </html>
