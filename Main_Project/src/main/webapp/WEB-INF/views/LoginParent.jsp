@@ -26,7 +26,7 @@
     <br><br>
 
     <h1 class="title">부모 로그인</h1>
-    <form class="login-form">
+    <form class="login-form" action="#"  method="post">
 
     <!-- 로그인 메시지 출력 -->
     <c:if test="${not empty message}">
@@ -36,12 +36,13 @@
 
       <div class="form-group">
         <label for="email">이메일</label>
-        <input type="email" id="email" name="parentId" placeholder="eeemail@gacikium.com" required>
+        <input type="email" id="id" name="parentId" placeholder="eeemail@gacikium.com" required>
       </div>
 
       <div class="form-group">
         <label for="password">비밀번호</label>
-        <input type="password" id="password" name="parentPw" placeholder="영문, 숫자, 특수문자를 사용한 8~20자" required>
+        <input type="password" id="pw" name="parentPw" 
+        placeholder="영문, 숫자, 특수문자를 사용한 8~20자" required>
       </div>
 
       <div class="options">
@@ -54,9 +55,9 @@
       <button type="submit" class="btn btn-primary">로그인</button>
 
       <div class="link-group">
-        <a href="#">비밀번호 찾기</a>
+        <a href="${cpath}/FindPassword">비밀번호 찾기</a>
         <span class="separator">ㅣ</span>
-        <a href="#">회원가입</a>
+        <a href="${cpath}/RegisterParent">회원가입</a>
       </div>
 
 
@@ -73,13 +74,6 @@
         <img src="/images/Apple Inc.svg" alt="Apple 로고" class="btn-icon">Apple로 시작하기
       </button>
     </form>
-    
-    
-    <div class="link-group">
-      <a href="#">비밀번호 찾기</a>
-      <span class="separator">ㅣ</span>
-      <a href="#">회원가입</a>
-    </div>
     
     <!-- 프터 -->
    <footer class="footer">
