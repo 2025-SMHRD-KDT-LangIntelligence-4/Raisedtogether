@@ -1,0 +1,390 @@
+@charset "UTF-8";
+
+/* --------------------
+   Fonts
+-------------------- */
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: url('/fonts/NanumSquareNeo-aLt.ttf') format('truetype');
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: url('/fonts/NanumSquareNeo-bRg.ttf') format('truetype');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: url('/fonts/NanumSquareNeo-cBd.ttf') format('truetype');
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: url('/fonts/NanumSquareNeo-dEb.ttf') format('truetype');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: url('/fonts/NanumSquareNeo-eHv.ttf') format('truetype');
+	font-weight: 800;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'NanumSquareNeo', sans-serif;
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+	font-weight: 400;
+	box-sizing: border-box;
+}
+
+
+/* 전체 화면 - 바텀네비*/
+.content-container {
+  padding-bottom: 80px;
+}
+
+
+
+.start-screen {
+	width: 430px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	background: #F7F7FF;
+	overflow: hidden;
+	font-family: 'NanumSquare Neo', sans-serif;
+	padding: 0;
+}
+
+.backAlert {
+	max-width: 430px;
+	padding: 20px 20px 0px 20px;
+	display: flex;
+	justify-content: space-between; /* 좌우 끝으로 배치 */
+	align-items: center; /* 수직 가운데 정렬 */
+}
+
+.back {
+	width: 28px;
+	height: 28px;
+}
+
+.alert-image {
+	width: 28px;
+	height: 28px;
+	cursor: pointer;
+}
+
+/*
+상단 프로필 영역
+*/
+.caregiver-profile {
+	width: 430px;
+	height: 190px;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.info-section {
+	flex: 1;
+}
+
+.name {
+	font-size: 17px;
+	font-weight: 590;
+	line-height: 22px;
+	color: black;
+	margin-bottom: 20px;
+}
+
+.university {
+	font-size: 14px;
+	font-weight: 700;
+	color: #6E6E6E;
+	margin-bottom: 30px;
+}
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.tag {
+	background: white;
+	border-radius: 6px;
+	padding: 5px 9px;
+	font-size: 14px;
+	font-weight: 700;
+	color: #534DFA;
+}
+
+.profile-img img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+}
+
+/*
+하단 부분
+*/
+.profile-container {
+	max-width: 430px;
+	padding: 20px;
+}
+
+.stat-container {
+	display: flex;
+	gap: 20px;
+}
+
+.stat-box {
+	width: 185px;
+	height: 80px;
+	background: white;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+	border-radius: 16px;
+	display: flex; /* flex 설정 */
+	flex-direction: column; /* 위아래로 정렬 */
+	justify-content: center; /* 수직 중앙 정렬 */
+	align-items: center; /* 수평 중앙 정렬 */
+}
+
+.stat-value {
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+.stat-value .highlight {
+	font-size: 20px;
+	font-weight: 800;
+	color: black;
+}
+
+.stat-value .unit {
+	font-size: 14px;
+	font-weight: 400;
+	color: #6E6E6E;
+}
+
+.stat-label {
+	left: 55px;
+	top: 47px;
+	font-size: 12px;
+	color: #6E6E6E;
+	font-weight: 400;
+	text-align: center;
+}
+
+.comment-box {
+	padding: 30px 0px;
+	display: flex;
+	align-items: center; /* 수평 중앙 정렬 */
+}
+
+.quote-left, .quote-right {
+	font-size: 60px;
+	color: #6E6E6E;
+	font-family: 'Freesentation', sans-serif;
+	font-weight: 800;
+}
+
+.quote-left {
+	top: 130px;
+	left: 40px;
+}
+
+.quote-right {
+	top: 130px;
+	left: 359px;
+}
+
+.comment {
+	top: 150px;
+	left: 60px;
+	width: 310px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 700;
+	color: #6E6E6E;
+}
+
+.confirmation-box {
+	width: 390px;
+	height: 60px;
+	background: #F7F7FF;
+	border-radius: 16px;
+	font-weight: 700;
+	font-size: 12px;
+	color: #4C4C4C;
+	line-height: 60px;
+	padding-left: 20px;
+}
+
+.illustration {
+	width: 119px;
+	height: 103px;
+	position: absolute;
+	top: 456px;
+	right: 40px;
+}
+
+.check-container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px; /* 항목 사이 간격 */
+	padding: 20px 0px 40px 0px;
+}
+
+.check-item {
+	display: flex;
+	flex-direction: row;
+	align-items: center; /* 수평 중앙 정렬 */
+}
+
+.check-icon {
+	width: 46px;
+	height: 46px;
+}
+
+.check-text {
+	display: flex;
+	flex-direction: column;
+	padding-left: 10px;
+	gap: 8px;
+}
+
+.check-title {
+	font-size: 14px;
+	font-weight: 700;
+	color: black;
+}
+
+.check-sub {
+	font-size: 10px;
+	color: #6E6E6E;
+	font-weight: 400;
+}
+
+.divider {
+	width: 390px;
+	border-bottom: 1px solid #D9D9D9;
+}
+
+.review-card {
+	width: 390px;
+	background: #f7f7ff;
+	border-radius: 16px;
+	padding: 20px;
+	margin: 20px 0px;
+	position: relative;
+	font-family: 'NanumSquare Neo', sans-serif;
+}
+
+.review-header {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 12px;
+	position: relative;
+}
+
+.review-category {
+	padding: 6px 10px;
+	background: white;
+	border: 1px solid #534DFA;
+	border-radius: 8px;
+	font-weight: 800;
+	font-size: 14px;
+	color: #534DFA;
+}
+
+.review-info {
+	font-size: 14px;
+	font-weight: 700;
+	color: black;
+}
+
+.review-stars {
+	position: absolute;
+	right: 0;
+	top: 4px;
+	display: flex;
+	gap: 2px;
+}
+
+.review-stars .star {
+	color: #534DFA;
+	font-size: 18px;
+}
+
+.review-body {
+	font-size: 12px;
+	line-height: 18px;
+	color: #4C4C4C;
+	font-weight: 400;
+}
+
+.section-title {
+	font-size: 16px;
+	font-weight: 800;
+	padding-top: 40px;
+}
+.emotion-container {
+	display: flex;
+	gap: 20px; /* 항목 사이 간격 */
+	justify-content: center; /* 전체 박스 가운데 정렬 */
+	align-items: center;
+	padding: 20px 0px;
+}
+
+.emotion-box {
+	width: 185px;
+	height: 129px;
+	background: #F7F7FF;
+	border-radius: 16px;
+
+	display: flex;              /* 추가 */
+	flex-direction: column;     /* 세로 정렬 */
+	align-items: center;        /* 가로 중앙 */
+	justify-content: center;    /* 세로 중앙 */
+}
+
+.emotion-box img {
+	width: 66px;
+	height: 64px;
+	margin-bottom: 10px;         /* 이미지 아래 간격 */
+}
+
+.emotion-text {
+	text-align: center;
+	font-size: 14px;
+	color: #6E6E6E;
+}
+
+
+
+.select-button {
+  width: 100%;
+  height: 50px;
+  background-color: #534DFA; /* 보라색 */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  margin-top: 40px ;
+}

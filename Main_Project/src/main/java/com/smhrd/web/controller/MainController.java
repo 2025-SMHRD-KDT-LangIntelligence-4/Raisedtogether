@@ -96,6 +96,9 @@ public class MainController {
 		return "Info";
 	}
 	
+	
+	
+	
 // 아래는 View 연습용 페이지 주소창에 /View1 쳐서 들어감 -------------------------------	
 	@GetMapping("/View1")
 	public String View1() {
@@ -134,7 +137,17 @@ public class MainController {
 		return "LoginParent2";
 	}
 	
+	// 하람 긴급돌봄 페이지 만듬
+	@GetMapping("/Emergency_긴급돌봄(하람)")
+	public String Emergency() {
+		return "Emergency_긴급돌봄(하람)";
+	}
 	
+	// 하람 돌보미 디테일 페이지 만듬
+		@GetMapping("/SitterDetail(하람)")
+		public String SitterDetail() {
+			return "SitterDetail(하람)";
+		}
 	
 	
 }
