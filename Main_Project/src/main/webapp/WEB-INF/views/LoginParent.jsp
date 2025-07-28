@@ -12,6 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>부모 로그인 - 같이키움</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="/css/LoginParent.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -23,17 +24,14 @@
     <div class="brand">같이키움</div>
 
     <br><br>
-
     <h1 class="title">부모 로그인</h1>
-
     <form class="login-form">
-
+    
 
     <!-- 로그인 메시지 출력 -->
     <c:if test="${not empty message}">
       <div style="color: red; text-align: center; margin-bottom: 10px;">${message}</div>
     </c:if>
-
       <div class="form-group">
         <label for="email">이메일</label>
         <input type="email" id="email" name="parentId" placeholder="eeemail@gacikium.com" required>
@@ -68,10 +66,12 @@
       <button type="button" class="btn btn-social btn-naver">
         <img src="/images/Nintendo.svg" alt="네이버 로고" class="btn-icon">네이버로 시작하기
       </button>
-      <button onclick="location.href='${cpath}/FindPassword';" class="btn btn-social btn-apple">
+      <button type="button" class="btn btn-social btn-apple">
         <img src="/images/Apple Inc.svg" alt="Apple 로고" class="btn-icon">Apple로 시작하기
       </button>
     </form>
+    
+    
     <div class="link-group">
       <a href="#">비밀번호 찾기</a>
       <span class="separator">ㅣ</span>
@@ -91,6 +91,11 @@
    </footer>
     
   </div>
+
   
 </body>
+
+
+</body>
+
 </html>
