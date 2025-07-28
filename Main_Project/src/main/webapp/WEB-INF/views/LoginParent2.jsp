@@ -31,37 +31,39 @@
 
     <!-- 로그인 카드 -->
     <main>
-      <div class="login-card">
-        <div class="logo">같이키움</div>
-        <h1 class="title">부모 로그인</h1>
-        <form>
-          <div class="form-group">
-            <label for="email">이메일</label>
-            <input type="email" id="email" placeholder="eeemail@gacikium.com" />
-          </div>
-          <div class="form-group">
-            <label for="password">비밀번호</label>
-            <input type="password" id="password" placeholder="영문, 숫자, 특수문자를 사용한 8~20자" />
-          </div>
-          <div class="options">
-            <label><input type="checkbox" checked /> 아이디 저장</label>
-          </div>
-          <button type="submit" class="btn login-btn">로그인</button>
-        </form>
-        <div class="links">
-          <a href="#" class="link">비밀번호 찾기</a>
-          <a href="#" class="link primary">회원가입</a>
-        </div>
-        <div class="social-login">
-          <button class="btn naver-btn"><img src="naver-icon.svg" alt="네이버 로고" /> 네이버로 시작하기</button>
-          <button class="btn kakao-btn"><img src="kakao-icon.svg" alt="카카오 로고" /> 카카오로 시작하기</button>
-          <button class="btn apple-btn"><img src="apple-icon.svg" alt="Apple 로고" /> Apple로 시작하기</button>
-        </div>
+	<div class="login-card">
+	  <div class="logo">같이키움</div>
+	  <h1 class="title">부모 로그인</h1>
+	  <form class="login-form">
+	    <label for="email" class="label">이메일</label>
+	    <input type="email" id="email" class="input" placeholder="eeemail@gacikium.com" />
+	
+	    <label for="password" class="label">비밀번호</label>
+	    <input type="password" id="password" class="input" placeholder="영문, 숫자, 특수문자를 사용한 8~20자" />
+	
+	    <div class="options">
+	      <label><input type="checkbox" class="checkbox" checked /> 아이디 저장</label>
+	    </div>
+	
+	    <button type="submit" class="btn login-btn">로그인</button>
+	  </form>
+	
+	  <div class="links">
+	    <a href="#" class="link">비밀번호 찾기</a>
+	    <a href="#" class="link signup">회원가입</a>
+	  </div>
+	
+	  <div class="social-login">
+	    <button class="btn naver-btn"><img src="naver-icon.svg" alt="네이버 로고" /> 네이버로 시작하기</button>
+	    <button class="btn kakao-btn"><img src="kakao-icon.svg" alt="카카오 로고" /> 카카오로 시작하기</button>
+	    <button class="btn apple-btn"><img src="apple-icon.svg" alt="Apple 로고" /> Apple로 시작하기</button>
+	  </div>
+	</div>
         <div class="divider"></div>
         <div class="footer">Copyright ⓒ 24.5 Corp. All rights reserved.</div>
-      </div>
+    </div>
+    
     </main>
-
     <!-- 고객센터 -->
     <footer class="contact-info">
       <div class="contact-header">고객센터</div>
