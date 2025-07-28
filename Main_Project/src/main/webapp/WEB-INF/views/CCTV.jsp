@@ -9,9 +9,29 @@
 <head>
     <meta charset="UTF-8">
     <title>CCTV 실시간 영상</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        #stream {
+            display: block;
+            margin-bottom: 20px;
+        }
+        #goToAlarmBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <h2>CCTV 실시간 스트리밍</h2>
-    <img src="http://192.168.205.129:8000/video_feed" width="640" height="480" />
+    <img id="stream" src="http://192.168.205.129:8000/video_feed" width="640" height="480" />
+
+    <button id="goToAlarmBtn" onclick="location.href='${cpath}/Alarm'">분석 기록 보기</button>
 </body>
 </html>
