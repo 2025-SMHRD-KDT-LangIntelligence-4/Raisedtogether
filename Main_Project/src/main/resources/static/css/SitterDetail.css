@@ -128,7 +128,7 @@ body {
 	padding: 5px 9px;
 	font-size: 14px;
 	font-weight: 700;
-	color: #534DFA;
+	color: #DC5454;
 }
 
 .profile-img img {
@@ -304,11 +304,11 @@ body {
 .review-category {
 	padding: 6px 10px;
 	background: white;
-	border: 1px solid #534DFA;
+	border: 1px solid #DC5454;
 	border-radius: 8px;
 	font-weight: 800;
 	font-size: 14px;
-	color: #534DFA;
+	color: #DC5454;
 }
 
 .review-info {
@@ -326,7 +326,7 @@ body {
 }
 
 .review-stars .star {
-	color: #534DFA;
+	color: #DC5454;
 	font-size: 18px;
 }
 
@@ -379,7 +379,7 @@ body {
 .select-button {
   width: 100%;
   height: 50px;
-  background-color: #534DFA; /* 보라색 */
+  background-color: #DC5454; 
   color: white;
   font-size: 16px;
   font-weight: bold;
