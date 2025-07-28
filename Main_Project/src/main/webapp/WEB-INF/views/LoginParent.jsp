@@ -20,8 +20,11 @@
 
   <div class="login-container">
     <!-- 1. 상단 로고 -->
-    <img src="/images/같이키움 로고.svg" alt="같이키움 로고" class="brand-logo">
-    <div class="brand">같이키움</div>
+    <div class="start-screen">
+      <div class="logoAlert">
+         <img class="logo-image" src="${cpath}/images/같이키움 로고.svg" alt="로고" />
+      </div>
+   </div>
 
     <br><br>
 

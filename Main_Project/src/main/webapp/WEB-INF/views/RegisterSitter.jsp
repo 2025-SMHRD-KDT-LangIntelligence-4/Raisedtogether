@@ -17,12 +17,11 @@
 
 	<div class="container">
 		<!-- 상태바 -->
-
+		
 		<div class="start-screen">
-			<div class="logoAlert">
-				<img class="logo-image" src="${cpath}/images/Arrow left.png"
-					alt="로고" />
-			</div>
+			<div class="backAlert">
+         			<a href="${cpath}/"><img class="back" src="${cpath}/images/Arrow left.png" alt="뒤로가기버튼" /></a>
+      			</div>
 		</div>
 
 		<div class="container2">
@@ -93,8 +92,11 @@
 				<textarea name="sitterIntroduction" class="textarea"
 					placeholder="아이들이나 부모님들에게 자신을 소개해주세요"></textarea>
 
-				<button class="submit-btn">가입하기</button>
 
+
+				<a href="${cpath}/">
+				<button class="submit-btn" onclick="/Mainpage">가입하기</button>
+				</a>
 
 			</div>
 

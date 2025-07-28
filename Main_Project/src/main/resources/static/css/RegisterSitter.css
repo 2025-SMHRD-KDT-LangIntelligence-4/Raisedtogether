@@ -216,8 +216,22 @@ body {
 	color: #B3B3B3;
 }
 
+.backAlert {
+   max-width: 430px;
+   padding: 20px 20px 0px 20px;
+   display: flex;
+   justify-content: space-between; /* 좌우 끝으로 배치 */
+   align-items: center; /* 수직 가운데 정렬 */
+}
+
+.back{
+   width: 28px;
+   height: 28px;
+}
+
 .submit-btn {
 	width: 100%;
+	min-width: 350px;
 	padding: 12px;
 	background: #534DFA;
 	color: white;
@@ -239,7 +253,7 @@ body {
 	color: #6e6e6e;
 	text-align: center;
 	border-top: 1px solid #ddd;
-	top: 40px;
+	top: 35px;
 }
 
 .footer-links {
