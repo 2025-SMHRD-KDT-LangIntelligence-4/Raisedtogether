@@ -20,7 +20,8 @@
 
 		<div class="start-screen">
 			<div class="logoAlert">
-				<img class="logo-image" src="${cpath}/images/Arrow left.png" alt="로고" />
+				<img class="logo-image" src="${cpath}/images/Arrow left.png"
+					alt="로고" />
 			</div>
 		</div>
 
@@ -49,38 +50,87 @@
 				class="label" for="sitterCareType">희망 돌봄 유형</label> <select
 				name="sitterCareType" class="input">
 				<option value="">선택해주세요</option>
-				<option value="유아">유아</option>
-				<option value="노인">노인</option>
-				<option value="장애인">장애인</option>
+				<option value="놀이시간">놀이시간</option>
+				<option value="학습시간">학습시간</option>
+				<option value="창의미술">창의미술</option>
+				<option value="영어">영어</option>
 			</select> <label class="label" for="sitterPhotoImg">프로필 사진 등록</label>
 			<div class="profile-upload">
-				<input type="file" name="sitterPhotoImg" />
+				<div class="profile-upload">
+					<div class="image-frame">
+						<img id="previewImage" src="" alt="미리보기" />
+					</div>
+					<input type="file" id="profileInput" accept="image/*" />
+				</div>
 			</div>
 
-			<label class="label" for="sitterIntroduction">한 줄 자기소개</label>
-			<textarea name="sitterIntroduction" class="textarea"
-				placeholder="아이들이나 부모님들에게 자신을 소개해주세요"></textarea>
+			<label class="label for "tag">태그 선택</label>
+			<div class="tag-container">
+				<input type="checkbox" id="tag1" name="tags" value="노래하기" /> <label
+					for="tag1" class="tag">노래하기</label> <input type="checkbox"
+					id="tag2" name="tags" value="그림그리기" /> <label for="tag2"
+					class="tag">그림그리기</label> <input type="checkbox" id="tag3"
+					name="tags" value="한글공부" /> <label for="tag3" class="tag">한글공부</label>
+				<input type="checkbox" id="tag4" name="tags" value="학습지 풀이" /> <label
+					for="tag4" class="tag">학습지 풀이</label> <input type="checkbox"
+					id="tag5" name="tags" value="영어돌봄" /> <label for="tag5"
+					class="tag">영어돌봄</label> <input type="checkbox" id="tag6"
+					name="tags" value="종이접기" /> <label for="tag6" class="tag">종이접기</label>
+				<input type="checkbox" id="tag7" name="tags" value="레고" /> <label
+					for="tag7" class="tag">레고</label> <input type="checkbox" id="tag8"
+					name="tags" value="책읽기" /> <label for="tag8" class="tag">책읽기</label>
+				<input type="checkbox" id="tag9" name="tags" value="독후활동" /> <label
+					for="tag9" class="tag">독후활동</label> <input type="checkbox"
+					id="tag10" name="tags" value="역할놀이" /> <label for="tag10"
+					class="tag">역할놀이</label> <input type="checkbox" id="tag11"
+					name="tags" value="구연동화" /> <label for="tag11" class="tag">구연동화</label>
+				<input type="checkbox" id="tag12" name="tags" value="만들기" /> <label
+					for="tag12" class="tag">만들기</label> <input type="checkbox"
+					id="tag13" name="tags" value="한글공부" /> <label for="tag13"
+					class="tag">한글공부</label> <label class="label"
+					for="sitterIntroduction">한 줄 자기소개</label>
 
-			<button class="submit-btn">가입하기</button>
+				<textarea name="sitterIntroduction" class="textarea"
+					placeholder="아이들이나 부모님들에게 자신을 소개해주세요"></textarea>
+
+				<button class="submit-btn">가입하기</button>
+
+
+			</div>
+
+
+			<!-- 프터 -->
+			<footer class="footer">
+				<div class="footer-content">
+					<div class="footer-links">
+						<a href="#">이용약관</a> <a href="#">개인정보 처리방침</a> <a href="#">고객센터</a>
+					</div>
+					<div class="footer-info">
+						<p>© 2025 같이키움. All rights reserved.</p>
+					</div>
+				</div>
+			</footer>
 
 
 		</div>
-		
-		
-		<!-- 프터 -->
-		<footer class="footer">
-			<div class="footer-content">
-				<div class="footer-links">
-					<a href="#">이용약관</a> <a href="#">개인정보 처리방침</a> <a href="#">고객센터</a>
-				</div>
-				<div class="footer-info">
-					<p>© 2025 같이키움. All rights reserved.</p>
-				</div>
-			</div>
-		</footer>
-		
-		
-	</div>
+		<script>
+			const input = document.getElementById("profileInput");
+			const preview = document.getElementById("previewImage");
 
+			input.addEventListener("change", function() {
+				const file = this.files[0];
+				if (file) {
+					const reader = new FileReader();
+					reader.onload = function(e) {
+						preview.src = e.target.result;
+					};
+					reader.readAsDataURL(file);
+					reader.onload = function(e) {
+						preview.src = e.target.result;
+						preview.style.display = "block"; // ← 이미지 있으면 보여줌
+					};
+				}
+			});
+		</script>
 </body>
 </html>

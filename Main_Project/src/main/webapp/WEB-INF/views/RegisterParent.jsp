@@ -20,6 +20,11 @@
 
 </head>
 <body>
+<div class="start-screen">
+			<div class="logoAlert">
+				<img class="logo-image" src="${cpath}/images/Arrow left.png" alt="로고" />
+			</div>
+		</div>
 
 	<div class="container">
 		<div class="logo">같이키움</div>
@@ -34,7 +39,7 @@
 			<div class="input-box small" style="top: 214px">
 				<input type="email" id="id" name="parentId"
 					maxlength="50" placeholder="eeemail@gacikium.com"
-					value="${parent.parentId != null ? parent.parentId : ''}">>
+					value="${parent.parentId != null ? parent.parentId : ''}">
 			</div>
 			<button onclick="parentDuplicate('id')" type="button"
 				class="check-btn" style="top: 217px">중복확인</button>
