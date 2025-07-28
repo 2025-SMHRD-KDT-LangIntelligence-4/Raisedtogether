@@ -20,8 +20,11 @@
 
   <div class="login-container">
     <!-- 1. 상단 로고 -->
-    <img src="/images/같이키움 로고.svg" alt="같이키움 로고" class="brand-logo">
-    <div class="brand">같이키움</div>
+    <div class="start-screen">
+      <div class="logoAlert">
+         <img class="logo-image" src="${cpath}/images/같이키움 로고.svg" alt="로고" />
+      </div>
+   </div>
 
     <br><br>
 
@@ -73,13 +76,6 @@
         <img src="/images/Apple Inc.svg" alt="Apple 로고" class="btn-icon">Apple로 시작하기
       </button>
     </form>
-    
-    
-    <div class="link-group">
-      <a href="#">비밀번호 찾기</a>
-      <span class="separator">ㅣ</span>
-      <a href="#">회원가입</a>
-    </div>
     
     <!-- 프터 -->
    <footer class="footer">

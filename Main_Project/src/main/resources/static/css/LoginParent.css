@@ -1,10 +1,5 @@
 @charset "UTF-8";
 
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
 
 * {
    box-sizing: border-box;
@@ -19,14 +14,56 @@ body {
 	font-family: 'Nanum Gothic', sans-serif;
 }
 
+/* 전체 화면 - 바텀네비, 상단바 고정 패딩*/
+
+
+.start-screen {
+	margin: 0;
+	padding: 0;
+	background: white;
+	overflow: hidden;
+	font-family: 'NanumSquare Neo', sans-serif;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-width: 430px;
+	justify-content: space-around;
+	align-items: center;
+	z-index: 1000; /* 항상 위에 */
+}
+
+.logoAlert {
+	max-width: 430px;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between; /* 좌우 끝으로 배치 */
+	align-items: center; /* 수직 가운데 정렬 */
+}
+
+.logo-image {
+	width: 36px;
+	height: 36px;
+}
 .login-container {
-	right: 40px;
-	width: 350px;
-	background: #fff;
-	border: 1px solid #EDEDED;
-	border-radius: 36px;
-	padding: 40px;
-	
+	height: 1292px;
+	padding: 40px 40px 40px 40px;
+	border-radius: 60px;
+	background: #F7F7FF;
+	position: relative;
+
+}
+.login-container2 {
+	width: 430px;
+	height: 932px;
+	padding-bottom: 80px; 
+	padding-top : 76px;
+	border-radius: 60px;
+	background: #ffffff;
+	position: relative;
+	padding-top: 80px;
+	left: 0px;
 }
 
 .login-header {
@@ -34,11 +71,7 @@ body {
 	align-items: center;
 }
 
-.brand-logo {
-	width: 28px;
-	height: 28px;
-	margin-right: 8px;
-}
+
 
 .login-header .brand {
 	color: #7672FF;
