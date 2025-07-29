@@ -89,9 +89,19 @@ public class MainController {
 		return "SitterDetail";
 	}
 	
+	@GetMapping("/SitterDetailUrgent")
+	public String SitterDetailUrgent() {
+		return "SitterDetailUrgent";
+	}
+	
 	@GetMapping("/Reservation")
 	public String Reservation() {
 		return "Reservation";
+	}
+	
+	@GetMapping("/ReservationDetail")
+	public String ReservationDetail() {
+		return "ReservationDetail";
 	}
 	
 	@GetMapping("/Chat")
@@ -99,13 +109,37 @@ public class MainController {
 		return "Chat";
 	}
 	
+	@GetMapping("/ChatDetail")
+	public String ChatDetail() {
+		return "ChatDetail";
+	}
+	
 	@GetMapping("/Info")
 	public String Info() {
 		return "Info";
 	}
 	
+	@GetMapping("/KidInfo")
+	public String KidInfo() {
+		return "KidInfo";
+	}
 	
+	@GetMapping("/Destination")
+	public String Destination() {
+		return "Destination";
+	}
+
+	@GetMapping("/PaymentHistory")
+	public String PaymentHistory() {
+		return "PaymentHistory";
+	}
 	
+
+	@GetMapping("/PaymentHistoryDetail")
+	public String PaymentHistoryDetail() {
+		return "PaymentHistoryDetail";
+	}
+
 	
 // 아래는 View 연습용 페이지 주소창에 /View1 쳐서 들어감 -------------------------------	
 	@GetMapping("/View1")

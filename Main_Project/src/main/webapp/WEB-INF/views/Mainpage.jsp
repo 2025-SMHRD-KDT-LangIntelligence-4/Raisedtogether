@@ -80,8 +80,8 @@
 
 			<div class="cards-wrapper">
 				<c:forEach var="i" begin="1" end="6">
-					<div class="card" onclick="location.href='${cpath}/SitterDetail'"> <img
-						src="https://placehold.co/64x64" alt="돌보미 이미지">
+					<div class="card" onclick="location.href='${cpath}/SitterDetail'"> 
+					<img src="https://placehold.co/64x64" alt="돌보미 이미지">
 						<div class="location">순천 풍덕동</div>
 						<div class="caregiver">임성윤 돌보미</div>
 						<div class="parent">세레비 부모님</div>
@@ -107,7 +107,7 @@
 	<div class="scroll-container2">
 		<div class="cards-wrapper2">
 			<c:forEach var="i" begin="1" end="2">
-				<a class="card2" href="${cpath}/SitterDetail">
+				<a class="card2" href="${cpath}/SitterDetailUrgent">
 					<div class="container2">
 						<img src="https://placehold.co/48x48" alt="돌보미 이미지">
 						<div class="name">심지은 돌보미</div>
@@ -159,9 +159,9 @@
 
 	<!-- 바텀 네비 -->
 	<div class="bottom-nav">
-		<button class="nav-item" onclick="location.href='#top'">
+		<button class="nav-item" onclick="location.href='${cpath}/Mainpage'">
 			<img src="/images/Home.svg" alt="홈 아이콘">
-			<span  class="nav-text active">홈</span >
+			<span  class="nav-text ">홈</span >
 		</button>
 		<button class="nav-item" onclick="location.href='${cpath}/Reservation'">
 			<img src="/images/Calendar.svg" alt="나의예약 아이콘">
