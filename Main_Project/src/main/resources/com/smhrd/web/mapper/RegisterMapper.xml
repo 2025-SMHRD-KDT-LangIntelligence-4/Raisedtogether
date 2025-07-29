@@ -6,37 +6,37 @@
 <mapper namespace="com.smhrd.web.mapper.RegisterMapper">
 	<!-- 부모 ID 중복확인 중복1, 없음0 -->
 	<select id="isParentIdExists" resultType="int" parameterType="String">
-		SELECT COUNT(*)
-		FROM T_PARENT
-		WHERE PARENT_ID = #{value};
+		select count(*)
+		from t_parent
+		where parent_id = #{value};
 	</select>
 	
 	<!-- 부모 NICKNAME 중복확인 중복1, 없음0 -->
 	<select id="isParentNicknameExists" resultType="int" parameterType="String">
-		SELECT COUNT(*)
-		FROM T_PARENT
-		WHERE PARENT_NICKNAME = #{value};
+		select count(*)
+		from t_parent
+		where parent_nickname = #{value};
 	</select>
 	
 	<!-- 부모 정보 DB에 입력 -->
 	<insert id="insertParent" parameterType="com.smhrd.web.entity.Parent">
-		INSERT INTO T_PARENT (PARENT_ID, PARENT_PW, PARENT_NICKNAME, PARENT_PHONE)
-		VALUES (#{parentId}, #{parentPw}, #{parentNickname}, #{parentPhone})
+		insert into t_parent (parent_id, parent_pw, parent_nickname, parent_phone)
+		values (#{parentId}, #{parentPw}, #{parentNickname}, #{parentPhone})
 	</insert>
 
 	<!-- 돌보미 ID 중복확인 중복1, 없음0 -->
 	<select id="isSitterIdExists" resultType="int" parameterType="com.smhrd.web.entity.Sitter">
-	SELECT COUNT(*)
-	FROM T_SITTER
-	WHERE SITTER_ID = #{sitterId};
+	select count(*)
+	from t_sitter
+	where sitter_id = #{sitterId};
 	</select>
 	
 
 	<!-- 돌보미 정보 DB에 입력 -->
 	<insert id="insertSitter" parameterType="com.smhrd.web.entity.Sitter">
-	INSERT INTO T_SITTER (SITTER_ID, SITTER_PW, SITTER_NAME, SITTER_PHONE,
-	SITTER_CARE_TYPE, SITTER_PHOTO_IMG, SITTER_CARE_TYPE_TAG, SITTER_INTRODUCTION)
-	VALUES (#{sitterId}, #{sitterPw}, #{sitterName}, #{sitterPhone},
+	insert into t_sitter (sitter_id, sitter_pw, sitter_name, sitter_phone,
+    sitter_care_type, sitter_photo_img, sitter_care_type_tag, sitter_introduction)
+	values (#{sitterId}, #{sitterPw}, #{sitterName}, #{sitterPhone},
 	#{sitterCareType}, #{sitterPhotoImg}, #{sitterCareTypeTag}, #{sitterIntroduction})
 	</insert>
 

@@ -6,14 +6,14 @@
 <mapper namespace="com.smhrd.web.mapper.LoginMapper">
 
 	<select id="GoLoginParent" resultType="int" parameterType="com.smhrd.web.entity.Parent">
-		SELECT COUNT(*)
-		FROM T_PARENT
-		WHERE PARENT_ID = #{parentId} AND PARENT_PW = #{parentPw};
+		select count(*)
+		from t_parent
+		where parent_id = #{parentId} and parent_pw = #{parentPw};
 	</select>
 
 	<select id="GoLoginSitter" resultType="int" parameterType="com.smhrd.web.entity.Sitter">
-		SELECT COUNT(*)
-		FROM T_SITTER
-		WHERE SITTER_ID = #{sitterId} AND SITTER_PW = #{sitterPw};
+		select count(*)
+		from t_sitter
+		where sitter_id = #{sitterId} and sitter_pw = #{sitterPw};
 	</select>
 </mapper>
