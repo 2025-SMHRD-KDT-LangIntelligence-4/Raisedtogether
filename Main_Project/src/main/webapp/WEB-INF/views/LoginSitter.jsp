@@ -39,10 +39,6 @@
 			<img class="profile-image" src="/images/같이키움 로고.svg" alt="프로필이미지" />
 		<form class="login-form">
 
-			<!-- 로그인 메시지 출력 -->
-			<c:if test="${not empty message}">
-				<div style="color: red; text-align: center; margin-bottom: 10px;">${message}</div>
-			</c:if>
 		</form>
     <h1 class="title">돌보미 로그인</h1>
     <form class="login-form" action="${cpath}/GoLoginSitter"  method="post">
