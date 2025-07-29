@@ -56,8 +56,7 @@
 	<script>
 		let previousData = "";
 
-		async
-		function fetchAlerts() {
+		async function fetchAlerts() {
 			console.log("📡 fetchAlerts() 호출됨");
 
 			try {
