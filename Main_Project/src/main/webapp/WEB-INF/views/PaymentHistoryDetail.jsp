@@ -86,16 +86,16 @@
 		</button>
 		<button class="nav-item"
 			onclick="location.href='${cpath}/Reservation'">
-			<img src="/images/Calendar-pocus.svg" alt="나의예약 아이콘"> <span
-				class="nav-text active">나의예약</span>
+			<img src="/images/Calendar.svg" alt="나의예약 아이콘"> <span
+				class="nav-text ">나의예약</span>
 		</button>
 		<button class="nav-item" onclick="location.href='${cpath}/Chat'">
 			<img src="/images/Message square.svg" alt="채팅 아이콘"> <span
 				class="nav-text">채팅</span>
 		</button>
 		<button class="nav-item" onclick="location.href='${cpath}/Info'">
-			<img src="/images/User.svg" alt="내정보 아이콘"> <span
-				class="nav-text">내정보</span>
+			<img src="/images/User-pocus.svg" alt="내정보 아이콘"> <span
+				class="nav-text active">내정보</span>
 		</button>
 	</div>
 

@@ -18,4 +18,8 @@ public String careApplyPage() {
 public String showDatePage1() {
     return "CareApply2-1"; // templates/CareApply3.html
 }
+@GetMapping("/CareApply4")
+public String firstPage() {
+    return "CareApply4"; // templates/CareApply3.html
+}
 }

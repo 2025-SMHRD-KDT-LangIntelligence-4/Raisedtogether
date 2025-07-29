@@ -15,14 +15,19 @@ public class SitterController {
 	@Autowired
 	SitterMapper mapper;
 	
-	@GetMapping("/sitterList")
+	@GetMapping("/sitterCare")
 	public String selectSitterList(Model model) {
 		List<Sitter> sitterList = mapper.selectSitterList();
         model.addAttribute("sitterList", sitterList);
         System.out.println(sitterList);
-        return "SitterDetail";
+        return "SitterCare";
 	}
 	
+//    @GetMapping("/SitterDetail/{sitter_id}")
+//    public String showSitterDetail(@PathVariable("sitter_id") String sitterId, Model model) {
+//        Sitter sitter = mapper.findSitterById(sitterId);
+//        model.addAttribute("sitter", sitter);
+//        return "SitterDetail"; // 상세보기 JSP
 	
 	
 }

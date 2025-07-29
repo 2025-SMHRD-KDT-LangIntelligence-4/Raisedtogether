@@ -1,10 +1,14 @@
 package com.smhrd.web.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.smhrd.web.entity.Sitter;
 import com.smhrd.web.mapper.MainMapper;
 
 @Controller
@@ -74,10 +78,13 @@ public class MainController {
 	public String CCTV() {
 		return "CCTV";
 	}
-	
-	@GetMapping("/SitterCare")
-	public String SitterCare() {
-		return "SitterCare";
+
+	@GetMapping("/sitterCare")
+	public String selectSitterList(Model model) {
+		List<Sitter> sitterList = mapper.selectSitterList();
+        model.addAttribute("sitterList", sitterList);
+        System.out.println(sitterList);
+        return "SitterCare";
 	}
 	
 	@GetMapping("/SitterUrgent")

@@ -86,7 +86,7 @@
 		</button>
 		<button class="nav-item"
 			onclick="location.href='${cpath}/Reservation'">
-			<img src="/images/Calendar-pocus.svg" alt="나의예약 아이콘"> <span
+			<img src="/images/Calendar.svg" alt="나의예약 아이콘"> <span
 				class="nav-text ">나의예약</span>
 		</button>
 		<button class="nav-item" onclick="location.href='${cpath}/Chat'">
