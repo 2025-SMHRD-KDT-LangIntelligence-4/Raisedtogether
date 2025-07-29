@@ -182,7 +182,7 @@
 
 <script>
   // 1~10 사이의 랜덤 숫자 생성
-  const randomHour = Math.floor(Math.random() * 24) + 1;
+  const randomHour = Math.floor(Math.random() * 12) + 1;
 
   // 텍스트 설정
   document.getElementById("timeBox").textContent = randomHour + "시간 전 작성";
