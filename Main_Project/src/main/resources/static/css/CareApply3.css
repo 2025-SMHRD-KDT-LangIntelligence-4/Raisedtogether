@@ -212,7 +212,13 @@ body {
   color: #6E6E6E;
   line-height: 18px;
 }
-
+.notice-icon{
+  width: 24px;
+  height: 25px;
+  position: absolute;
+  top: 26px;
+  left: 340px;
+}
 .next-button {
   position: absolute;
   top: 582px;

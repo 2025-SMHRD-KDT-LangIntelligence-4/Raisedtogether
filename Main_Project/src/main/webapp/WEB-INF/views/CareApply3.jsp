@@ -62,12 +62,14 @@
 		<!-- 안내사항 -->
 		<div class="notice-box">
 			<div class="notice-title">안내사항</div>
+			<img class="notice-icon"src="${cpath}/images/Icon.png" alt="주의사항" />
 			<div class="notice-divider"></div>
 			<div class="notice-content">
 				• 동생 또는 친구가 같이 수업 받기를 원할때는 추가비용이 <br> &nbsp;&nbsp;발생할 수
 				있습니다.(5000원)<br> • 돌보미 한명당 최대 3명의 아이까지 돌봐줄 수 있습니다.<br>
 				&nbsp;&nbsp;(선생님 재량에 따라 다를 수 있습니다)
 			</div>
+			
 		</div>
 
 		<!-- 다음 버튼 -->
