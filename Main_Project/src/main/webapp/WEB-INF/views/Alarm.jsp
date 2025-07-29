@@ -23,7 +23,7 @@
   
   <h2 style="font-weight: 700; padding: 20px;">실시간 알림</h2>
 
-  <div id="alertLog">알림을 불러오는 중...</div>
+  <div id="alertLog"><span style="font-size: 16px; color:#6E6E6E">알림을 불러오는 중...</span></div>
 </div>
 
 
@@ -89,5 +89,7 @@
 		setInterval(fetchAlerts, 5000);
 		fetchAlerts();
 	</script>
+	
+	
 </body>
 </html>
