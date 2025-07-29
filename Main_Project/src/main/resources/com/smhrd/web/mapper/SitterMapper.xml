@@ -10,5 +10,12 @@
         SELECT sitter_name, sitter_photo_img, sitter_care_type_tag
         FROM t_sitter
     </select>
+    
+    <select id="selectTop6Sitters" resultType="com.smhrd.web.entity.Sitter">
+	    SELECT sitter_name, sitter_photo_img, sitter_care_type_tag, sitter_rating
+	    FROM t_sitter
+	    ORDER BY sitter_rating DESC
+	    LIMIT 6
+	</select>
 
 </mapper>
