@@ -51,4 +51,6 @@ public class Sitter {
 	// 케어타입태그 추가
 	private String sitterCareTypeTag;
 	
+	// 돌보미 평점 추가
+	private int sitterRating;
 }
