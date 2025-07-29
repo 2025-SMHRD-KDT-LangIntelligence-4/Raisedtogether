@@ -9,6 +9,7 @@ import org.apache.ibatis.annotations.Select;
 import com.smhrd.web.entity.Alarm;
 import com.smhrd.web.entity.Sitter;
 
+
 @Mapper
 public interface AlarmMapper {
 

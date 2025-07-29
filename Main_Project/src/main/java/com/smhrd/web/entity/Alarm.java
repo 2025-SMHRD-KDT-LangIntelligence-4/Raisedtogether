@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Alarm {
     private int alarm_idx;
-    private int cctv_idx; // 선택적으로 사용
+    private int cctv_idx; // 선택적으로 
     private String parent_id;
     private String alarm_content;
     private String alarm_video_file;

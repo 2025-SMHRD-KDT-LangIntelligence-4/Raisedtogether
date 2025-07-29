@@ -20,7 +20,7 @@ public class AlarmController {
         this.alertService = alertService;
     }
 
-    // ✅ 알림 수신 API - parentId 포함 + 유효성 검사 포함
+    // ✅ 알림 수신 API - parentId 포함 + 유효성 검사 
     @PostMapping("/api/alerts")
     @ResponseBody
     public String receiveAlert(@RequestBody Map<String, String> payload) {
@@ -45,7 +45,7 @@ public class AlarmController {
         return response;
     }
 
-    // ✅ 뷰 페이지에서 보호자 ID로 알림 조회
+    // ✅ 뷰 페이지에서 보호자 ID로 알림 
     @GetMapping("/Alarm")
     public String alarmPage(@RequestParam("parentId") String parentId, Model model) {
         List<Alarm> alerts = alertService.getAlertsByParent(parentId);

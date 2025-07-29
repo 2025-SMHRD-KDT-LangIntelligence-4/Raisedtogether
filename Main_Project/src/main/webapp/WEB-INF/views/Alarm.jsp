@@ -56,7 +56,7 @@
 		<script>
 		  let previousData = "";
 		
-		  const parentId = "${parentId}";  // ✅ 자바 코드에서 넘어온 parentId 사용
+		  const parentId = "${parentId}";  // ✅ 자바 코드에서 넘어온 parentId 
 		
 		  async function fetchAlerts() {
 		    try {

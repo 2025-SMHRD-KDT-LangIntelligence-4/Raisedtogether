@@ -29,7 +29,6 @@
 		</div>
 
 
-
 		<div class="stream-container">
 			<img id="stream" src="http://172.30.1.93:8000/video_feed" />
 		</div>
