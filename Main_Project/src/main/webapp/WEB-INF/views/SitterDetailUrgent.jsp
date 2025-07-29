@@ -8,8 +8,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>시터 디테일</title>
-<link rel="stylesheet" href="${cpath}/css/SitterDetail.css">
+<title>긴급돌봄 시터 디테일 </title>
+<link rel="stylesheet" href="${cpath}/css/SitterDetailUrgent.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -24,6 +24,7 @@
 					src="${cpath}/images/알림버튼.svg" alt="알림버튼" /> </a>
 			</div>
 		</div>
+
 
 		<div class="caregiver-profile">
 			<div class="info-section">
@@ -40,7 +41,7 @@
 				<img src="https://placehold.co/150x150" alt="프로필 이미지">
 			</div>
 		</div>
-	
+
 
 
 
@@ -167,13 +168,12 @@
 		</div>
 
 
-		<button onclick="location.href='${cpath}/CareApply'"
-			class="select-button">돌봄 신청하기</button>
+<button onclick="location.href='${cpath}/CareApply'"  class="select-button">돌봄 신청하기</button>
 
 
 	</div>
 
-</div>
+	</div>
 
 
 </body>
