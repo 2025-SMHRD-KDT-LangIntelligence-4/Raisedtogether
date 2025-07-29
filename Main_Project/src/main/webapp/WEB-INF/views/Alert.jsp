@@ -8,9 +8,51 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="${cpath}/css/Mainpage.css">
+<title>알림 확인하는 페이지</title>
 </head>
 <body>
-	<h1>알림 확인하는 페이지</h1>
+	<div class="content-container">
+
+
+	<div class="start-screen" id=".top">
+		<div class="logoAlert">
+			<img class="logo-image" src="${cpath}/images/같이키움 로고.svg" alt="로고" />
+			<a href="${cpath}/Alert"><img class="alert-image" src="${cpath}/images/알림버튼.svg"
+				alt="로고" /> </a>
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	</div>
+	
+	
+		<!-- 바텀 네비 -->
+	<div class="bottom-nav">
+		<button class="nav-item" onclick="location.href='${cpath}/Mainpage'">
+			<img src="/images/Home-nocolor.svg" alt="홈 아이콘">
+			<span  class="nav-text ">홈</span >
+		</button>
+		<button class="nav-item" onclick="location.href='${cpath}/Reservation'">
+			<img src="/images/Calendar.svg" alt="나의예약 아이콘">
+			<span  class="nav-text">나의예약</span >
+		</button>
+		<button class="nav-item" onclick="location.href='${cpath}/Chat'">
+			<img src="/images/Message square.svg" alt="채팅 아이콘">
+			<span  class="nav-text">채팅</span >
+		</button>
+		<button class="nav-item" onclick="location.href='${cpath}/Info'">
+			<img src="/images/User.svg" alt="내정보 아이콘">
+			<span  class="nav-text">내정보</span >
+		</button>
+	</div>
+	
+	
 </body>
 </html>

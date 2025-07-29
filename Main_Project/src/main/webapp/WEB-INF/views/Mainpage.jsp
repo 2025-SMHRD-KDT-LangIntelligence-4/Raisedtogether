@@ -107,7 +107,7 @@
 	<div class="scroll-container2">
 		<div class="cards-wrapper2">
 			<c:forEach var="i" begin="1" end="2">
-				<a class="card2" href="${cpath}/SitterDetailUrgent">
+				<div class="card2" onclick = "location.href='${cpath}/SitterDetailUrgent'">
 					<div class="container2">
 						<img src="https://placehold.co/48x48" alt="돌보미 이미지">
 						<div class="name">심지은 돌보미</div>
@@ -134,7 +134,7 @@
 								class="tag">책읽기</span> <span class="tag">역할놀이</span>
 						</div>
 					</div>
-				</a>
+				</div>
 			</c:forEach>
 		</div>
 	</div>
@@ -161,7 +161,7 @@
 	<div class="bottom-nav">
 		<button class="nav-item" onclick="location.href='${cpath}/Mainpage'">
 			<img src="/images/Home.svg" alt="홈 아이콘">
-			<span  class="nav-text ">홈</span >
+			<span  class="nav-text  active">홈</span >
 		</button>
 		<button class="nav-item" onclick="location.href='${cpath}/Reservation'">
 			<img src="/images/Calendar.svg" alt="나의예약 아이콘">

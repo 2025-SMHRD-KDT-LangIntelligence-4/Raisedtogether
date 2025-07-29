@@ -16,7 +16,7 @@
 
 	<div class="content-container">
 
-		<div class="start-screen" id=".top">
+		<div class="start-screen" >
 			<div class="backAlert">
 				<a href="${cpath}/Mainpage"> <img class="back"
 					src="${cpath}/images/Arrow left.png" alt="뒤로가기버튼" /></a> <img
@@ -161,9 +161,9 @@
 
 	<!-- 바텀 네비 -->
 	<div class="bottom-nav">
-		<button class="nav-item" onclick="location.href='#top'">
-			<img src="/images/Home.svg" alt="홈 아이콘"> <span
-				class="nav-text active">홈</span>
+		<button class="nav-item" onclick="location.href='${cpath}/Mainpage'">
+			<img src="/images/Home-nocolor.svg" alt="홈 아이콘"> <span
+				class="nav-text ">홈</span>
 		</button>
 		<button class="nav-item"
 			onclick="location.href='${cpath}/Reservation'">
