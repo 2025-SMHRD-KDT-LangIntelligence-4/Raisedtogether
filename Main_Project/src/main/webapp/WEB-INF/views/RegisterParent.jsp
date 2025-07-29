@@ -106,15 +106,6 @@
 					<p>© 2025 같이키움. All rights reserved.</p>
 				</div>
 				</div>
-		<form action="${cpath }/insertParent" method="post">
-			<!-- 이메일 -->
-			<div class="label" style="top: 191px">이메일</div>
-			<div class="input-box small" style="top: 214px">
-				<input type="email" id="id" name="parentId"
-					maxlength="50" placeholder="eeemail@gacikium.com"
-					value="${parent.parentId != null ? parent.parentId : ''}">
-			</div>
-			</form>
 		</footer>
 	</div>
 	

@@ -20,7 +20,7 @@ body {
 	background:#ffffff;
 	overflow: hidden;
 	font-family: 'NanumSquare Neo', sans-serif;
-	padding: 40px 0px 20px 20px;
+	padding: 20px 20px 0px 20px;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -33,7 +33,6 @@ body {
 
 .logoAlert {
    max-width: 430px;
-   padding: 20px ;
    display: flex;
    justify-content: space-between; /* 좌우 끝으로 배치 */
    align-items: center; /* 수직 가운데 정렬 */
