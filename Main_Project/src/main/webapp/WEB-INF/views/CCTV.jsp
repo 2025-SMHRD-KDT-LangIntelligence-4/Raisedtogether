@@ -31,7 +31,7 @@
 
 
 		<div class="stream-container">
-			<img id="stream" src="http://192.168.205.129:8000/video_feed" />
+			<img id="stream" src="http://192.168.202.114:8000/video_feed" />
 		</div>
 
 <div class="alarm-btn">
