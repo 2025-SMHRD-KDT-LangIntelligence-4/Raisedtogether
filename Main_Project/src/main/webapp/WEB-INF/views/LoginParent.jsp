@@ -36,7 +36,7 @@
     <br><br>
 
     <h1 class="title">부모 로그인</h1>
-    <form class="login-form" action="#"  method="post">
+    <form class="login-form" action="${cpath}/Mainpage"  method="post">
 
       <div class="form-group">
         <label for="email">이메일</label>

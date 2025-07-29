@@ -3,6 +3,7 @@ package com.smhrd.web.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.smhrd.web.mapper.MainMapper;
 
@@ -20,6 +21,8 @@ public class MainController {
 	public String Mainpage() {
 		return "Mainpage";
 	}
+	
+	// 우빈 : PostMapping("/Mainpage") 로그인 컨트롤러에 만듦
 	
 	@GetMapping("/Alert")
 	public String Alert() {
