@@ -50,6 +50,7 @@
         <img class="icon" src="${cpath}/images/Trash 2.svg" alt="지우기" />
     </button>
 
+
 		<!-- 아이 등록 버튼 -->
 		<a href="${cpath}/CareApply2-1">
 		<div class="child-register">	
