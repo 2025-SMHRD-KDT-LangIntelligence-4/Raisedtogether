@@ -23,7 +23,7 @@ public class RegisterController {
 	RegisterMapper mapper;
 	
 	// 아이디, 닉네임 중복 확인
-	@PostMapping("/parentDuplicate") //뷰에서 jquery불러오고 js와 연결해야함
+	@PostMapping("/parentDuplicate") //뷰에서 jquery 불러오고 js와 연결해야함
 	@ResponseBody
 	public String parentDuplicate(@RequestBody Map<String, String> body) {
 		String type = body.get("type");

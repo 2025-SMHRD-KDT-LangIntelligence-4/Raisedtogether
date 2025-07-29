@@ -45,7 +45,8 @@
 			</c:if>
 		</form>
     <h1 class="title">부모 로그인</h1>
-    <form class="login-form" action="#"  method="post">
+    <form class="login-form" action="${cpath}/GoLoginParent"  method="post">
+
       <div class="form-group">
         <label for="email">이메일</label>
         <input type="email" id="id" name="parentId" placeholder="eeemail@gacikium.com" required>
