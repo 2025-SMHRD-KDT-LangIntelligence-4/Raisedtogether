@@ -7,12 +7,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class Alarm {
-	private int AlarmIdx;
-	private String AlarmAlarmContent;
-	private String AlarmVideoFile;
-	private LocalDateTime AlarmCreatedAt;
-	private String AlarmIsReceived;
+    private int alarm_idx;
+    private int cctv_idx; // 선택적으로 사용
+    private String parent_id;
+    private String alarm_content;
+    private String alarm_video_file;
+    private LocalDateTime alarm_created_at;
+    private String alarm_is_received;
 }

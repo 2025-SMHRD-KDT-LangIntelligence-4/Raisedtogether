@@ -53,43 +53,42 @@
 
 
 
-	<script>
-		let previousData = "";
-
-		async function fetchAlerts() {
-			console.log("📡 fetchAlerts() 호출됨");
-
-			try {
-				const res = await
-				fetch("${cpath}/api/alerts/latest");
-				console.log("🌐 fetch 결과:", res);
-				if (!res.ok) {
-					console.error("❌ 응답 실패", res.statusText);
-					return;
-				}
-
-				const data = await
-				res.json();
-				console.log("📦 받은 데이터:", data);
-
-				const alertLog = document.getElementById("alertLog");
-				const newText = data.messages.join("\n");
-
-				if (newText !== previousData) {
-					alertLog.textContent = newText;
-					alertLog.scrollTop = alertLog.scrollHeight;
-					previousData = newText;
-				}
-
-			} catch (err) {
-				console.error("❌ fetchAlerts 실패:", err);
-			}
-		}
-
-		setInterval(fetchAlerts, 5000);
-		fetchAlerts();
+		<script>
+		  let previousData = "";
+		
+		  const parentId = "${parentId}";  // ✅ 자바 코드에서 넘어온 parentId 사용
+		
+		  async function fetchAlerts() {
+		    try {
+		      const res = await fetch(`${cpath}/api/alerts/${parentId}`); // ✅ parentId별로 요청
+		      if (!res.ok) {
+		        console.error("❌ 응답 실패", res.statusText);
+		        return;
+		      }
+		
+		      const data = await res.json();
+		
+		      const alertLog = document.getElementById("alertLog");
+		
+		      let newText = "";
+		      data.messages.forEach(msg => {
+		        newText += `🔔 ${msg.alarmAlarmContent} - ${msg.alarmCreatedAt}\n`;
+		      });
+		
+		      if (newText !== previousData) {
+		        alertLog.textContent = newText;
+		        alertLog.scrollTop = alertLog.scrollHeight;
+		        previousData = newText;
+		      }
+		    } catch (err) {
+		      console.error("❌ fetchAlerts 실패:", err);
+		    }
+		  }
+		
+		  setInterval(fetchAlerts, 5000);
+		  fetchAlerts();
 	</script>
-	
+		
 	
 </body>
 </html>
