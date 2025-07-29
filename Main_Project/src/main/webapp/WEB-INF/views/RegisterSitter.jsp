@@ -118,9 +118,10 @@
 				<label for="tag12" class="tag">만들기</label>
 			</div>
 			
-				<label class="label"
-					for="sitterIntroduction">한 줄 자기소개</label>
-				<textarea name="sitterIntroduction" placeholder="소개 입력"><c:out value="${sitter.sitterIntroduction}" /></textarea>
+			<!-- 우빈 : 한줄 자기소개 수정 금지 보기편하게 줄바꿈도 안돼요 -->
+				<label class="label" for="sitterIntroduction">한 줄 자기소개</label>
+				<textarea name="sitterIntroduction" class="textarea" placeholder="아이들이나 부모님들에게 자신을 소개해주세요"><c:out value="${sitter.sitterIntroduction}" /></textarea>
+				
 
 
 			<button type="submit" class="submit-btn">가입하기</button>
