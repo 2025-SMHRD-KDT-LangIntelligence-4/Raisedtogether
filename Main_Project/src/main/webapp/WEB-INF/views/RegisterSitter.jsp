@@ -48,7 +48,8 @@
 			<label class="label" for="sitterId">이메일</label>
 			<div class="email-row">
 				<input type="email" name="sitterId" id="id" class="input"
-					placeholder="eeemail@gacikium.com" />
+					placeholder="eeemail@gacikium.com"
+					value="${sitter != null ? sitter.sitterId : ''}" />
 				<button onclick="sitterDuplicate('id')" type="button" class="check-btn">중복확인</button>
 			</div>
 
@@ -64,10 +65,12 @@
 			<div id="pwMsg" style="position:absolute; top: 420px; left: 130px; font-size: 12px;"></div>
 
 			<label class="label" for="sitterName">이름</label> <input type="text"
-				name="sitterName" class="input" placeholder="이름을 입력해주세요" />
+				name="sitterName" class="input" placeholder="이름을 입력해주세요"
+				value="${sitter != null ? sitter.sitterName : ''}" />
 			
 			<label class="label" for="sitterPhone">전화번호</label> <input type="tel"
-				name="sitterPhone" class="input" maxlength="11" placeholder="01012345678" />
+				name="sitterPhone" class="input" maxlength="11" placeholder="01012345678"
+				value="${sitter != null ? sitter.sitterPhone : ''}" />
 				
 			<label class="label" for="sitterCareType">희망 돌봄 유형</label>
 				<select name="sitterCareType" class="input">
@@ -117,8 +120,8 @@
 			
 				<label class="label"
 					for="sitterIntroduction">한 줄 자기소개</label>
-				<textarea name="sitterIntroduction" class="textarea"
-					placeholder="아이들이나 부모님들에게 자신을 소개해주세요"></textarea>
+				<textarea name="sitterIntroduction" placeholder="소개 입력"><c:out value="${sitter.sitterIntroduction}" /></textarea>
+
 
 			<button type="submit" class="submit-btn">가입하기</button>
 		</form>
