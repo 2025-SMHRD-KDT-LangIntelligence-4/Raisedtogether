@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <c:set var="cpath" value="${pageContext.request.contextPath}" />
@@ -8,88 +8,92 @@
 <html lang="ko">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>부모 로그인 - 같이키움</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="/css/LoginParent.css">
+<meta charset="UTF-8">
+<title>부모 로그인 - 같이키움</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="/css/LoginParent.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body class="page">
 
-  <div class="login-container">
-    <!-- 1. 상단 로고 -->
-    <div class="start-screen">
-      <div class="logoAlert">
-         <img class="logo-image" src="${cpath}/images/같이키움 로고.svg" alt="로고" />
-      </div>
-   </div>
+	<div class="login-container">
+		<!-- 1. 상단 로고 -->
+		<div class="start-screen">
+			<div class="backAlert">
+         			<a href="${cpath}/"><img class="back" src="${cpath}/images/Arrow left.png" alt="뒤로가기버튼" /></a>
+      			</div>
+		</div>
 
-    <br><br>
+		<br>
+		<br>
+		<div class="logo">같이키움</div>
+			<img class="profile-image" src="/images/같이키움 로고.svg" alt="프로필이미지" />
+		<h1 class="title">부모 로그인</h1>
+		<form class="login-form">
 
-    <h1 class="title">부모 로그인</h1>
-    <form class="login-form">
-
-    <!-- 로그인 메시지 출력 -->
-    <c:if test="${not empty message}">
-      <div style="color: red; text-align: center; margin-bottom: 10px;">${message}</div>
-    </c:if>
-
-
-      <div class="form-group">
-        <label for="email">이메일</label>
-        <input type="email" id="email" name="parentId" placeholder="eeemail@gacikium.com" required>
-      </div>
-
-      <div class="form-group">
-        <label for="password">비밀번호</label>
-        <input type="password" id="password" name="parentPw" placeholder="영문, 숫자, 특수문자를 사용한 8~20자" required>
-      </div>
-
-      <div class="options">
-        <label class="checkbox">
-          <input type="checkbox" id="remember">
-          아이디 저장
-        </label>
-      </div>
-
-      <button type="submit" class="btn btn-primary">로그인</button>
-
-      <div class="link-group">
-        <a href="#">비밀번호 찾기</a>
-        <span class="separator">ㅣ</span>
-        <a href="#">회원가입</a>
-      </div>
+			<!-- 로그인 메시지 출력 -->
+			<c:if test="${not empty message}">
+				<div style="color: red; text-align: center; margin-bottom: 10px;">${message}</div>
+			</c:if>
 
 
-      <div class="divider"></div>
+			<div class="form-group">
+				<label for="email">이메일</label> <input type="email" id="email"
+					name="parentId" placeholder="eeemail@gacikium.com" required>
+			</div>
 
-      <!-- 소셜 로그인 버튼 -->
-      <button type="button" class="btn btn-social btn-kakao">
-        <img src="/images/Kakao Talk.svg" alt="카카오 로고" class="btn-icon">카카오로 시작하기
-      </button>
-      <button type="button" class="btn btn-social btn-naver">
-        <img src="/images/Nintendo.svg" alt="네이버 로고" class="btn-icon">네이버로 시작하기
-      </button>
-      <button type="button" class="btn btn-social btn-apple">
-        <img src="/images/Apple Inc.svg" alt="Apple 로고" class="btn-icon">Apple로 시작하기
-      </button>
-    </form>
-    
-    <!-- 프터 -->
-   <footer class="footer">
-      <div class="footer-content">
-         <div class="footer-links">
-            <a href="#">이용약관</a> <a href="#">개인정보 처리방침</a> <a href="#">고객센터</a>
-         </div>
-         <div class="footer-info">
-            <p>© 2025 같이키움. All rights reserved.</p>
-         </div>
-      </div>
-   </footer>
-    
-  </div>
+			<div class="form-group">
+				<label for="password">비밀번호</label> <input type="password"
+					id="password" name="parentPw" placeholder="영문, 숫자, 특수문자를 사용한 8~20자"
+					required>
+			</div>
+
+			<div class="options">
+				<label class="checkbox"> <input type="checkbox"
+					id="remember"> 아이디 저장
+				</label>
+			</div>
+
+			<button type="submit" class="btn btn-primary">로그인</button>
+
+			<div class="link-group">
+				<a href="#">비밀번호 찾기</a> <span class="separator">ㅣ</span> <a
+					href="${cpath}/RegisterParent">부모 회원가입</a>
+			</div>
+
+
+			<div class="divider"></div>
+
+			<!-- 소셜 로그인 버튼 -->
+			<button type="button" class="btn btn-social btn-kakao">
+				<img src="/images/Kakao Talk.svg" alt="카카오 로고" class="btn-icon">카카오로
+				시작하기
+			</button>
+			<button type="button" class="btn btn-social btn-naver">
+				<img src="/images/Nintendo.svg" alt="네이버 로고" class="btn-icon">네이버로
+				시작하기
+			</button>
+			<button type="button" class="btn btn-social btn-apple">
+				<img src="/images/Apple Inc.svg" alt="Apple 로고" class="btn-icon">Apple로
+				시작하기
+			</button>
+		</form>
+
+		<!-- 프터 -->
+		<footer class="footer">
+			<div class="footer-content">
+				<div class="footer-links">
+					<a href="#">이용약관</a> <a href="#">개인정보 처리방침</a> <a href="#">고객센터</a>
+				</div>
+				<div class="footer-info">
+					<p>© 2025 같이키움. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+
+	</div>
 
 </body>
 

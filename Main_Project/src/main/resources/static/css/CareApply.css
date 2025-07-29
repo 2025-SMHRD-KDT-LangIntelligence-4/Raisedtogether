@@ -1,9 +1,53 @@
 @charset "UTF-8";
 
+* {
+   box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    font-family: 'NanumSquare Neo', sans-serif;
-    background: white;
+	margin: 0;
+	padding: 0px; font-family : 'NanumSquare Neo', sans-serif;
+	background: #F7F7FF;
+	font-family: 'NanumSquare Neo', sans-serif;
+	width: 430px;
+	height: 947px;
+	border-radius: 60px;
+	position: relative;
+}
+
+.start-screen {
+	margin: 0;
+	background:#ffffff;
+	overflow: hidden;
+	font-family: 'NanumSquare Neo', sans-serif;
+	padding: 40px 0px 20px 20px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-width: 430px;
+	justify-content: space-around;
+	align-items: center;
+	z-index: 1000; /* 항상 위에 */
+}
+
+.logoAlert {
+   max-width: 430px;
+   padding: 20px ;
+   display: flex;
+   justify-content: space-between; /* 좌우 끝으로 배치 */
+   align-items: center; /* 수직 가운데 정렬 */
+}
+
+.logo-image {
+   width: 36px;
+   height: 36px;
+}
+
+.alert-image {
+   width: 28px;
+   height: 28px;
+   cursor: pointer;
 }
 
 .container {
@@ -14,35 +58,9 @@ body {
     background: white;
     overflow: hidden;
 }
-/* 상태바 아이콘 */
-.icon {
-    width: 28px;
-    height: 28px;
-    position: absolute;
-    overflow: hidden;
-}
-.top-right {
-    top: 68px;
-    left: 382px;
-}
-.top-left {
-    top: 68px;
-    left: 20px;
-}
-.icon-outer {
-    width: 21px;
-    height: 23.33px;
-    position: absolute;
-    left: 3.5px;
-    top: 2.33px;
-}
-.icon-inner-small {
-    width: 16.33px;
-    height: 16.33px;
-    position: absolute;
-    left: 5.83px;
-    top: 5.83px;
-}
+
+
+
 
 /* 제목 */
 .title {
@@ -75,7 +93,7 @@ body {
     color: #6E6E6E;
 }
 
-.checkbox {
+.next {
     position: absolute;
     top: 26px;
     left: 30px;
@@ -84,7 +102,7 @@ body {
     overflow: hidden;
 }
 
-.checkbox-inner {
+.next-inner {
     width: 16.33px;
     height: 16.33px;
     position: absolute;

@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
 body {
-  margin: 0;
-  font-family: 'NanumSquare Neo', sans-serif;
-  background-color: #F7F7FF;
+	margin: 0;
+	padding: 0px; font-family : 'NanumSquare Neo', sans-serif;
+	background: #ffffff;
+	font-family: 'NanumSquare Neo', sans-serif;
 }
 .start-screen {
 	margin: 0;
-	padding: 0;
 	background: white;
 	overflow: hidden;
 	font-family: 'NanumSquare Neo', sans-serif;
@@ -24,7 +24,7 @@ body {
 
 .logoAlert {
 	max-width: 430px;
-	padding: 20px;
+	padding: 20px 20px 0px 20px;
 	display: flex;
 	justify-content: space-between; /* 좌우 끝으로 배치 */
 	align-items: center; /* 수직 가운데 정렬 */
@@ -36,18 +36,18 @@ body {
 }
 
 .container {
-  width: 430px;
-  height: 695px;
-  position: relative;
-  background: #FFFFFF;
-  border-radius: 60px;
-  margin: 0 auto;
-  position: relative;
-  top: 116px;
+	width: 430px;
+	height: 932px;
+	padding-bottom: 80px; 
+	padding-top : 76px;
+	border-radius: 60px;
+	background: #ffffff;
+	position: relative;
+	padding-top: 80px;
 }
 .container2 {
-	height: 932px;
-	padding: 0;
+	height: 695px;
+	padding: 40px 40px 40px 40px;
 	border-radius: 60px;
 	background: #F7F7FF;
 	position: relative;
@@ -84,6 +84,7 @@ body {
   left: 40px;
   font-size: 12px;
   font-weight: 700;
+  margin-bottom: 14px;
   color: #6E6E6E;
   display: flex;
   flex-direction: column;
@@ -104,6 +105,7 @@ body {
   color: #B3B3B3;
   font-size: 12px;
   font-weight: 400;
+  
 }
 
 .input-box.small {
@@ -167,4 +169,39 @@ button {
   cursor: pointer;
   border: none;
   font-family: 'NanumSquare Neo', sans-serif;
+}
+/* 프터 */
+.footer {
+	width: 100%;
+	position: relative;
+	background-color: #ffffff;
+	padding: 20px 16px;
+	font-size: 12px;
+	color: #6e6e6e;
+	text-align: center;
+	border-top: 1px solid #ddd;
+	top: 35px;
+}
+
+.footer-links {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 12px;
+	margin-bottom: 8px;
+	flex-wrap: wrap;
+}
+
+.footer-links a {
+	color: #6e6e6e;
+	text-decoration: none;
+}
+
+.footer-links a:hover {
+	text-decoration: underline;
+}
+
+.footer-info p {
+	margin: 0;
+	line-height: 1.5;
 }

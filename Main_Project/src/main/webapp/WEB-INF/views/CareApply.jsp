@@ -10,37 +10,31 @@
     <meta charset="UTF-8">
     <title>아이 선택</title>
     <link rel="stylesheet" href="/css/CareApply.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <div class="container">
     <!-- 상태바 -->
-    <div class="status-bar">
-        <div class="status-top">
-            
-            <div class="status-center"></div>
-            
-        </div>
-        <div class="icon top-right">
-            <div class="icon-outer"></div>
-            <img class="icon-outer" src="/images/알림버튼.svg" alt="알림버튼"/>
-        </div>
-        <div class="icon top-left">
-            <div class="icon-inner-small"></div>
-            <img class="icon-inner-small" src="/images/Arrow left.png" alt="알림버튼"/>
-        </div>
-    </div>
+    <div class="start-screen">
+      <div class="logoAlert">
+         <a href="${cpath}/Mainpage"><img class="back" src="${cpath}/images/Arrow left.png" alt="뒤로가기버튼" /></a>
+         <a href="${cpath}/Alert"><img class="alert-image" src="${cpath}/images/알림버튼.svg" alt="로고" /> </a>
+      </div>
+   </div>
 
     <!-- 제목 -->
     <div class="title">돌보미와 만날 아이를 선택하세요</div>
 
     <!-- 아이 등록 박스 -->
+    <a href="${cpath}/CareApply2">
     <div class="register-box">
         <div class="register-text">아이 등록</div>
-        <div class="checkbox">
-            <div class="checkbox-inner"></div>
-        </div>
+        <img class="next" src="${cpath}/images/Plus.svg" alt="뒤로가기버튼" />
     </div>
-
+	</a>
+	
     <!-- 안내사항 -->
     <div class="info-box">
         <div class="info-title">안내사항</div>
