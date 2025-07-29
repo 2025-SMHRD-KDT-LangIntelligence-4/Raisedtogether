@@ -79,13 +79,13 @@
 			</div>
 
 			<div class="cards-wrapper">
-				<c:forEach var="i" begin="1" end="6">
+				<c:forEach var="i" begin="1" end="6"  >
 					<div class="card" onclick="location.href='${cpath}/SitterDetail'"> 
 					<img src="${cpath}/imageSitter/sitter1.jpg" alt="돌보미 이미지">
 						<div class="location">${sitter_region}</div>
 						<div class="caregiver">${sitter_name}</div>
 						<div class="parent"></div>
-						<div class="time">11시간 전 작성</div>
+						<div class="time" id="timeBox"></div>
 						<div class="content">제가 부탁드린 점 반영하셔서 아이 돌봄 해주셨어요~ 다양한 놀이
 							패턴으로 풍부하게 놀아주셔서 애들이 심심할 틈이 없었어요!! 늘 최선을 ...</div>
 							
@@ -177,6 +177,16 @@
 			<span  class="nav-text">내정보</span >
 		</button>
 	</div>
+
+
+
+<script>
+  // 1~10 사이의 랜덤 숫자 생성
+  const randomHour = Math.floor(Math.random() * 24) + 1;
+
+  // 텍스트 설정
+  document.getElementById("timeBox").textContent = randomHour + "시간 전 작성";
+</script>
 
 
 </body>
