@@ -4,6 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <c:set var="cpath" value="${pageContext.request.contextPath}" />
+
 <!-- 우빈 : 현재 줄 기준, 위 항목 복사해서 view 페이지에 기본으로 넣을 것 -->
 <!DOCTYPE html>
 <html lang="ko">
@@ -119,12 +120,6 @@
 				<textarea name="sitterIntroduction" class="textarea"
 					placeholder="아이들이나 부모님들에게 자신을 소개해주세요"></textarea>
 
-			<!--
-				<a href="${cpath}/">
-				<button type="submit" class="submit-btn" onclick="/Mainpage">가입하기</button>
-				</a>
-			-->
-			
 			<button type="submit" class="submit-btn">가입하기</button>
 		</form>
 		
@@ -166,6 +161,5 @@
 				}
 			});
 		</script>
-		</div>
 </body>
 </html>

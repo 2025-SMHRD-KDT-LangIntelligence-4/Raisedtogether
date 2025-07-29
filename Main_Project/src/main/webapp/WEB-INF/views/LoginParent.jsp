@@ -44,7 +44,7 @@
 			<c:if test="${not empty message}">
 				<div style="color: red; text-align: center; margin-bottom: 10px;">${message}</div>
 			</c:if>
-
+		</form>
     <h1 class="title">부모 로그인</h1>
     <form class="login-form" action="#"  method="post">
 			<div class="form-group">

@@ -106,6 +106,7 @@
 				<div class="footer-info">
 					<p>© 2025 같이키움. All rights reserved.</p>
 				</div>
+				</div>
 		<form action="${cpath }/insertParent" method="post">
 			<!-- 이메일 -->
 			<div class="label" style="top: 191px">이메일</div>
