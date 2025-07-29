@@ -81,7 +81,7 @@
 			<div class="cards-wrapper">
 				<c:forEach var="i" begin="1" end="6">
 					<div class="card" onclick="location.href='${cpath}/SitterDetail'"> 
-					<img src="https://placehold.co/64x64" alt="돌보미 이미지">
+					<img src="${cpath}/images/sitter1.jpg" alt="돌보미 이미지">
 						<div class="location">순천 풍덕동</div>
 						<div class="caregiver">임성윤 돌보미</div>
 						<div class="parent">세레비 부모님</div>
