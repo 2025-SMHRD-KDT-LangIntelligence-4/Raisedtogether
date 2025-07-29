@@ -35,7 +35,7 @@
     <br><br>
 
     <h1 class="title">돌보미 로그인</h1>
-    <form class="login-form" action="#"  method="post">
+    <form class="login-form" action="${cpath}/GoLoginSitter"  method="post">
 
       <div class="form-group">
         <label for="email">이메일</label>

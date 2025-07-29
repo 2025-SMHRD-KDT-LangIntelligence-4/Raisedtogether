@@ -5,7 +5,15 @@
   
 <mapper namespace="com.smhrd.web.mapper.LoginMapper">
 
-	<select id="MainpageWithLogin">
-		
+	<select id="GoLoginParent" resultType="int" parameterType="com.smhrd.web.entity.Parent">
+		SELECT COUNT(*)
+		FROM T_PARENT
+		WHERE PARENT_ID = #{parentId} AND PARENT_PW = #{parentPw};
+	</select>
+
+	<select id="GoLoginSitter" resultType="int" parameterType="com.smhrd.web.entity.Sitter">
+		SELECT COUNT(*)
+		FROM T_SITTER
+		WHERE SITTER_ID = #{sitterId} AND SITTER_PW = #{sitterPw};
 	</select>
 </mapper>
