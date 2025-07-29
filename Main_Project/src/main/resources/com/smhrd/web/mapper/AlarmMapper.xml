@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.smhrd.web.mapper.AlarmMapper">
+
+  <!-- 명시적 매핑 -->
+  <resultMap id="alarmResultMap" type="com.smhrd.web.entity.Alarm">
+    <id property="alarmIdx" column="alarm_idx" />
+    <result property="cctvIdx" column="cctv_idx" />
+    <result property="parentId" column="parent_id" />
+    <result property="alarmContent" column="alarm_content" />
+    <result property="alarmVideoFile" column="alarm_video_file" />
+    <result property="alarmCreatedAt" column="alarm_created_at" />
+    <result property="alarmIsReceived" column="alarm_is_received" />
+  </resultMap>
+
+  <!-- 알림 추가 -->
+  <insert id="insertAlarm" parameterType="com.smhrd.web.entity.Alarm">
+    INSERT INTO t_alarm (
+      cctv_idx, parent_id, alarm_content, alarm_video_file, alarm_created_at, alarm_is_received
+    ) VALUES (
+      #{cctvIdx}, #{parentId}, #{alarmContent}, #{alarmVideoFile}, #{alarmCreatedAt}, #{alarmIsReceived}
+    )
+  </insert>
+
+  <!-- 보호자별 알림 조회 -->
+  <select id="selectByParentId" resultMap="alarmResultMap">
+    SELECT *
+    FROM t_alarm
+    WHERE parent_id = #{parentId}
+    ORDER BY alarm_created_at DESC
+  </select>
+
+</mapper>

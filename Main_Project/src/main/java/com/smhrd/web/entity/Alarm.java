@@ -1,7 +1,6 @@
 package com.smhrd.web.entity;
 
-import java.time.LocalDateTime;
-
+import java.sql.Timestamp;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,11 +9,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Alarm {
-    private int alarm_idx;
-    private int cctv_idx; // 선택적으로 
-    private String parent_id;
-    private String alarm_content;
-    private String alarm_video_file;
-    private LocalDateTime alarm_created_at;
-    private String alarm_is_received;
+    private int alarmIdx;
+    private int cctvIdx;
+    private String parentId;
+    private String alarmContent;
+    private String alarmVideoFile;
+    private Timestamp alarmCreatedAt;
+    private boolean alarmIsReceived;
 }
