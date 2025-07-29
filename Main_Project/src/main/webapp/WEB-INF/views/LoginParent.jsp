@@ -16,6 +16,13 @@
   <link rel="stylesheet" href="/css/LoginParent.css">
 </head>
 
+<!-- 사용자에게 메시지 띄우기 (회원가입, 로그인 등) -->
+<c:if test="${not empty message}">
+  <script>
+    alert("${message}");
+  </script>
+</c:if>
+
 <body class="page">
 
   <div class="login-container">
@@ -30,12 +37,6 @@
 
     <h1 class="title">부모 로그인</h1>
     <form class="login-form" action="#"  method="post">
-
-    <!-- 로그인 메시지 출력 -->
-    <c:if test="${not empty message}">
-      <div style="color: red; text-align: center; margin-bottom: 10px;">${message}</div>
-    </c:if>
-
 
       <div class="form-group">
         <label for="email">이메일</label>
