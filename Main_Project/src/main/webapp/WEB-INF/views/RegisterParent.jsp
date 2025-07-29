@@ -36,7 +36,6 @@
 			<img class="profile-image" src="/images/같이키움 로고.svg" alt="프로필이미지" />
 
 			<div class="title">부모 회원가입</div>
-=======
 <!-- 사용자에게 메시지 띄우기 (회원가입, 로그인 등) -->
 <c:if test="${not empty message}">
   <script>

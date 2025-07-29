@@ -37,7 +37,6 @@
 		<br>
 		<div class="logo">같이키움</div>
 			<img class="profile-image" src="/images/같이키움 로고.svg" alt="프로필이미지" />
-		<h1 class="title">부모 로그인</h1>
 		<form class="login-form">
 
 			<!-- 로그인 메시지 출력 -->
@@ -47,19 +46,10 @@
 		</form>
     <h1 class="title">부모 로그인</h1>
     <form class="login-form" action="#"  method="post">
-			<div class="form-group">
-				<label for="email">이메일</label> <input type="email" id="email"
-					name="parentId" placeholder="eeemail@gacikium.com" required>
-			</div>
       <div class="form-group">
         <label for="email">이메일</label>
         <input type="email" id="id" name="parentId" placeholder="eeemail@gacikium.com" required>
       </div>
-			<div class="form-group">
-				<label for="password">비밀번호</label> <input type="password"
-					id="password" name="parentPw" placeholder="영문, 숫자, 특수문자를 사용한 8~20자"
-					required>
-			</div>
       <div class="form-group">
         <label for="password">비밀번호</label>
         <input type="password" id="pw" name="parentPw" 
@@ -73,10 +63,7 @@
 
 			<button type="submit" class="btn btn-primary">로그인</button>
 
-			<div class="link-group">
-				<a href="#">비밀번호 찾기</a> <span class="separator">ㅣ</span> <a
-					href="${cpath}/RegisterParent">부모 회원가입</a>
-			</div>
+			
       <div class="link-group">
         <a href="${cpath}/FindPassword">비밀번호 찾기</a>
         <span class="separator">ㅣ</span>
@@ -99,7 +86,6 @@
 				시작하기
 			</button>
 		</form>
-
 		<!-- 프터 -->
 		<footer class="footer">
 			<div class="footer-content">
