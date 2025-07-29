@@ -69,13 +69,6 @@ public class RegisterController {
 	    return "LoginParent";
 	}
 	
-	// 로그인 정보 db에 잘 전달됨. 로그인 오류시 메시지 띄우는 거 해야함
-	/* Login.jsp에 추가해야함
-	<c:if test="${not empty message}">
-	  <div style="color: red;">${message}</div>
-	</c:if>
-    */
-	
 //------------------------------------------------------------------------------------
 	@PostMapping("/sitterDuplicate") //뷰에서 jquery불러오고 js와 연결해야함
 	@ResponseBody
