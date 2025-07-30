@@ -55,7 +55,9 @@
     </div>
 
     <!-- 다음 버튼 -->
+    <a href="${cpath}/카카오페이결제">
     <button class="next-btn">다음</button>
+    </a>
   </div>
 </div>
 

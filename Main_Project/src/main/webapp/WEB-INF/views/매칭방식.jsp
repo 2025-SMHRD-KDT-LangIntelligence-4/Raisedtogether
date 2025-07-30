@@ -35,7 +35,9 @@
         <div class="desc">돌보미 선택 → 수업 신청 순으로 진행돼요</div>
       </div>
     </div>
+    <a href="${cpath}/결제_쿠폰_등록하기">
     <button class="next-btn">다음</button>
+    </a>
   </div>
 </div>
 

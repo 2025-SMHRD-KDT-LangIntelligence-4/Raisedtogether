@@ -34,4 +34,9 @@ public String place2() {
 public String visitTime() {
     return "CareApply7"; 
 }
+@GetMapping("/CareApply8")
+public String page1() {
+    return "CareApply8"; // page1.jsp
+}
+
 }
