@@ -1,6 +1,7 @@
 package com.smhrd.web.entity;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -59,4 +60,7 @@ public class Sitter {
 	
 	// 돌보미 학력 추가
 	private String education;
+	
+	// 돌보미의 리뷰를 연결한 것
+	private List<SitterReview> sitterReviews;
 }

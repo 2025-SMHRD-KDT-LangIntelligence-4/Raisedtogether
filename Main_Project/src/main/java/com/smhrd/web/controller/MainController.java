@@ -79,13 +79,13 @@ public class MainController {
 		return "CCTV";
 	}
 
-//	@GetMapping("/sitterCare")
-//	public String selectSitterList(Model model) {
-//		List<Sitter> sitterList = mapper.selectSitterList();
-//        model.addAttribute("sitterList", sitterList);
-//        System.out.println(sitterList);
-//        return "SitterCare";
-//	}
+	@GetMapping("/SitterCare")
+	public String selectSitterList(Model model) {
+		List<Sitter> sitterList = mapper.selectSitterWithReviews();
+        model.addAttribute("sitterList", sitterList);
+        System.out.println(sitterList);
+        return "SitterCare";
+	}
 	
 	@GetMapping("/SitterUrgent")
 	public String SitterUrgent() {
@@ -175,6 +175,22 @@ public class MainController {
 	@GetMapping("/LoginParent2")
 	public String LoginParent2() {
 		return "LoginParent2";
+	}
+	
+	@GetMapping("/매칭방식")
+	public String 매칭방식() {
+		return "매칭방식";
+	}
+	
+	
+	@GetMapping("/결제_쿠폰_등록하기")
+	public String 결제_쿠폰_등록하기() {
+		return "결제_쿠폰_등록하기";
+	}
+	
+	@GetMapping("/카카오페이결제")
+	public String 카카오페이결제() {
+		return "카카오페이결제";
 	}
 	
 	

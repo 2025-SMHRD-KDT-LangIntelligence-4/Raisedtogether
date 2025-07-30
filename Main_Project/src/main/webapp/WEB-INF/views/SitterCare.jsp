@@ -53,34 +53,38 @@
 
 
 		<!-- 7/30 여기부터 하면 됨. sitter컨트롤러 없애고 메인에 추가할 예정 -->
-		<!-- 돌보미 카드 --> 
+		<!-- 돌보미 카드 -->
 		<div class="caregiver-card-list">
 			<c:forEach items="${sitterList}" var="s">
-			<div class="caregiver-card" onclick="location.href='${cpath}/SitterDetail/${s.sitter_id}'">
-				<div class="caregiver-name">${s.sitter_id}</div>
-				<div class="caregiver-school">${s.sitter_education}</div>
-				<div class="caregiver-desc">${s.sitter_introduction}</div>
-				<div class="caregiver-tags">
-			        <c:forEach var="tag" items="${fn:split(s.sitter_care_type_tag, ',')}">
-			          <span># ${tag}</span>
-			        </c:forEach>
-				</div>
-				<div class="divider"></div>
-				<div class="caregiver-footer">
-					<div class="price">
-						<span class="amount">${s.sitter_price}</span> <span class="unit">/ 시급</span>
+				<div class="caregiver-card"
+					onclick="location.href='${cpath}/SitterDetail/${s.sitter_id}'">
+					<div class="caregiver-name">${s.sitter_id}</div>
+					<div class="caregiver-school">${s.sitter_education}</div>
+					<div class="caregiver-desc">${s.sitter_introduction}</div>
+					<div class="caregiver-tags">
+						<c:forEach var="tag" items="${fn:split(s.sitter_care_type_tag, ',')}">
+							<span># ${tag}</span>
+						</c:forEach>
 					</div>
-					<div class="more">
-						<span>더보기</span> <img src="${cpath}/images/Chevron right.svg"
-							alt="더보기 아이콘" />
+					<div class="divider"></div>
+					<div class="caregiver-footer">
+						<div class="price">
+							<span class="amount">${s.sitter_price}</span>
+							<span class="unit">/ 시급</span>
+						</div>
+						<div class="more">
+							<span>더보기</span>
+							<img src="${cpath}/images/Chevron right.svg" alt="더보기 아이콘" />
+						</div>
+					</div>
+					<div class="caregiver-image">
+						<img src="${s.sitter_photo_img}" alt="caregiver-profile" />
 					</div>
 				</div>
-				<div class="caregiver-image">
-					<img src="${s.sitter_photo_img}" alt="caregiver-profile" />
-				</div>
-			</div>
 			</c:forEach>
-<!-- 
+		</div>
+
+		<!-- 
 			다른 카드들
 			<div class="caregiver-card">
 				<div class="caregiver-name">조윤미 돌보미</div>

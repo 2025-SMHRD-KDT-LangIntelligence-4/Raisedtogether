@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+/* 오버레이 */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* 팝업 */
+.popup {
+  width: 320px;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  animation: fadeIn 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* 쿠폰 선택 박스 */
+.coupon-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8F8F8;
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.coupon-box .left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.coupon-box img {
+  width: 20px;
+}
+
+.highlight {
+  color: #534DFA;
+  font-weight: bold;
+}
+
+/* 포인트 박스 */
+.section-point-box {
+  background: #F5F5FA;
+  padding: 10px 12px;
+  border-radius: 10px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 4px;
+}
+
+.point-label {
+  font-size: 13px;
+  color: #555;
+}
+
+.point-value {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* 안내 텍스트 */
+.info-text {
+  list-style: none;
+  padding: 0;
+  margin: 0px 0 20px;
+  font-size: 12px;
+  color: gray;
+}
+
+/* 가격 정보 */
+.price-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: bold;
+  color: #333;
+  font-size: 20px;
+}
+
+/* 다음 버튼 */
+.next-btn {
+  width: 100%;
+  background: #534DFA;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
