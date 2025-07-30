@@ -75,11 +75,6 @@ public class MainController {
 		return "FindPassword";
 	}
 	
-	@GetMapping("/CareApply")
-	public String CareApply() {
-		return "CareApply";
-	}
-	
 	@GetMapping("/Urgent")
 	public String Urgent() {
 		return "Urgent";

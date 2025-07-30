@@ -32,6 +32,9 @@ public class Parent {
 	private String parentCare_type;
 	private String parentNotes;
 	private LocalDateTime parentJoinedAt; 
+	
+	private int parent_lat; // 위도
+	private int parent_lng; // 경도
 }
 
 

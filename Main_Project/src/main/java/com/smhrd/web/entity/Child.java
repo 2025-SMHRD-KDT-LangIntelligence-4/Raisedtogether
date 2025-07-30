@@ -15,5 +15,6 @@ public class Child {
 	private LocalDateTime childBirthdate;
 	private String childGender;
 	private String childNotes;
+	private String childBehavior;
 	private LocalDateTime childCreatedAt;
 }
