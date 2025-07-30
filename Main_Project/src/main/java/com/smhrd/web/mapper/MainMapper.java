@@ -9,6 +9,8 @@ import com.smhrd.web.entity.Sitter;
 @Mapper
 public interface MainMapper {
 
-	List<Sitter> selectSitterList();
+	List<Sitter> selectSitterWithReviews();
+
+	
 	
 }
