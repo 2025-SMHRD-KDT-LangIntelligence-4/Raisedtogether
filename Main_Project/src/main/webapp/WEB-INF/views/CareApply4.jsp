@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <title>아이 선택</title>
-    <link rel="stylesheet" href="/css/CareApply.css">
+    <link rel="stylesheet" href="/css/CareApply4.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,14 +27,13 @@
     <!-- 제목 -->
     <div class="title">돌보미와 만날 아이를 선택하세요</div>
 
-    <!-- 아이 등록 박스 -->
+    <!-- 장소 등록 박스 -->
     <a href="${cpath}/CareApply5">
     <div class="place-box">
-        <div class="place-text">아이 등록</div>
+        <div class="place-text">장소 등록</div>
         <img class="next" src="${cpath}/images/Plus.svg" alt="추가하기" />
     </div>
 	</a>
-	
 
 </div>
 </body>

@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+/* 또는 구글폰트 예시라면 이렇게 추가 */
+@font-face {
+	font-family: 'NanumSquare Neo';
+	src: url('...') format('woff2');
+	font-display: swap;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'NanumSquare Neo', sans-serif;
+}
+
+.container {
+    width: 430px;
+    height: 932px;
+    position: relative;
+    background: white;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.title {
+    position: absolute;
+    left: 20px;
+    top: 136px;
+    font-size: 22px;
+    font-weight: 800;
+    color: black;
+}
+
+.section-label {
+    position: absolute;
+    left: 19px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #757575;
+}
+
+.date-box {
+    position: absolute;
+    top: 219px;
+    left: 20px;
+    width: 390px;
+    padding: 12px 16px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #D9D9D9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date-text {
+    font-size: 14px;
+    color: #B3B3B3;
+    flex: 1;
+}
+
+.calendar-icon {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #757575;
+    box-sizing: border-box;
+}
+
+.time-option {
+    position: absolute;
+    top: 314px;
+    width: 36px;
+    height: 36px;
+    background: #534DFA;
+    border-radius: 50%;
+}
+
+.time-label {
+    position: absolute;
+    top: 322px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #4C4C4C;
+}
+
+.time-range {
+    position: absolute;
+    top: 360px;
+    width: 184px;
+    padding: 12px 16px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #D9D9D9;
+    text-align: right;
+    color: #B3B3B3;
+    font-size: 14px;
+}
+
+.notice-box {
+    position: absolute;
+    top: 643px;
+    left: 20px;
+    width: 390px;
+    height: 149px;
+    background: #F2F2F7;
+    border-radius: 16px;
+    position: relative;
+}
+
+.notice-title {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    color: #6E6E6E;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.notice-line {
+    position: absolute;
+    top: 55px;
+    left: 20px;
+    width: 350px;
+    border-top: 1px solid #D9D9D9;
+}
+
+.notice-content {
+    position: absolute;
+    top: 75px;
+    left: 30px;
+    color: #6E6E6E;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.warning-icon {
+    position: absolute;
+    top: 20px;
+    left: 346px;
+    width: 24px;
+    height: 25px;
+    border: 2px solid #EC221F;
+}
+
+.next-button {
+    position: absolute;
+    top: 832px;
+    left: 20px;
+    width: 390px;
+    height: 60px;
+    background: #534DFA;
+    border: none;
+    border-radius: 16px;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+}
