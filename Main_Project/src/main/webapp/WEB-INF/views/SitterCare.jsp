@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>같이 키움이 콕 집은 돌보미</title>
 <link rel="stylesheet" href="${cpath}/css/SitterCare.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
