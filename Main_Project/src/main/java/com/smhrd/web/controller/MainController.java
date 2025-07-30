@@ -177,6 +177,22 @@ public class MainController {
 		return "LoginParent2";
 	}
 	
+	@GetMapping("/매칭방식")
+	public String 매칭방식() {
+		return "매칭방식";
+	}
+	
+	
+	@GetMapping("/결제_쿠폰_등록하기")
+	public String 결제_쿠폰_등록하기() {
+		return "결제_쿠폰_등록하기";
+	}
+	
+	@GetMapping("/카카오페이결제")
+	public String 카카오페이결제() {
+		return "카카오페이결제";
+	}
+	
 	
 	
 }
