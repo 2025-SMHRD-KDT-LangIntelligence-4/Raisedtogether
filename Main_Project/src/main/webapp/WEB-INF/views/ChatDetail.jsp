@@ -9,7 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="${cpath}/css/ChatDetail2.css">
+<link rel="stylesheet" href="${cpath}/css/ChatDetail.css">
 <title>Insert title here</title>
 </head>
 <body>
@@ -119,7 +119,7 @@
         chatMessages.appendChild(otherBubble);
         chatMessages.scrollTop = chatMessages.scrollHeight;
         responseIndex++;
-      }, 1000);
+      }, 3000);
     }
   }
 
