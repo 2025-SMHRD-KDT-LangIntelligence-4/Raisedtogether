@@ -89,6 +89,11 @@ public class MainController {
 	public String CCTV() {
 		return "CCTV";
 	}
+	@GetMapping("/Alarm")
+    public String alarmPage() {
+        return "Alarm"; // /WEB-INF/views/Alarm.jsp 로 forward됨
+    }
+
 
 	@GetMapping("/SitterCare")
 	public String SitterCare(Model model) {
