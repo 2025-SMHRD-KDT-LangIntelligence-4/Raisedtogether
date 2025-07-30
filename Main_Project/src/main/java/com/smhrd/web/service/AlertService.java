@@ -5,9 +5,8 @@ import org.springframework.stereotype.Service;
 import com.smhrd.web.entity.Alarm;
 import com.smhrd.web.mapper.AlarmMapper;
 
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 import java.util.List;
-
 
 @Service
 public class AlertService {
@@ -17,16 +16,15 @@ public class AlertService {
 
     public void addAlert(String content, String parentId) {
         Alarm alarm = new Alarm();
-        alarm.setAlarm_content(content);
-        alarm.setAlarm_created_at(LocalDateTime.now());
-        alarm.setAlarm_is_received("N");
-        alarm.setAlarm_video_file(null); // 나중에 추가 가능
-        alarm.setParent_id(parentId);    // ✔️ 컬럼명과 맞춰 변경
-        mapper.insertAlarm(alarm);
+        alarm.setAlarmContent(content);                         // ✔️ CamelCase
+        alarm.setAlarmCreatedAt(new Timestamp(System.currentTimeMillis())); // ✔️ java.sql.Timestamp
+        alarm.setAlarmIsReceived(false);                        // ✔️ boolean
+        alarm.setAlarmVideoFile(null);                          // ✔️ optional field
+        alarm.setParentId(parentId);                            // ✔️ CamelCase
+        mapper.insertAlarm(alarm);                              // ✔️ Mapper 호출
     }
 
-
     public List<Alarm> getAlertsByParent(String parentId) {
-        return mapper.selectByParentId(parentId);
+        return mapper.selectByParentId(parentId);               // ✔️ Mapper 호출
     }
 }

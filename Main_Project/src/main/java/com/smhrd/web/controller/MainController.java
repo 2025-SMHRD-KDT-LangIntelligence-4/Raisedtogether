@@ -79,13 +79,13 @@ public class MainController {
 		return "CCTV";
 	}
 
-	@GetMapping("/sitterCare")
-	public String selectSitterList(Model model) {
-		List<Sitter> sitterList = mapper.selectSitterList();
-        model.addAttribute("sitterList", sitterList);
-        System.out.println(sitterList);
-        return "SitterCare";
-	}
+//	@GetMapping("/sitterCare")
+//	public String selectSitterList(Model model) {
+//		List<Sitter> sitterList = mapper.selectSitterList();
+//        model.addAttribute("sitterList", sitterList);
+//        System.out.println(sitterList);
+//        return "SitterCare";
+//	}
 	
 	@GetMapping("/SitterUrgent")
 	public String SitterUrgent() {
