@@ -33,9 +33,8 @@
 			<img id="stream" src="http://172.30.1.93:8000/video_feed" />
 		</div>
 
-<div class="alarm-btn">
-		<div class="goToAlarmBtn" onclick="location.href='${cpath}/Alarm?parentId=${parentId}'">
-			<div class="care-button-text">분석 기록 보기</div>
+<div class="goToAlarmBtn" onclick="location.href='/Alarm'">
+  <div class="care-button-text">분석 기록 보기</div>
 </div>
 
 

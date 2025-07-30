@@ -1,56 +1,41 @@
 package com.smhrd.web.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import com.smhrd.web.service.AlertService;
-import com.smhrd.web.entity.Alarm;
-
-import java.util.HashMap;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.*;
 import java.util.List;
-import java.util.Map;
 
-@Controller
+@RestController
 public class AlarmController {
 
-    private final AlertService alertService;
+    // 절대 경로 지정
+    private static final String LOG_FILE_PATH = "C:/Users/smart/git/Raisedtogether/Main_Project/logs/alert.log";
 
-    public AlarmController(AlertService alertService) {
-        this.alertService = alertService;
-    }
+    @GetMapping("/api/log")
+    public String getAlarmLog() {
+        Path logPath = Paths.get(LOG_FILE_PATH);
 
-    // ✅ 알림 수신 API (Python 측에서 호출)
-    @PostMapping("/api/alerts")
-    @ResponseBody
-    public String receiveAlert(@RequestBody Map<String, String> payload) {
-        String msg = payload.get("message");
-        String parentId = payload.get("parentId");
-
-        if (msg == null || parentId == null) {
-            return "Invalid request: message and parentId required";
+        // 파일 존재 여부 확인
+        if (!Files.exists(logPath)) {
+            return "🚫 로그 파일이 존재하지 않습니다: " + LOG_FILE_PATH;
         }
 
-        alertService.addAlert(msg, parentId);
-        return "Alert received";
-    }
+        try {
+            // UTF-8로 파일 읽기
+            List<String> lines = Files.readAllLines(logPath, StandardCharsets.UTF_8);
 
-    // ✅ 보호자 ID별 알림 리스트 조회 API (JSP의 JS에서 호출)
-    @GetMapping("/api/alerts/{parentId}")
-    @ResponseBody
-    public Map<String, Object> getAlertsByParent(@PathVariable String parentId) {
-        Map<String, Object> response = new HashMap<>();
-        List<Alarm> alerts = alertService.getAlertsByParent(parentId);
-        response.put("messages", alerts);
-        return response;
-    }
+            if (lines.isEmpty()) {
+                return "📭 현재 로그가 없습니다.";
+            }
 
-    // ✅ 알림 JSP 페이지 렌더링
-    @GetMapping("/Alarm")
-    public String alarmPage(@RequestParam("parentId") String parentId, Model model) {
-        List<Alarm> alerts = alertService.getAlertsByParent(parentId);
-        model.addAttribute("alerts", alerts);
-        model.addAttribute("parentId", parentId); // JS에서 활용됨
-        return "Alarm"; // Alarm.jsp 또는 Alarm.html
+            return String.join("\n", lines);
+
+        } catch (IOException e) {
+            e.printStackTrace();  // 서버 로그에 출력
+            return "🚫 로그 파일 읽기 중 오류 발생:\n" + e.toString();
+        }
     }
 }
