@@ -34,7 +34,9 @@
 			</div>
 
 			<!-- 결제하기 버튼 -->
-			<button class="pay-btn">결제하기</button>
+			<form action="/pay/ready" method="post">
+			<button class="pay-btn" >결제하기</button>
+			</form>
 		</div>
 	</div>
 

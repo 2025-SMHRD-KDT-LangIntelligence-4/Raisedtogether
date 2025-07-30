@@ -9,7 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="stylesheet" href="${cpath}/css/ChatDetail.css">
+<link rel="stylesheet" href="${cpath}/css/ChatDetail2.css">
 <title>Insert title here</title>
 </head>
 <body>
@@ -37,9 +37,9 @@
 
 
 		</div>
-		
-		
-		
+
+
+
 		<!-- ✅ 채팅 하단 입력창 (Flexbox 기반) -->
 		<div class="chat-input-wrapper">
 			<div class="add-button">
@@ -55,8 +55,8 @@
 				<img src="/images/send.svg" alt="Send" />
 			</div>
 		</div>
-		
-		
+
+
 	</div>
 
 
@@ -85,36 +85,53 @@
 	</div>
 
 
-	<script>
+<script>
   const sendBtn = document.getElementById('sendBtn');
   const chatInput = document.getElementById('chatInput');
   const chatMessages = document.getElementById('chatMessages');
 
-  // 전송 함수
+  let responseIndex = 0;
+
+  const dummyResponses = [
+    '안녕하세요! 일정 조율 필요하신가요?',
+    '네 가능합니다!!',
+    '감사합니다. 방문 전에 연락드리겠습니다!'
+  ];
+
   function sendMessage() {
     const text = chatInput.value.trim();
     if (text === '') return;
 
-    // 채팅 말풍선 생성
-    const bubble = document.createElement('div');
-    bubble.classList.add('chat-bubble');
-    bubble.textContent = text;
+    // 👉 내가 보낸 메시지
+    const myBubble = document.createElement('div');
+    myBubble.classList.add('chat-bubble', 'my-message');
+    myBubble.textContent = text;
+    chatMessages.appendChild(myBubble);
+    chatInput.value = '';
+    chatMessages.scrollTop = chatMessages.scrollHeight;
 
-    chatMessages.appendChild(bubble);        // 말풍선 추가
-    chatInput.value = '';                    // 입력창 비우기
-    chatMessages.scrollTop = chatMessages.scrollHeight; // 스크롤 맨 아래로
+    // 👉 상대방 더미 응답 (3개까지만)
+    if (responseIndex < dummyResponses.length) {
+      setTimeout(() => {
+        const otherBubble = document.createElement('div');
+        otherBubble.classList.add('chat-bubble', 'other-message');
+        otherBubble.textContent = dummyResponses[responseIndex];
+        chatMessages.appendChild(otherBubble);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        responseIndex++;
+      }, 1000);
+    }
   }
 
-  // 클릭 이벤트
+  // 이벤트 연결
   sendBtn.addEventListener('click', sendMessage);
-
-  // 엔터키로도 전송 가능
   chatInput.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
       sendMessage();
     }
   });
 </script>
+
 
 
 

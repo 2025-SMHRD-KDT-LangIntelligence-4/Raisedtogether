@@ -212,4 +212,12 @@ public class MainController {
 	
 	
 	
+	
+	@GetMapping("/ChatDetail2")
+	public String ChatDetail2() {
+		return "ChatDetail2";
+	}
+	
+	
+	
 }

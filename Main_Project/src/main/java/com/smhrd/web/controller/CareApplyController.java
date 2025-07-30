@@ -2,6 +2,7 @@ package com.smhrd.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class CareApplyController {
@@ -10,7 +11,7 @@ public class CareApplyController {
 public String showDatePage() {
         return "CareApply2";
     }
-@GetMapping("/CareApply3")
+@PostMapping("/CareApply3")
 public String careApplyPage() {
     return "CareApply3"; 
 }

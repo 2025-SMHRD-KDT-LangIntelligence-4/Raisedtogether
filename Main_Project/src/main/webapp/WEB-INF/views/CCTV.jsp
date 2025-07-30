@@ -33,15 +33,15 @@
 			<img id="stream" src="http://172.30.1.93:8000/video_feed" />
 		</div>
 
+<div style="padding: 20px">
 <div class="goToAlarmBtn" onclick="location.href='/Alarm'">
   <div class="care-button-text">분석 기록 보기</div>
 </div>
-
+</div>
 
 		</div>
 
 
-	</div>
 
 
 	<!-- 바텀 네비 -->

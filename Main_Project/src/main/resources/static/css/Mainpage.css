@@ -48,7 +48,7 @@ body {
 /* 전체 화면 - 바텀네비, 상단바 고정 패딩*/
 .content-container {
 	padding-bottom: 80px;
-	padding-top:76px;
+	padding-top: 76px;
 }
 
 .start-screen {
@@ -58,8 +58,6 @@ body {
 	overflow: hidden;
 	font-family: 'NanumSquare Neo', sans-serif;
 	padding: 0;
-	
-	
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -72,7 +70,7 @@ body {
 
 .logoAlert {
 	max-width: 430px;
-	padding: 20px ;
+	padding: 20px;
 	display: flex;
 	justify-content: space-between; /* 좌우 끝으로 배치 */
 	align-items: center; /* 수직 가운데 정렬 */
@@ -108,7 +106,7 @@ body {
 	left: 20px;
 	background: linear-gradient(135deg, #7672FF 0%, #8DACFF 100%);
 	border-radius: 16px;
-	cursor:pointer;
+	cursor: pointer;
 }
 
 .care-button-text {
@@ -285,7 +283,7 @@ body {
 	color: #078300;
 	position: absolute;
 	top: 108px;
-	left: 17px;
+	left: 10px;
 }
 
 .card .caregiver, .card .parent, .card .time {
@@ -315,10 +313,12 @@ body {
 	top: 20px;
 	left: 101px;
 	width: 182px;
+	max-height: 70px;
 	font-size: 12px;
 	line-height: 18px;
 	color: black;
 	position: absolute;
+	overflow: hidden;
 }
 
 /* 긴급돌봄 카드 리스트 */
@@ -328,6 +328,7 @@ body {
 }
 
 .cards-wrapper2 {
+	background: #fff; /* 예시용 배경색 */
 	display: flex;
 	flex-wrap: wrap;
 	gap: 16px;
@@ -360,8 +361,9 @@ body {
 .card2 {
 	width: 300px;
 	background: white;
-	border-radius: 12px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	border-radius: 28px;
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
 	text-decoration: none;
 	color: inherit;
 }
@@ -406,6 +408,8 @@ body {
 	border-radius: 12px;
 	font-weight: 500;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+	white-space: nowrap; /* 텍스트 내부 줄바꿈 방지 */
+	display: inline-block; /* flex 말고 inline-block으로 */
 }
 
 /* --------------------
