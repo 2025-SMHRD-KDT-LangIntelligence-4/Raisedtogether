@@ -50,26 +50,21 @@
 			</div>
 		</div>
 
-
-
-		<!-- 7/30 여기부터 하면 됨. sitter컨트롤러 없애고 메인에 추가할 예정 -->
-		<!-- 돌보미 카드 -->
 		<div class="caregiver-card-list">
 			<c:forEach items="${sitterList}" var="s">
-				<div class="caregiver-card"
-					onclick="location.href='${cpath}/SitterDetail/${s.sitter_id}'">
-					<div class="caregiver-name">${s.sitter_id}</div>
-					<div class="caregiver-school">${s.sitter_education}</div>
-					<div class="caregiver-desc">${s.sitter_introduction}</div>
+				<div class="caregiver-card" onclick="location.href='${cpath}/SitterDetail/${s.sitterId}'">
+					<div class="caregiver-name">${s.sitterName}</div>
+					<div class="caregiver-school">${s.sitterEducation}</div>
+					<div class="caregiver-desc">${s.sitterIntroduction}</div>
 					<div class="caregiver-tags">
-						<c:forEach var="tag" items="${fn:split(s.sitter_care_type_tag, ',')}">
+						<c:forEach var="tag" items="${fn:split(s.sitterCareTypeTag, ',')}">
 							<span># ${tag}</span>
 						</c:forEach>
 					</div>
 					<div class="divider"></div>
 					<div class="caregiver-footer">
 						<div class="price">
-							<span class="amount">${s.sitter_price}</span>
+							<span class="amount">${s.sitterPrice}</span>
 							<span class="unit">/ 시급</span>
 						</div>
 						<div class="more">
@@ -78,60 +73,10 @@
 						</div>
 					</div>
 					<div class="caregiver-image">
-						<img src="${s.sitter_photo_img}" alt="caregiver-profile" />
+						<img src="${cpath}/${s.sitterPhotoImg}" alt="caregiver-profile" />
 					</div>
 				</div>
 			</c:forEach>
-		</div>
-
-		<!-- 
-			다른 카드들
-			<div class="caregiver-card">
-				<div class="caregiver-name">조윤미 돌보미</div>
-				<div class="caregiver-school">특기교사</div>
-				<div class="caregiver-desc">상냥하고 재미있는 엄마같은 돌보미 조윤미입니다</div>
-				<div class="caregiver-tags">
-					<span># 독후활동</span> <span># 숙제지도</span> <span># 영어</span>
-				</div>
-				<div class="divider"></div>
-				<div class="caregiver-footer">
-					<div class="price">
-						<span class="amount">20,000원</span> <span class="unit">/ 시급</span>
-					</div>
-					<div class="more">
-						<span>더보기</span> <img src="${cpath}/images/Chevron right.svg"
-							alt="더보기 아이콘" />
-					</div>
-				</div>
-				<div class="caregiver-image">
-					<img src="https://placehold.co/60x60" alt="caregiver-profile" />
-				</div>
-			</div>
-
-			필요 시 계속 반복
-			<div class="caregiver-card"
-				onclick="location.href='${cpath}/SitterDetailUrgent'">
-				<div class="caregiver-name">임성윤 돌보미</div>
-				<div class="caregiver-school">순천대학교 • 유아교육과</div>
-				<div class="caregiver-desc">화창하게 밝고 계획적이며 다재다능한 돌보미입니다!</div>
-				<div class="caregiver-tags">
-					<span># 노래하기</span> <span># 한글공부</span> <span># 학습지풀이</span>
-				</div>
-				<div class="divider"></div>
-				<div class="caregiver-footer">
-					<div class="price">
-						<span class="amount">18,000원</span> <span class="unit">/ 시급</span>
-					</div>
-					<div class="more">
-						<span>더보기</span> <img src="${cpath}/images/Chevron right.svg"
-							alt="더보기 아이콘" />
-					</div>
-				</div>
-				<div class="caregiver-image">
-					<img src="https://placehold.co/60x60" alt="caregiver-profile" />
-				</div>
-			</div>
- -->
 		</div>
 	</div>
 

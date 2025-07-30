@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <c:set var="cpath" value="${pageContext.request.contextPath}" />
 <!-- 우빈 : 현재 줄 기준, 위 항목 복사해서 view 페이지에 기본으로 넣을 것 -->
 <!DOCTYPE html>
@@ -49,90 +50,40 @@
 			</div>
 		</div>
 
-
-
-
-		<!-- 가짜카드 -->
 		<div class="caregiver-card-list">
-
-			<div class="caregiver-card"
-				onclick="location.href='${cpath}/SitterDetailUrgent'">
-				<div class="caregiver-name">임성윤 돌보미</div>
-				<div class="caregiver-school">순천대학교 • 유아교육과</div>
-				<div class="caregiver-desc">화창하게 밝고 계획적이며 다재다능한 돌보미입니다!</div>
-				<div class="caregiver-tags">
-					<span># 노래하기</span> <span># 한글공부</span> <span># 학습지풀이</span>
-				</div>
-				<div class="divider"></div>
-				<div class="caregiver-footer">
-					<div class="price">
-						<span class="amount">18,000원</span> <span class="unit">/ 시급</span>
+			<c:forEach items="${sitterList}" var="s">
+				<div class="caregiver-card" onclick="location.href='${cpath}/SitterDetailUrgent/${s.sitterId}'">
+					<div class="caregiver-name">${s.sitterName}</div>
+					<div class="caregiver-school">${s.sitterEducation}</div>
+					<div class="caregiver-desc">${s.sitterIntroduction}</div>
+					<div class="caregiver-tags">
+						<c:forEach var="tag" items="${fn:split(s.sitterCareTypeTag, ',')}">
+							<span># ${tag}</span>
+						</c:forEach>
 					</div>
-					<div class="more">
-						<span>더보기</span> <img src="${cpath}/images/Chevron right.svg"
-							alt="더보기 아이콘" />
+					<div class="divider"></div>
+					<div class="caregiver-footer">
+						<div class="price">
+							<span class="amount">${s.sitterPrice}</span> <span class="unit">/
+								시급</span>
+						</div>
+						<div class="more">
+							<span>더보기</span>
+							<img src="${cpath}/images/Chevron right.svg" alt="더보기 아이콘" />
+						</div>
 					</div>
-				</div>
-				<div class="caregiver-image">
-					<img src="https://placehold.co/60x60" alt="caregiver-profile" />
-				</div>
-			</div>
-
-
-			<!-- 다른 카드들 -->
-			<div class="caregiver-card">
-				<div class="caregiver-name">조윤미 돌보미</div>
-				<div class="caregiver-school">특기교사</div>
-				<div class="caregiver-desc">상냥하고 재미있는 엄마같은 돌보미 조윤미입니다</div>
-				<div class="caregiver-tags">
-					<span># 독후활동</span> <span># 숙제지도</span> <span># 영어</span>
-				</div>
-				<div class="divider"></div>
-				<div class="caregiver-footer">
-					<div class="price">
-						<span class="amount">20,000원</span> <span class="unit">/ 시급</span>
-					</div>
-					<div class="more">
-						<span>더보기</span> <img src="${cpath}/images/Chevron right.svg"
-							alt="더보기 아이콘" />
+					<div class="caregiver-image">
+						<img src="${cpath}/${s.sitterPhotoImg}" alt="caregiver-profile" />
 					</div>
 				</div>
-				<div class="caregiver-image">
-					<img src="https://placehold.co/60x60" alt="caregiver-profile" />
-				</div>
-			</div>
-
-			<!-- 필요 시 계속 반복 -->
-			<div class="caregiver-card"
-				onclick="location.href='${cpath}/SitterDetailUrgent'">
-				<div class="caregiver-name">임성윤 돌보미</div>
-				<div class="caregiver-school">순천대학교 • 유아교육과</div>
-				<div class="caregiver-desc">화창하게 밝고 계획적이며 다재다능한 돌보미입니다!</div>
-				<div class="caregiver-tags">
-					<span># 노래하기</span> <span># 한글공부</span> <span># 학습지풀이</span>
-				</div>
-				<div class="divider"></div>
-				<div class="caregiver-footer">
-					<div class="price">
-						<span class="amount">18,000원</span> <span class="unit">/ 시급</span>
-					</div>
-					<div class="more">
-						<span>더보기</span> <img src="${cpath}/images/Chevron right.svg"
-							alt="더보기 아이콘" />
-					</div>
-				</div>
-				<div class="caregiver-image">
-					<img src="https://placehold.co/60x60" alt="caregiver-profile" />
-				</div>
-			</div>
-
+			</c:forEach>
 		</div>
 	</div>
 
 
 
 
-	<!-- 실제 코드로 사용할 때 
+			<!-- 실제 코드로 사용할 때 
 <div class="caregiver-container">
     <c:forEach var="caregiver" items="${caregiverList}">
         <div class="caregiver-card">
@@ -161,28 +112,24 @@
 -->
 
 
-<!-- 바텀 네비 -->
-	<div class="bottom-nav">
-		<button class="nav-item" onclick="location.href='${cpath}/Mainpage'">
-			<img src="/images/Home-nocolor.svg" alt="홈 아이콘"> <span
-				class="nav-text ">홈</span>
-		</button>
-		<button class="nav-item"
-			onclick="location.href='${cpath}/Reservation'">
-			<img src="/images/Calendar.svg" alt="나의예약 아이콘"> <span
-				class="nav-text">나의예약</span>
-		</button>
-		<button class="nav-item" onclick="location.href='${cpath}/Chat'">
-			<img src="/images/Message square.svg" alt="채팅 아이콘"> <span
-				class="nav-text">채팅</span>
-		</button>
-		<button class="nav-item" onclick="location.href='${cpath}/Info'">
-			<img src="/images/User.svg" alt="내정보 아이콘"> <span
-				class="nav-text">내정보</span>
-		</button>
-	</div>
-
-
-
-</body>
+			<!-- 바텀 네비 -->
+			<div class="bottom-nav">
+				<button class="nav-item" onclick="location.href='${cpath}/Mainpage'">
+					<img src="/images/Home-nocolor.svg" alt="홈 아이콘"> <span
+						class="nav-text ">홈</span>
+				</button>
+				<button class="nav-item"
+					onclick="location.href='${cpath}/Reservation'">
+					<img src="/images/Calendar.svg" alt="나의예약 아이콘"> <span
+						class="nav-text">나의예약</span>
+				</button>
+				<button class="nav-item" onclick="location.href='${cpath}/Chat'">
+					<img src="/images/Message square.svg" alt="채팅 아이콘"> <span
+						class="nav-text">채팅</span>
+				</button>
+				<button class="nav-item" onclick="location.href='${cpath}/Info'">
+					<img src="/images/User.svg" alt="내정보 아이콘"> <span
+						class="nav-text">내정보</span>
+				</button>
+			</div></body>
 </html>

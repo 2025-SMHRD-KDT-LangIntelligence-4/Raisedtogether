@@ -1,5 +1,6 @@
 package com.smhrd.web.controller;
 
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.smhrd.web.entity.Sitter;
+import com.smhrd.web.entity.SitterReview;
 import com.smhrd.web.mapper.MainMapper;
 
 @Controller
@@ -22,7 +24,16 @@ public class MainController {
 	}
 	
 	@GetMapping("/Mainpage")
-	public String Mainpage() {
+	public String Mainpage(Model model) {
+		List<SitterReview> reviewList = mapper.selectSitterReviewTop6();
+		
+	    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyMMdd");
+	    for (SitterReview review : reviewList) {
+	        String formattedDate = review.getReviewCreatedAt().format(formatter);
+	        review.setFormattedDate(formattedDate);
+	    }
+	    
+		model.addAttribute("reviewList", reviewList);
 		return "Mainpage";
 	}
 	
@@ -80,15 +91,16 @@ public class MainController {
 	}
 
 	@GetMapping("/SitterCare")
-	public String selectSitterList(Model model) {
-		List<Sitter> sitterList = mapper.selectSitterWithReviews();
-        model.addAttribute("sitterList", sitterList);
-        System.out.println(sitterList);
-        return "SitterCare";
+	public String SitterCare(Model model) {
+		List<Sitter> sitterList = mapper.selectSitterWithIntroduction();
+		model.addAttribute("sitterList", sitterList);
+		return "SitterCare";
 	}
 	
 	@GetMapping("/SitterUrgent")
-	public String SitterUrgent() {
+	public String SitterUrgent(Model model) {
+		List<Sitter> sitterList = mapper.selectSitterWithIntroduction();
+		model.addAttribute("sitterList", sitterList);
 		return "SitterUrgent";
 	}
 	

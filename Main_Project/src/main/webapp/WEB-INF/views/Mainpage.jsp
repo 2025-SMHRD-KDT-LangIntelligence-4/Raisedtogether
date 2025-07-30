@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <c:set var="cpath" value="${pageContext.request.contextPath}" />
 
 <!DOCTYPE html>
@@ -41,7 +42,7 @@
 		<!-- 기능 카드 -->
 		<div class="care-options">
 
-			<div class="care-option" onclick="location.href='${cpath}/Urgent'"
+			<div class="care-option" onclick="location.href='${cpath}/SitterUrgent'"
 				style="cursor: pointer;">
 				<div class="option-box">
 					<img class="option-icon"
@@ -67,7 +68,7 @@
 
 
 
-	<!-- 콕 찝은 카드 리스트 -->
+<!-- ===== [콕 찝은 카드 리스트] ================================================== -->
 	<div class="highlight-section">
 		<div class="container"
 			style="background: #F7F7FF; padding-right: 0px; padding-bottom: 40px">
@@ -79,23 +80,21 @@
 			</div>
 
 			<div class="cards-wrapper">
-				<c:forEach var="i" begin="1" end="6"  items="${sitterList}">
-					<div class="card" onclick="location.href='${cpath}/SitterDetail'"> 
-					<img src="${cpath}/imageSitter/sitter1.jpg" alt="돌보미 이미지">
-						<div class="location">${i.sitter_region}</div>
-						<div class="caregiver">${i.sitter_name} 돌보미</div>
-						<div class="parent">여기두</div>
-						<div class="time" id="timeBox"></div>
-						<div class="content">제가 부탁드린 점 반영하셔서 아이 돌봄 해주셨어요~ 다양한 놀이
-							패턴으로 풍부하게 놀아주셔서 애들이 심심할 틈이 없었어요!! 늘 최선을 ...</div>
-							
+				<c:forEach items="${reviewList}" var="r">
+					<div class="card" onclick="location.href='${cpath}/SitterDetail/${r.sitterId}'"> 
+					<img src="${cpath}/${r.sitterPhotoImg}" alt="돌보미 이미지">
+						<div class="location">${r.sitterRegion}</div>
+						<div class="caregiver">${r.sitterName} 돌보미</div>
+						<div class="parent">${r.parentNickname}</div>
+						<div class="time">${r.formattedDate} 일자 리뷰</div>
+						<div class="content">${r.reviewOpinion}</div>
 					</div>
 				</c:forEach>
 			</div>
 		</div>
 	</div>
 
-	<!-- 긴급 돌봄 가능 돌보미 -->
+<!-- ===== [긴급 돌봄이 가능한 돌보미] ================================================== -->
 	<div class="container">
 		<div class="title">
 			<span class="highlight">긴급돌봄</span>이 가능한 돌보미 <a class="more"
@@ -105,42 +104,40 @@
 		</div>
 	</div>
 
-	<div class="scroll-container2">
-		<div class="cards-wrapper2">
-			<c:forEach var="i" begin="1" end="${sitterList.length}">
-				<div class="card2" onclick = "location.href='${cpath}/SitterDetailUrgent'">
-					<div class="container2">
-						<img src="https://placehold.co/48x48" alt="돌보미 이미지">
-						<div class="name">${i.sitter_name} 돌보미</div>
-						<img alt="더보기 버튼" src="${cpath}/images/ri_arrow-right-s-line.svg">
-					</div>
-
-					<div class="container3">
-						<div class="checklist">
-							<img class="check-image" src="${cpath}/images/check2-square.svg"
-								alt="체크박스"> <span>신청 응답 서류 확인</span>
-						</div>
-						<div class="checklist">
-							<img class="check-image" src="${cpath}/images/check2-square.svg"
-								alt="체크박스"> <span>학력 및 경력 증명서 확인</span>
-						</div>
-						<div class="checklist">
-							<img class="check-image" src="${cpath}/images/check2-square.svg"
-								alt="체크박스"> <span>행동 강령 서약서 확인</span>
+		<div class="scroll-container2">
+			<div class="cards-wrapper2">
+				<c:forEach items="${reviewList}" var="r">
+					<div class="card2"
+						onclick="location.href='${cpath}/SitterDetailUrgent/${r.sitterId}'">
+						<div class="container2">
+							<img src="${cpath}/${r.sitterPhotoImg}" alt="돌보미 이미지">
+							<div class="name">${r.sitterName}돌보미</div>
+							<img alt="더보기 버튼" src="${cpath}/images/ri_arrow-right-s-line.svg">
 						</div>
 
-						<div class="tags">
-							<span class="tag">${i.sitterCareTypeTag}</span> <span class="tag">${i.sitterCareTypeTag}</span> <span
-								class="tag">${i.sitterCareTypeTag}</span> <span class="tag">${i.sitterCareTypeTag}</span> <span
-								class="tag">${i.sitterCareTypeTag}</span> <span class="tag">${i.sitterCareTypeTag}</span>
+						<div class="container3">
+							<div class="checklist">
+								<img class="check-image" src="${cpath}/images/check2-square.svg"
+									alt="체크박스"> <span>신청 응답 서류 확인</span>
+							</div>
+							<div class="checklist">
+								<img class="check-image" src="${cpath}/images/check2-square.svg"
+									alt="체크박스"> <span>학력 및 경력 증명서 확인</span>
+							</div>
+							<div class="checklist">
+								<img class="check-image" src="${cpath}/images/check2-square.svg"
+									alt="체크박스"> <span>행동 강령 서약서 확인</span>
+							</div>
+							<c:forEach var="tag" items="${fn:split(r.sitterCareTypeTag, ',')}">
+									<span class="tag"># ${tag}</span>
+							</c:forEach>
 						</div>
 					</div>
-				</div>
-			</c:forEach>
+				</c:forEach>
+			</div>
 		</div>
-	</div>
 
-	<!-- 프터 위 빈 공간 -->
+		<!-- 프터 위 빈 공간 -->
 	<div class="nothing"></div>
 
 	<!-- 프터 -->

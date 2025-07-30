@@ -59,7 +59,7 @@ public class Sitter {
 	private int sitterPrice;
 	
 	// 돌보미 학력 추가
-	private String education;
+	private String sitterEducation;
 	
 	// 돌보미의 리뷰를 연결한 것
 	private List<SitterReview> sitterReviews;
