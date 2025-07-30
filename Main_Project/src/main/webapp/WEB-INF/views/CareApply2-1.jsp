@@ -9,7 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <title>아이 정보 입력</title>
-<link rel="stylesheet" href="/css/CareApply2.css">
+<link rel="stylesheet" href="/css/CareApply2-1.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,15 +21,14 @@
 		<!-- 상태바 -->
 		<div class="start-screen">
 			<div class="logoAlert">
-				<a href="${cpath}/CareApply"><img class="back"
-					src="${cpath}/images/Arrow left.png" alt="뒤로가기버튼" /></a> <a
-					href="${cpath}/Alert"><img class="alert-image"
-					src="${cpath}/images/알림버튼.svg" alt="로고" /> </a>
+				<a href="${cpath}/CareApply3"><img class="back" src="${cpath}/images/Arrow left.png" alt="뒤로가기버튼" /></a>
+				<a href="${cpath}/Alert"><img class="alert-image" src="${cpath}/images/알림버튼.svg" alt="로고" /> </a>
 			</div>
 		</div>
+
 		<div class="title">아이 정보 등록</div>
 
-		<form action="${cpath}/child/register" method="post">
+		<form action="${cpath}/CareApply3" method="get">
 			<!-- 이름 -->
 			<label class="label" for="childName">이름</label>
 			<input type="text" name="childName" placeholder="아이의 이름을 입력해주세요"
@@ -55,8 +54,8 @@
 			<textarea name="notes" placeholder="예) 알러지가 있어요, 먹는 약이 있어요 등"></textarea>
 			<label class="label" for="behavior">성향</label>
 			<textarea name="behavior" placeholder="예) 처음에 낯을 많이 가려요, 예민해요 등"></textarea>
-
-			<button type="submit" class="btn-next">다음</button>
+			
+			<a href="${cpath}/CareApply3"><button type="submit" class="btn-next">다음</button></a>
 		</form>
 	</div>
 	<script>

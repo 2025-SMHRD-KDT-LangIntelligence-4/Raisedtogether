@@ -29,7 +29,7 @@
 		</div>
 		<div class="title">방문 날짜 등록</div>
 
-		<form action="${cpath}/CareApply3" method="post">
+		<form action="${cpath}/CareApply8" method="get">
 			<!-- 날짜선택 -->
 			<div class="date-container">
 				<label class="label" for="date">날짜선택</label> <input type="date"

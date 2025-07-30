@@ -29,7 +29,7 @@
 		</div>
 		<div class="title">아이 정보 등록</div>
 
-		<form action="${cpath}/CareApply3" method="post">
+		<form action="${cpath}/CareApply3" method="get">
 			<!-- 이름 -->
 			<label class="label" for="childName">이름</label>
 			<input type="text" name="childName" placeholder="아이의 이름을 입력해주세요"

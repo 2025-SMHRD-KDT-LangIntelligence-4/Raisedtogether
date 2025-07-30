@@ -19,7 +19,7 @@
     <!-- 상태바 -->
     <div class="start-screen">
       <div class="logoAlert">
-         <a href="${cpath}/Mainpage"><img class="back" src="${cpath}/images/Arrow left.png" alt="뒤로가기버튼" /></a>
+         <a href="${cpath}/CareApply3"><img class="back" src="${cpath}/images/Arrow left.png" alt="뒤로가기버튼" /></a>
          <a href="${cpath}/Alert"><img class="alert-image" src="${cpath}/images/알림버튼.svg" alt="로고" /> </a>
       </div>
    </div>

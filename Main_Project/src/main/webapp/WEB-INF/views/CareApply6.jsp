@@ -65,8 +65,9 @@
 		</div>
 
 		<!-- 다음 버튼 -->
-		<button class="next-button">다음</button>
-
+		<a href="${cpath}/CareApply7">
+			<button class="next-button">다음</button>
+		</a>
 	</div>
 	<script>
     document.addEventListener("DOMContentLoaded", function () {

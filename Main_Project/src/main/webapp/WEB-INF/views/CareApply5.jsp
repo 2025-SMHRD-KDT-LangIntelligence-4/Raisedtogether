@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<c:set var="cpath" value="${pageContext.request.contextPath}" />
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -15,7 +19,7 @@
 	<!-- 상태바 -->
     	<div class="start-screen">
       		<div class="logoAlert">
-         	<a href="${cpath}/Mainpage"><img class="back" src="${cpath}/images/Arrow left.png" alt="뒤로가기버튼" /></a>
+         	<a href="${cpath}/CareApply4"><img class="back" src="${cpath}/images/Arrow left.png" alt="뒤로가기버튼" /></a>
          	<a href="${cpath}/Alert"><img class="alert-image" src="${cpath}/images/알림버튼.svg" alt="로고" /> </a>
       		</div>
    		</div>
@@ -47,8 +51,9 @@
             예) CCTV가 있어요, 강아지가 있어요 등
         </div>
     </div>
-
-    <div class="confirm-btn">다음</div>
+	<a href="${cpath}/CareApply6">
+		<button class="confirm-btn">다음</button>
+	</a>
 </div>
 </body>
 </html>

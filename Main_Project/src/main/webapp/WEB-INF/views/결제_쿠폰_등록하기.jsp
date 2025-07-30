@@ -19,7 +19,9 @@
   <div class="popup">
     <div class="popup-header">
       <span>결제 / 쿠폰등록</span>
-      <button class="close-btn" onclick="closeOverlay()">×</button>
+      <a href="{cpash}/CareApply8">
+      	<button class="close-btn" onclick="closeOverlay()">×</button>
+      </a>
     </div>
 
     <!-- 쿠폰 선택 -->

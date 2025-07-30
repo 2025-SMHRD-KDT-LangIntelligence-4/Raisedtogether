@@ -3,6 +3,7 @@ package com.smhrd.web.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+
 @Controller
 public class CareApplyController {
 
@@ -37,6 +38,10 @@ public String visitTime() {
 @GetMapping("/CareApply8")
 public String page1() {
     return "CareApply8"; // page1.jsp
+}
+@GetMapping("/돌보미선택")
+public String choose() {
+    return "돌보미선택";
 }
 
 }

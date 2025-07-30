@@ -19,10 +19,9 @@ body {
 	background: #F7F7FF;
 	font-family: 'NanumSquare Neo', sans-serif;
 	width: 430px;
-	height: 947px;
+	height: 932px;
 	border-radius: 60px;
 	position: relative;
-	top: 50px;
 }
 
 .start-screen {
@@ -62,11 +61,13 @@ body {
 
 .container {
   width: 430px;
-  height: 932px;
+  height: 880px;
   position: relative;
   background: white;
   margin: 0 auto;
   overflow: hidden;
+  padding: 20px;
+  top:52px;
 }
 
 .title {

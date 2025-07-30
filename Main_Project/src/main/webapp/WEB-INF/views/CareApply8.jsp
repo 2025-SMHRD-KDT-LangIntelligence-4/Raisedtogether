@@ -1,7 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<c:set var="cpath" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
 <title>돌봄 유형 선택</title>
@@ -16,7 +19,7 @@
 	<!-- 상태바 -->
 		<div class="start-screen">
 			<div class="logoAlert">
-				<a href="${cpath}/CareApply5"><img class="back" src="${cpath}/images/Arrow left.png" alt="뒤로가기버튼" /></a>
+				<a href="${cpath}/CareApply7"><img class="back" src="${cpath}/images/Arrow left.png" alt="뒤로가기버튼" /></a>
 				<a href="${cpath}/Alert"><img class="alert-image" src="${cpath}/images/알림버튼.svg" alt="로고" /> </a>
 			</div>
 		</div>
@@ -35,7 +38,6 @@
                 <li>말놀이</li>
             </ul>
         </div>
-
         <div class="card" onclick="selectCard(1)">
             <div class="checkbox">
                 <div class="checkmark">✔</div>
@@ -48,7 +50,6 @@
                 <li>종이접기</li>
             </ul>
         </div>
-
         <div class="card" onclick="selectCard(2)">
             <div class="checkbox">
                 <div class="checkmark">✔</div>
@@ -61,7 +62,6 @@
                 <li>학습지 풀이</li>
             </ul>
         </div>
-
         <div class="card" onclick="selectCard(3)">
             <div class="checkbox">
                 <div class="checkmark">✔</div>

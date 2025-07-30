@@ -17,7 +17,7 @@ body {
 	background: #F7F7FF;
 	font-family: 'NanumSquare Neo', sans-serif;
 	width: 430px;
-	height: 947px;
+	height: 932px;
 	border-radius: 60px;
 	position: relative;
 }
@@ -58,7 +58,7 @@ body {
 }
 
 .container {
-    height: 791px;
+    height: 880px;
 	width: 430px;
 	padding: 40px 40px 40px 40px;
 	background: #ffffff;

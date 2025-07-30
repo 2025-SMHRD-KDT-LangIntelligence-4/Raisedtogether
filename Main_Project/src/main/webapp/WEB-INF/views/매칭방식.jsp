@@ -21,23 +21,21 @@
       <span>돌보미 매칭 방식</span>
       <button class="close-btn" onclick="closeOverlay()">×</button>
     </div>
-    <div class="option active" onclick="selectOption(this)">
+    <div class="option active" onclick="selectOption(this)" data-target="결제_쿠폰_등록하기">
       <img src="/images/Stars.svg" alt="추천" />
       <div>
         <div class="title">추천 받고 선택할게요</div>
         <div class="desc">수업 신청 → 돌보미 추천 순으로 진행돼요</div>
       </div>
     </div>
-    <div class="option" onclick="selectOption(this)">
+    <div class="option" onclick="selectOption(this)" data-target="SitterCare">
       <img src="/images/Stars-1.svg" alt="직접 선택" />
       <div>
         <div class="title">콕 찍어서 선택할게요</div>
         <div class="desc">돌보미 선택 → 수업 신청 순으로 진행돼요</div>
       </div>
     </div>
-    <a href="${cpath}/결제_쿠폰_등록하기">
-    <button class="next-btn">다음</button>
-    </a>
+    <button class="next-btn" onclick="goNext()">다음</button>
   </div>
 </div>
 
@@ -45,19 +43,29 @@
 
 
 <script>
+let selectedPage = "결제_쿠폰_등록하기"; // 기본값은 첫 번째
 
 function closeOverlay() {
-	  document.getElementById("matchingOverlay").style.display = "none";
-	}
+  document.getElementById("matchingOverlay").style.display = "none";
+}
 
-	function selectOption(elem) {
-	  const allOptions = document.querySelectorAll(".option");
-	  allOptions.forEach(opt => opt.classList.remove("active"));
-	  elem.classList.add("active");
-	}
+function selectOption(elem) {
+  const allOptions = document.querySelectorAll(".option");
+  allOptions.forEach(opt => opt.classList.remove("active"));
+  elem.classList.add("active");
 
+  // data-target 값 가져오기
+  selectedPage = elem.getAttribute("data-target");
+}
 
-
+function goNext() {
+  if (!selectedPage) {
+    alert("옵션을 선택해주세요.");
+    return;
+  }
+  // 페이지 이동
+  window.location.href = "${cpath}/" + selectedPage;
+}
 </script>
 </body>
 </html>
