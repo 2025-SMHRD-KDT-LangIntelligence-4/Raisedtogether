@@ -75,11 +75,6 @@ public class MainController {
 		return "FindPassword";
 	}
 	
-	@GetMapping("/CareApply")
-	public String CareApply() {
-		return "CareApply";
-	}
-	
 	@GetMapping("/Urgent")
 	public String Urgent() {
 		return "Urgent";
@@ -208,6 +203,14 @@ public class MainController {
 	@GetMapping("/카카오페이결제")
 	public String 카카오페이결제() {
 		return "카카오페이결제";
+	}
+	
+	
+	
+	
+	@GetMapping("/ChatDetail2")
+	public String ChatDetail2() {
+		return "ChatDetail2";
 	}
 	
 	

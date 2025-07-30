@@ -38,7 +38,7 @@
 			<!-- 생년월일 -->
 			<div class="date-container">
 				<label class="label" for="birth">생년월일</label>
-				<input type="date" class="birth" id="birth"/>
+				<input type="date" class="birth" name="childBirth" id="birth" />
 			</div>
 
 			<!-- 성별 -->
@@ -52,9 +52,10 @@
 
 			<!-- 주의사항 및 성향 -->
 			<label class="label" for="notes">주의사항</label>
-			<textarea name="notes" placeholder="예) 알러지가 있어요, 먹는 약이 있어요 등"></textarea>
+			<textarea name="childNotes" placeholder="예) 알러지가 있어요, 먹는 약이 있어요 등"></textarea>
 			<label class="label" for="behavior">성향</label>
-			<textarea name="behavior" placeholder="예) 처음에 낯을 많이 가려요, 예민해요 등"></textarea>
+			<textarea name="childBehavior" placeholder="예) 처음에 낯을 많이 가려요, 예민해요 등"></textarea>
+			
 			<a href="${cpath}/CareApply3"><button type="submit" class="btn-next">다음</button></a>
 		</form>
 	</div>
