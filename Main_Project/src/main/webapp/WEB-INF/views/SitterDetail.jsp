@@ -25,22 +25,23 @@
 			</div>
 		</div>
 
+<c:forEach items="${sitterList}" var="s">
 		<div class="caregiver-profile">
 			<div class="info-section">
-				<div class="name">임성윤 돌보미</div>
-				<div class="university">순천대학교 • 유아교육과</div>
+				<div class="name">${s.sitter_name} 돌보미</div>
+				<div class="university">${s.education} • ${s.education}</div>
 				<div class="tags">
-					<div class="tag"># 노래하기</div>
-					<div class="tag"># 그림그리기</div>
-					<div class="tag"># 한글공부</div>
-					<div class="tag"># 학습지풀이</div>
+					<div class="tag">${s.sitterCareTypeTag}</div>
+					<div class="tag">${s.sitterCareTypeTag}</div>
+					<div class="tag">${s.sitterCareTypeTag}</div>
+					<div class="tag">${s.sitterCareTypeTag}</div>
 				</div>
 			</div>
 			<div class="profile-img">
 				<img src="https://placehold.co/150x150" alt="프로필 이미지">
 			</div>
 		</div>
-	
+	</c:forEach>
 
 
 

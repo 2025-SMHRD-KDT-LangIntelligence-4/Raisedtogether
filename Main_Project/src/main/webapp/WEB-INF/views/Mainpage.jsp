@@ -79,12 +79,12 @@
 			</div>
 
 			<div class="cards-wrapper">
-				<c:forEach var="i" begin="1" end="6"  >
+				<c:forEach var="i" begin="1" end="6"  items="${sitterList}">
 					<div class="card" onclick="location.href='${cpath}/SitterDetail'"> 
 					<img src="${cpath}/imageSitter/sitter1.jpg" alt="돌보미 이미지">
-						<div class="location">${sitter_region}</div>
-						<div class="caregiver">${sitter_name}</div>
-						<div class="parent"></div>
+						<div class="location">${i.sitter_region}</div>
+						<div class="caregiver">${i.sitter_name} 돌보미</div>
+						<div class="parent">여기두</div>
 						<div class="time" id="timeBox"></div>
 						<div class="content">제가 부탁드린 점 반영하셔서 아이 돌봄 해주셨어요~ 다양한 놀이
 							패턴으로 풍부하게 놀아주셔서 애들이 심심할 틈이 없었어요!! 늘 최선을 ...</div>
@@ -107,11 +107,11 @@
 
 	<div class="scroll-container2">
 		<div class="cards-wrapper2">
-			<c:forEach var="i" begin="1" end="2">
+			<c:forEach var="i" begin="1" end="${sitterList.length}">
 				<div class="card2" onclick = "location.href='${cpath}/SitterDetailUrgent'">
 					<div class="container2">
 						<img src="https://placehold.co/48x48" alt="돌보미 이미지">
-						<div class="name">심지은 돌보미</div>
+						<div class="name">${i.sitter_name} 돌보미</div>
 						<img alt="더보기 버튼" src="${cpath}/images/ri_arrow-right-s-line.svg">
 					</div>
 
@@ -130,9 +130,9 @@
 						</div>
 
 						<div class="tags">
-							<span class="tag">영어돌봄</span> <span class="tag">종이접기</span> <span
-								class="tag">그림그리기</span> <span class="tag">레고</span> <span
-								class="tag">책읽기</span> <span class="tag">역할놀이</span>
+							<span class="tag">${i.sitterCareTypeTag}</span> <span class="tag">${i.sitterCareTypeTag}</span> <span
+								class="tag">${i.sitterCareTypeTag}</span> <span class="tag">${i.sitterCareTypeTag}</span> <span
+								class="tag">${i.sitterCareTypeTag}</span> <span class="tag">${i.sitterCareTypeTag}</span>
 						</div>
 					</div>
 				</div>
