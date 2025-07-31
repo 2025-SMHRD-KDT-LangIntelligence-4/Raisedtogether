@@ -232,6 +232,7 @@ body {
 }
 
 .next-button {
+	position: fixed;
 	width: 390px;
 	height: 60px;
 	background: #534DFA;
