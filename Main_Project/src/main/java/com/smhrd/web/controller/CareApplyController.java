@@ -21,6 +21,7 @@ import com.smhrd.web.mapper.CareApplyMapper;
 
 import jakarta.servlet.http.HttpSession;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 
 
@@ -101,7 +102,7 @@ public class CareApplyController {
 	@GetMapping("/DeleteChild")
 	public String DeleteChild(@RequestParam("childIdx") int childIdx) {
 		mapper.deleteCareByChildIdx(childIdx);
-		mapper.DeleteChild(childIdx);
+		mapper.deleteChild(childIdx);
 		return "redirect:/CareApply3";
 	}
 //----------------------------------------------------------------------------------------
@@ -121,7 +122,7 @@ public class CareApplyController {
 //	    
 //	    return "CareApply4";  // JSP 이름 (뷰 이름)
 //	}
-	
+//----------------------------------------------------------------------------------------	
 	@PostMapping("/CareApply4")
 	public String careApply4Post(@RequestParam(name = "childIdx", required = false) List<String> childIdxList, Model model) {
 	    logger.info("받은 childIdx 리스트: {}", childIdxList);
@@ -134,7 +135,22 @@ public class CareApplyController {
 
 	    return "CareApply4";
 	}
-	
+//----------------------------------------------------------------------------------------
+	@PostMapping("CareApplyPlace")
+	public String CareApplyPlace(Care care, Model model, HttpSession session) {
+		String parentId = (String) session.getAttribute("parentId");
+		if (parentId == null) {
+			model.addAttribute("message", "로그인이 필요합니다.");
+			return "redirect:/LoginParent";
+		} else {
+			care.setParentId(parentId);
+			logger.info("CareApplyPlace - childIdx: {}", care.getChildIdx());
+			mapper.insertCarePlace(care);
+			List<Care> carePlace = mapper.selectCarePlace(care);
+			model.addAttribute("carePlace", carePlace);
+			return "redirect:/CareApply4";
+		}
+	}
 	
 //----------------------------------------------------------------------------------------
 	@GetMapping("/CareApply5")

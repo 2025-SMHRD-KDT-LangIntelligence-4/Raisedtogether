@@ -30,7 +30,7 @@
 		<div class="title">방문 장소 등록</div>
 
 
-		<form action="${cpath}/CareApply4" method="post">
+		<form action="${cpath}/CareApplyPlace" method="post">
 			<div class="input-group">
 				<label>방문 장소 명칭</label> <input type="text" name="carePlace" class="input-box"
 					placeholder="방문장소의 명칭을 입력해주세요" required />

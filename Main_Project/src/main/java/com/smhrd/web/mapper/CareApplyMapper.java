@@ -16,10 +16,10 @@ public interface CareApplyMapper {
 
 	// 아이 지우는 매퍼 2개가 한 세트
 	void deleteCareByChildIdx(int childIdx);
-	public void DeleteChild(int childIdx);
+	public void deleteChild(int childIdx);
 	
-	public void InsertCarePlace(Care care);
+	public void insertCarePlace(Care care);
 
-	public List<Care> selectCarePlace();
+	public List<Care> selectCarePlace(Care care);
 }
 
