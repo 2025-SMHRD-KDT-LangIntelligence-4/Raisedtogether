@@ -114,7 +114,7 @@
 				<div class="review-card">
 					<div class="review-header">
 						<div class="review-category">${randomCareTime2}시간</div>
-						<div class="review-info">${review.parentNickname}• ${review.childName}</div>
+						<div class="review-info">${review.parentNickname}님 • ${review.childName} ${review.childAge}세 ${review.childGender}</div>
 						<div class="review-stars">
 							<span class="star">★</span> <span class="star">★</span> <span
 								class="star">★</span> <span class="star">★</span> <span

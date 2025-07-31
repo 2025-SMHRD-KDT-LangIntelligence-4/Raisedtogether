@@ -112,7 +112,7 @@
 			<div class="cards-wrapper2">
 				<c:forEach items="${reviewList}" var="r">
 					<div class="card2"
-						onclick="location.href='${cpath}/SitterDetailUrgent/${r.sitterId}'">
+						onclick="location.href='${cpath}/SitterDetail/${r.sitterId}'">
 						<div class="container2">
 							<img src="${cpath}/${r.sitterPhotoImg}" alt="돌보미 이미지">
 							<div class="name">${r.sitterName} 돌보미</div>

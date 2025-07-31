@@ -102,26 +102,28 @@
 	</select>
 
 <!-- ======================================================================== -->
-	<select id="selectReviewsBySitterId"
-		resultType="com.smhrd.web.entity.SitterReview" parameterType="String">
-		SELECT
-		r.review_idx AS reviewIdx,
-		r.review_ratings AS reviewRatings,
-		r.review_opinion AS reviewOpinion,
-		r.review_created_at AS reviewCreatedAt,
-		r.sitter_id AS sitterId,
-		r.parent_id AS parentId,
-		p.parent_nickname AS parentNickname,
-		TIMESTAMPDIFF(YEAR, c.child_birthdate, CURDATE()) AS childAge,
-		c.child_gender AS childGender
-		FROM
-		t_sitter_review r
-		JOIN
-		t_parent p ON r.parent_id = p.parent_id
-		JOIN
-		t_child c ON r.parent_id = c.parent_id
-		WHERE
-		r.sitter_id = #{sitterId}
-	</select>
+<select id="selectReviewsBySitterId"
+    resultType="com.smhrd.web.entity.SitterReview" parameterType="String">
+    SELECT
+        r.review_idx AS reviewIdx,
+        r.review_ratings AS reviewRatings,
+        r.review_opinion AS reviewOpinion,
+        r.review_created_at AS reviewCreatedAt,
+        r.sitter_id AS sitterId,
+        r.parent_id AS parentId,
+        p.parent_nickname AS parentNickname,
+        TIMESTAMPDIFF(YEAR, c.child_birthdate, CURDATE()) AS childAge,
+        c.child_gender AS childGender,
+        c.child_name AS childName
+    FROM
+        t_sitter_review r
+    JOIN
+        t_parent p ON r.parent_id = p.parent_id
+    JOIN
+        t_child c ON r.parent_id = c.parent_id
+    WHERE
+        r.sitter_id = #{sitterId}
+</select>
+
 
 </mapper>
