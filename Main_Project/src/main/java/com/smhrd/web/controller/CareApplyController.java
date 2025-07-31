@@ -107,7 +107,7 @@ public class CareApplyController {
 	}
 //----------------------------------------------------------------------------------------
 //	@GetMapping("/CareApply4")
-//	public String careApply4(@RequestParam(name = "childIdx", required = false) String childIdxStr, Model model) {
+//	public String CareApply4(@RequestParam(name = "childIdx", required = false) String childIdxStr, Model model) {
 //		logger.info("받은 childIdx 파라미터: {}", childIdxStr);
 //	    if (childIdxStr != null && !childIdxStr.isEmpty()) {
 //	        // "94,107" => ["94", "107"]
@@ -123,7 +123,13 @@ public class CareApplyController {
 //	    return "CareApply4";  // JSP 이름 (뷰 이름)
 //	}
 //----------------------------------------------------------------------------------------	
-	@PostMapping("/CareApply4")
+	@GetMapping("/CareApply4") // 등록한 장소 불러오기 
+	public String selectCarePlace(Care care) {
+		mapper.selectCarePlace(care);
+		return "CareApply4";
+	}
+//----------------------------------------------------------------------------------------	
+	@PostMapping("/CareApply4") // 등록한 아이 정보 가지고 가는 로직
 	public String careApply4Post(@RequestParam(name = "childIdx", required = false) List<String> childIdxList, Model model) {
 	    logger.info("받은 childIdx 리스트: {}", childIdxList);
 

@@ -4,10 +4,14 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
 <mapper namespace="com.smhrd.web.mapper.CareApplyMapper">
-	<insert id="insertChild" parameterType="com.smhrd.web.entity.Child">
-		insert into t_child (parent_id, child_name, child_birthdate, child_gender, child_notes, child_behavior)
-		values (#{parentId}, #{childName}, #{childBirthdate}, #{childGender}, #{childNotes}, #{childBehavior})
+	<insert id="insertChild" parameterType="com.smhrd.web.entity.Child" useGeneratedKeys="true"
+		keyProperty="childIdx">
+		insert into t_child (parent_id, child_name, child_birthdate, child_gender,
+		child_notes, child_behavior)
+		values (#{parentId}, #{childName}, #{childBirthdate}, #{childGender},
+		#{childNotes}, #{childBehavior})
 	</insert>
+
 
 	<select id="selectChildByParentId" parameterType="String"
 		resultType="com.smhrd.web.entity.Child">
