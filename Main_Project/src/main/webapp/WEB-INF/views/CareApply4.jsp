@@ -24,20 +24,13 @@
 				</a>
 			</div>
 		</div>
-
-<<<<<<< HEAD
-=======
-    <!-- 제목 -->
-    <div class="title">돌보미와 만날 장소를 선택하세요</div>
->>>>>>> branch 'master' of https://github.com/2025-SMHRD-KDT-LangIntelligence-4/Raisedtogether.git
-
-		<div class="main-content">
 			<!-- 타이틀 -->
 			<div class="title">돌보미와 만날 장소를 선택하세요</div>
 
+
 			<!-- 각 장소를 카드로 출력 -->
 			<div class="card-list">
-				<c:forEach var="v" items="${visitList}">
+				<c:forEach var="place" items="${carePlace}">
 					<div class="child-card">
 						<!-- 체크 버튼 -->
 						<button class="check-btn" onclick="toggleCheck(this)">
@@ -49,9 +42,9 @@
 
 						<!-- 장소 정보 -->
 						<div class="child-info">
-							<div class="child-name">${v.visitName}</div>
+							<div class="child-name">${place.carePlace}</div>
 							<div class="child-sub">
-								<c:out value="${v.visitLocation}" />
+								<c:out value="${place.careAddress2}" />
 							</div>
 						</div>
 

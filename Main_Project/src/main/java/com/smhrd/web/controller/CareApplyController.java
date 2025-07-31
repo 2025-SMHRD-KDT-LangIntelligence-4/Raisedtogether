@@ -2,7 +2,11 @@ package com.smhrd.web.controller;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,10 +15,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.smhrd.web.entity.Care;
 import com.smhrd.web.entity.Child;
 import com.smhrd.web.mapper.CareApplyMapper;
 
 import jakarta.servlet.http.HttpSession;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 
 @Controller
@@ -23,6 +30,8 @@ public class CareApplyController {
     private final LoginController loginController;
 	@Autowired
 	CareApplyMapper mapper;
+	
+	private static final Logger logger = LoggerFactory.getLogger(CareApplyController.class);
 
     CareApplyController(LoginController loginController) {
         this.loginController = loginController;
@@ -32,14 +41,14 @@ public class CareApplyController {
 	public String CareApply2() {
 		return "CareApply2";
 	}
-	
+//----------------------------------------------------------------------------------------	
 	@GetMapping("/CareApply3")
 	public String SelectChildInfo(HttpSession session, Model model) {
 	    String parentId = (String) session.getAttribute("parentId");
 
 	    if (parentId == null) {
 	        model.addAttribute("message", "로그인이 필요합니다.");
-	        return "CareApply2"; // 로그인 페이지 또는 이전 페이지로 리디렉션
+	        return "redirect:/LoginParent";
 	    }
 
 	    List<Child> childList = mapper.selectChildByParentId(parentId);
@@ -58,19 +67,14 @@ public class CareApplyController {
 	    model.addAttribute("childList", childList);
 	    return "/CareApply3";
 	}
-
+//----------------------------------------------------------------------------------------
 	@PostMapping("/CareApply3")
 	public String CareApply3(Child child, HttpSession session, Model model) {
-		
-		System.out.println("child name: " + child.getChildName());
-		System.out.println("gender: " + child.getChildGender());
-		System.out.println("생일: " + child.getChildBirthdate());
-		
 		// 세션에서 parent_id 가져오기
 		String parentId = (String) session.getAttribute("parentId");
 		if (parentId == null) {
 			model.addAttribute("message", "로그인이 필요합니다.");
-	        return "CareApply2";
+	        return "redirect:/LoginParent";
 		}else {			
 		child.setParentId(parentId);
 		mapper.insertChild(child);
@@ -93,29 +97,51 @@ public class CareApplyController {
 		return "CareApply3";
 		}
 	}
-	
+//----------------------------------------------------------------------------------------
 	@GetMapping("/DeleteChild")
 	public String DeleteChild(@RequestParam("childIdx") int childIdx) {
 		mapper.deleteCareByChildIdx(childIdx);
 		mapper.DeleteChild(childIdx);
 		return "redirect:/CareApply3";
 	}
+//----------------------------------------------------------------------------------------
+//	@GetMapping("/CareApply4")
+//	public String careApply4(@RequestParam(name = "childIdx", required = false) String childIdxStr, Model model) {
+//		logger.info("받은 childIdx 파라미터: {}", childIdxStr);
+//	    if (childIdxStr != null && !childIdxStr.isEmpty()) {
+//	        // "94,107" => ["94", "107"]
+//	        String[] childIdxArray = childIdxStr.split(",");
+//	        
+//	        // 뷰로 넘기기 위해 모델에 추가
+//	        model.addAttribute("selectedChildIdxs", childIdxArray);
+//	    } else {
+//	        // 선택값 없을 때 처리
+//	        model.addAttribute("selectedChildIdxs", new String[0]);
+//	    }
+//	    
+//	    return "CareApply4";  // JSP 이름 (뷰 이름)
+//	}
+	
+	@PostMapping("/CareApply4")
+	public String careApply4Post(@RequestParam(name = "childIdx", required = false) List<String> childIdxList, Model model) {
+	    logger.info("받은 childIdx 리스트: {}", childIdxList);
 
-	@GetMapping("/CareApply2-1")
-	public String CareApply21() {
-		return "CareApply2-1";
+	    if (childIdxList != null && !childIdxList.isEmpty()) {
+	        model.addAttribute("selectedChildIdxs", childIdxList.toArray(new String[0]));
+	    } else {
+	        model.addAttribute("selectedChildIdxs", new String[0]);
+	    }
+
+	    return "CareApply4";
 	}
-
-	@GetMapping("/CareApply4")
-	public String CareApply4() {
-		return "CareApply4";
-	}
-
+	
+	
+//----------------------------------------------------------------------------------------
 	@GetMapping("/CareApply5")
 	public String CareApply5() {
 		return "CareApply5";
 	}
-
+//----------------------------------------------------------------------------------------
 	@GetMapping("/CareApply6")
 	public String CareApply6() {
 		return "CareApply6";

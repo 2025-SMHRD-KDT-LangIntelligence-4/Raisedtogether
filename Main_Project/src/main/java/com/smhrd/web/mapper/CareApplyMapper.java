@@ -3,7 +3,9 @@ package com.smhrd.web.mapper;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
+import com.smhrd.web.entity.Care;
 import com.smhrd.web.entity.Child;
 
 @Mapper
@@ -12,7 +14,12 @@ public interface CareApplyMapper {
 
 	public List<Child> selectChildByParentId(String parentId);
 
-	// 아이 지우는 매퍼 1세트
+	// 아이 지우는 매퍼 2개가 한 세트
 	void deleteCareByChildIdx(int childIdx);
 	public void DeleteChild(int childIdx);
+	
+	public void InsertCarePlace(Care care);
+
+	public List<Care> selectCarePlace();
 }
+

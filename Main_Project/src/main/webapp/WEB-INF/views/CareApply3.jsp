@@ -33,7 +33,7 @@
 			<!-- 각 아이를 카드로 출력 -->
 			<div class="card-list">
 				<c:forEach var="child" items="${childList}">
-					<div class="child-card">
+					<div class="child-card" data-child-idx="${child.childIdx}">
 						<!-- 체크 버튼 -->
 						<button class="check-btn" onclick="toggleCheck(this)">
 							<svg viewBox="0 0 24 24" fill="none" class="check-icon">
@@ -62,7 +62,7 @@
 							<button class="icon-btn">
 								<img class="icon" src="${cpath}/images/Edit 3.svg" alt="수정하기" />
 							</button>
-							
+
 							<form action="${cpath}/DeleteChild" method="get"
 								onsubmit="return confirm('${child.childName} 정보를 정말 삭제하시겠습니까?');"
 								style="display: inline;">
@@ -73,7 +73,7 @@
 							</form>
 
 						</div>
-						
+
 					</div>
 				</c:forEach>
 			</div>
@@ -84,7 +84,43 @@
 				<img class="register-icon" src="${cpath}/images/Plus.svg" alt="아이등록" />
 				<div class="register-text">아이 등록</div>
 			</div>
-
+			
+	<!-- 여기서부터 다음버튼 -->
+	<form id="childForm" method="post" action="${cpath}/CareApply4">
+	  
+		</form>
+	
+	<button type="button" onclick="goNext()">다음</button>
+	
+	<script>
+	function goNext() {
+	  const selectedCards = document.querySelectorAll(".child-card.selected");
+	  if (selectedCards.length === 0) {
+	    alert("한 명 이상의 아이를 선택해주세요");
+	    return;
+	  }
+	
+	  const form = document.getElementById('childForm');
+	  // 기존 hidden input 초기화
+	  form.querySelectorAll('input[name="childIdx"]').forEach(e => e.remove());
+	
+	  // 선택한 아이들 childIdx input 생성
+	  selectedCards.forEach(card => {
+	    const childIdx = card.getAttribute("data-child-idx");
+	    const input = document.createElement("input");
+	    input.type = "hidden";
+	    input.name = "childIdx";  // 서버에서 배열로 받을 파라미터 이름
+	    input.value = childIdx;
+	    form.appendChild(input);
+	  });
+	
+	  // 폼 제출 (POST)
+	  form.submit();
+	}
+	</script>
+	<!-- 여기까지 다음버튼 -->
+	
+	
 			<!-- 안내사항 -->
 			<div class="notice-box">
 				<div class="notice-title">안내사항</div>
@@ -94,18 +130,20 @@
 					• 동생 또는 친구가 같이 수업 받기를 원할때는 추가비용이<br> &nbsp;&nbsp;발생할 수
 					있습니다.(5000원)<br> • 돌보미 한명당 최대 3명의 아이까지 돌보줄 수 있습니다.<br>
 					&nbsp;&nbsp;(설정에 따라 단단할 수 있습니다)
+				
 				</div>
-			</div>
-
-
-		</div>
-
-		<!-- 다음 버튼 -->
-		<button class="next-button"
-			onclick="location.href='${cpath}/CareApply4'">다음</button>
-
 	</div>
 
+
+		
+
+	
+	
+
+	</div>
+	
+	</div>
+	
 	<script>
 		function toggleCheck(button) {
 			button.classList.toggle("selected");
@@ -115,5 +153,9 @@
 			}
 		}
 	</script>
+
+
+
+
 </body>
 </html>

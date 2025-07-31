@@ -17,8 +17,6 @@
 		WHERE parent_id = #{parentId}
 	</select>
 
-
-
 	<delete id="deleteCareByChildIdx" parameterType="int">
 		DELETE FROM t_care WHERE child_idx = #{childIdx}
 	</delete>
@@ -27,4 +25,16 @@
 		delete from t_child
 		where child_idx = #{childIdx}
 	</delete>
+	
+	<insert id="InsertCarePlace" parameterType="com.smhrd.web.entity.Care">
+	    insert into t_care (care_idx, parent_id, child_idx, care_place, care_address)
+	    values (#{careIdx}, #{parentId}, #{childIdx}, #{carePlace}, #{careAddress2})
+	</insert>
+	
+	<select id="selectCarePlace" resultType="com.smhrd.web.entity.Care">>
+		 select *
+		 from t_care
+		 where parent_id = #{parentId}
+	</select>
+
 </mapper>
