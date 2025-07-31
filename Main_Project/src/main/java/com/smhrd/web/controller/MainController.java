@@ -132,7 +132,14 @@ public class MainController {
 		int randomCareTime = new Random().nextInt(301) + 100;  // (100~400시간)
 		int randomCareTime2 = new Random().nextInt(13) + 4;  // (4~12시간)
 		List<SitterReview> reviewList = mapper.selectReviewsBySitterId(sitterId);
-
+		
+	    // 로그 출력 (콘솔에 찍힘)
+	    for (SitterReview review : reviewList) {
+	        System.out.println("parentNickname: " + review.getParentNickname()
+	            + ", childName: " + review.getChildName()
+	            + ", reviewOpinion: " + review.getReviewOpinion());
+	    }
+		
 		model.addAttribute("sitter", sitter);
 		model.addAttribute("avgRating", avgRating != null ? avgRating : 0.0);
 		model.addAttribute("randomCareTime", randomCareTime);

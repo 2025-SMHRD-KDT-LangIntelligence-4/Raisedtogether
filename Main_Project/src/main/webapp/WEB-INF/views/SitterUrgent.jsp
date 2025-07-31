@@ -52,7 +52,7 @@
 
 		<div class="caregiver-card-list">
 			<c:forEach items="${sitterList}" var="s">
-				<div class="caregiver-card" onclick="location.href='${cpath}/SitterDetailUrgent/${s.sitterId}'">
+				<div class="caregiver-card" onclick="location.href='${cpath}/SitterDetail/${s.sitterId}'">
 					<div class="caregiver-name">${s.sitterName}</div>
 					<div class="caregiver-school">${s.sitterEducation}</div>
 					<div class="caregiver-desc">${s.sitterIntroduction}</div>
