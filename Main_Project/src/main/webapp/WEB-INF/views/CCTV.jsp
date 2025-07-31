@@ -30,7 +30,7 @@
 
 
 		<div class="stream-container">
-			<img id="stream" src="http://172.30.1.93:8000/video_feed" />
+			<img id="stream" src="http://127.0.0.1:8000/video_feed" />
 		</div>
 
 <div style="padding: 20px">
