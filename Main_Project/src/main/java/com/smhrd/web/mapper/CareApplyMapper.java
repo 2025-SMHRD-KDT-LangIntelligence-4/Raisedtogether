@@ -11,4 +11,7 @@ public interface CareApplyMapper {
 	public void insertChild(Child child);
 
 	public List<Child> selectChildByParentId(String parentId);
+
+	void deleteCareByChildIdx(int childIdx);
+	public void DeleteChild(int childIdx);
 }

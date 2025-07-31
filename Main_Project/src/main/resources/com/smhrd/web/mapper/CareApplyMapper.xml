@@ -16,4 +16,15 @@
 		FROM t_child
 		WHERE parent_id = #{parentId}
 	</select>
+
+
+
+	<delete id="deleteCareByChildIdx" parameterType="int">
+		DELETE FROM t_care WHERE child_idx = #{childIdx}
+	</delete>
+
+	<delete id="DeleteChild">
+		delete from t_child
+		where child_idx = #{childIdx}
+	</delete>
 </mapper>

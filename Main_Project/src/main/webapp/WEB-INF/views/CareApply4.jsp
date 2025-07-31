@@ -25,7 +25,7 @@
    </div>
 
     <!-- 제목 -->
-    <div class="title">돌보미와 만날 아이를 선택하세요</div>
+    <div class="title">돌보미와 만날 장소를 선택하세요</div>
 
     <!-- 장소 등록 박스 -->
     <a href="${cpath}/CareApply5">
