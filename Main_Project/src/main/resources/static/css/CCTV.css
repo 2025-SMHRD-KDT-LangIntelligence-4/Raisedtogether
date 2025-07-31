@@ -49,6 +49,7 @@ body {
 .content-container {
 	padding-bottom: 80px;
 	padding-top: 76px;
+	height : 932px
 }
 
 .start-screen {
@@ -89,16 +90,17 @@ body {
 
 .stream-container {
 	padding: 20px;
-	width: 390px;
+	max-width: 390px;
 	height: 657 px;
 }
 
-#stream {
+.stream-container img{
+	max-width: 390px;
+	border-radius: 15px;
+	height : 657 px;
 	display: block;
-	width: 390px;
-	height: 657 px;
-	border-radius: 15px
 }
+
 
 .alarm-btn{
 	padding: 20px;
@@ -107,6 +109,11 @@ body {
 	align-items: center; /* 세로 중앙 정렬 */
 }
 
+.btnC{
+	position: absolute;
+	bottom: 70px;
+	padding:20px;
+}
 
 
 .goToAlarmBtn {
@@ -118,6 +125,7 @@ body {
 	display: flex;
 	justify-content: center; /* 가로 중앙 정렬 */
 	align-items: center; /* 세로 중앙 정렬 */
+	
 }
 
 .care-button-text {

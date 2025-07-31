@@ -33,7 +33,7 @@
 			<img src="http://172.30.1.42:8000/video_feed">
 		</div>
 
-<div style="padding: 20px">
+<div class="btnC" >
 <div class="goToAlarmBtn" onclick="location.href='/Alarm'">
   <div class="care-button-text">분석 기록 보기</div>
 </div>
