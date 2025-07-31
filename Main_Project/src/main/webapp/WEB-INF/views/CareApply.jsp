@@ -5,14 +5,12 @@
 <c:set var="cpath" value="${pageContext.request.contextPath}" />
 
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="${cpath}/css/CareApply.css">
     <title>아이 선택</title>
-    <link rel="stylesheet" href="/css/CareApply.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <div class="container">
@@ -28,12 +26,11 @@
     <div class="title">돌보미와 만날 아이를 선택하세요</div>
 
     <!-- 아이 등록 박스 -->
-    <a href="${cpath}/CareApply2">
-    <div class="register-box">
+    <div class="register-box" onclick="location.href='${cpath}/CareApply2'">
         <div class="register-text">아이 등록</div>
         <img class="next" src="${cpath}/images/Plus.svg" alt="추가하기" />
     </div>
-	</a>
+
 	<!-- 안내사항 -->
 		<div class="notice-box">
 			<div class="notice-title">안내사항</div>

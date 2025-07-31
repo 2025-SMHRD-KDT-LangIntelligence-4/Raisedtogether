@@ -1,11 +1,38 @@
 @charset "UTF-8";
 
-/* 또는 구글폰트 예시라면 이렇게 추가 */
+/* --------------------
+   Fonts
+-------------------- */
 @font-face {
-	font-family: 'NanumSquare Neo';
-	src: url('...') format('woff2');
-	font-display: swap;
+	font-family: 'NanumSquareNeo';
+	src: url('/fonts/NanumSquareNeo-aLt.ttf') format('truetype');
+	font-weight: 200;
 }
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: url('/fonts/NanumSquareNeo-bRg.ttf') format('truetype');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: url('/fonts/NanumSquareNeo-cBd.ttf') format('truetype');
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: url('/fonts/NanumSquareNeo-dEb.ttf') format('truetype');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: url('/fonts/NanumSquareNeo-eHv.ttf') format('truetype');
+	font-weight: 800;
+}
+
 
 * {
    box-sizing: border-box;
@@ -14,7 +41,6 @@
 body {
 	margin: 0;
 	padding: 0px; font-family : 'NanumSquare Neo', sans-serif;
-	background: #F7F7FF;
 	font-family: 'NanumSquare Neo', sans-serif;
 	width: 430px;
 	height: 932px;
@@ -58,9 +84,9 @@ body {
 }
 
 .container {
-    height: 880px;
 	width: 430px;
-	padding: 40px 40px 40px 40px;
+	height: 882px;
+	padding: 40px ;
 	background: #ffffff;
 	position: relative;
 	top: 50px;
@@ -129,19 +155,19 @@ input, textarea, button {
   flex: 1;
   text-align: center;
   padding: 12px;
-  border: 1.5px solid #7A5FF5;
+  border: 1.5px solid #534DFA;
   border-radius: 8px;
   cursor: pointer;
   font-size: 14px;
   position: relative;
   transition: 0.3s;
-  color: #7A5FF5;
+  color: #534DFA;
   background-color: white;
   margin-bottom:20px;
 }
 
 .gender-button.active {
-  background-color: #7A5FF5;
+  background-color: #534DFA;
   color: white;
 }
 
@@ -154,14 +180,16 @@ input, textarea, button {
 }
 
 .btn-next {
-  background-color: #7A5FF5;
+  background-color: #534DFA;
   color: white;
   font-size: 16px;
   border: none;
   border-radius: 12px;
   padding: 14px;
   cursor: pointer;
-  margin-top: 64px;
+  margin:0;
+  position: relative;
+  width:350px;
 }
 
 .notes {

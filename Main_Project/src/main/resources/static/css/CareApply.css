@@ -1,5 +1,38 @@
 @charset "UTF-8";
 
+/* --------------------
+   Fonts
+-------------------- */
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: url('/fonts/NanumSquareNeo-aLt.ttf') format('truetype');
+	font-weight: 200;
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: url('/fonts/NanumSquareNeo-bRg.ttf') format('truetype');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: url('/fonts/NanumSquareNeo-cBd.ttf') format('truetype');
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: url('/fonts/NanumSquareNeo-dEb.ttf') format('truetype');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'NanumSquareNeo';
+	src: url('/fonts/NanumSquareNeo-eHv.ttf') format('truetype');
+	font-weight: 800;
+}
+
 * {
    box-sizing: border-box;
 }
