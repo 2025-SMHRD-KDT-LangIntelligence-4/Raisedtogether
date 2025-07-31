@@ -19,8 +19,14 @@ import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class CareApplyController {
+
+    private final LoginController loginController;
 	@Autowired
 	CareApplyMapper mapper;
+
+    CareApplyController(LoginController loginController) {
+        this.loginController = loginController;
+    }
 	
 	@GetMapping("/CareApply2")
 	public String CareApply2() {

@@ -12,7 +12,7 @@
 	<select id="selectChildByParentId" parameterType="String"
 		resultType="com.smhrd.web.entity.Child">
 		SELECT child_name AS childName, child_birthdate AS childBirthdate,
-		child_gender AS childGender
+		child_gender AS childGender, child_idx AS childIDX
 		FROM t_child
 		WHERE parent_id = #{parentId}
 	</select>

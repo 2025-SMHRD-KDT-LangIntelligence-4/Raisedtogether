@@ -62,8 +62,9 @@
 							<button class="icon-btn">
 								<img class="icon" src="${cpath}/images/Edit 3.svg" alt="수정하기" />
 							</button>
+							
 							<form action="${cpath}/DeleteChild" method="get"
-								onsubmit="return confirm('정말 삭제하시겠습니까?');"
+								onsubmit="return confirm('${child.childName} 정보를 정말 삭제하시겠습니까?');"
 								style="display: inline;">
 								<input type="hidden" name="childIdx" value="${child.childIdx}" />
 								<button type="submit" class="icon-btn">
@@ -72,6 +73,7 @@
 							</form>
 
 						</div>
+						
 					</div>
 				</c:forEach>
 			</div>
