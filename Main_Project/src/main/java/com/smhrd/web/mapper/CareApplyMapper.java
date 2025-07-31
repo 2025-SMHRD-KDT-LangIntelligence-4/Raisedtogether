@@ -21,5 +21,7 @@ public interface CareApplyMapper {
 	public void insertCarePlace(Care care);
 
 	public List<Care> selectCarePlace(Care care);
+	
+	public void deletePlace(int careIdx);
 }
 

@@ -32,7 +32,7 @@
 	
 	<insert id="insertCarePlace" parameterType="com.smhrd.web.entity.Care">
 	    insert into t_care (parent_id, child_idx, care_place, care_address)
-	    values (#{parentId}, #{childIdx}, #{carePlace}, #{careAddress2})
+	    values (#{parentId}, #{childIdx}, #{carePlace}, #{careAddress})
 	</insert>
 	
 	<select id="selectCarePlace" resultType="com.smhrd.web.entity.Care" parameterType="com.smhrd.web.entity.Care">
@@ -41,4 +41,8 @@
 		 where parent_id = #{parentId}
 	</select>
 
+	<delete id="deletePlace">
+		delete from t_care
+		where care_idx = #{careIdx}
+	</delete>
 </mapper>

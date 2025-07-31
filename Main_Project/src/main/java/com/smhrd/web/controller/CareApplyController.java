@@ -99,8 +99,8 @@ public class CareApplyController {
 		}
 	}
 //----------------------------------------------------------------------------------------
-	@GetMapping("/DeleteChild")
-	public String DeleteChild(@RequestParam("childIdx") int childIdx) {
+	@GetMapping("/deleteChild")
+	public String deleteChild(@RequestParam("childIdx") int childIdx) {
 		mapper.deleteCareByChildIdx(childIdx);
 		mapper.deleteChild(childIdx);
 		return "redirect:/CareApply3";
@@ -124,9 +124,17 @@ public class CareApplyController {
 //	}
 //----------------------------------------------------------------------------------------	
 	@GetMapping("/CareApply4") // 등록한 장소 불러오기 
-	public String selectCarePlace(Care care) {
-		mapper.selectCarePlace(care);
+	public String selectCarePlace(Care care, Model model, HttpSession session) {
+		String parentId = (String) session.getAttribute("parentId");
+		if (parentId == null) {
+			model.addAttribute("message", "로그인이 필요합니다.");
+	        return "redirect:/LoginParent";
+		}else {	
+		care.setParentId(parentId);
+		List<Care> carePlace = mapper.selectCarePlace(care);
+		model.addAttribute("carePlace", carePlace);
 		return "CareApply4";
+		}
 	}
 //----------------------------------------------------------------------------------------	
 	@PostMapping("/CareApply4") // 등록한 아이 정보 가지고 가는 로직
@@ -152,12 +160,17 @@ public class CareApplyController {
 			care.setParentId(parentId);
 			logger.info("CareApplyPlace - childIdx: {}", care.getChildIdx());
 			mapper.insertCarePlace(care);
-			List<Care> carePlace = mapper.selectCarePlace(care);
-			model.addAttribute("carePlace", carePlace);
+			List<Care> CarePlace = mapper.selectCarePlace(care);
+			model.addAttribute("CarePlace", CarePlace);
 			return "redirect:/CareApply4";
 		}
 	}
-	
+//----------------------------------------------------------------------------------------
+	@GetMapping("deletePlace")
+	public String deletePlace(@RequestParam("careIdx") int careIdx) {
+		mapper.deletePlace(careIdx);
+		return "redirect:/CareApply4";
+	}
 //----------------------------------------------------------------------------------------
 	@GetMapping("/CareApply5")
 	public String CareApply5() {

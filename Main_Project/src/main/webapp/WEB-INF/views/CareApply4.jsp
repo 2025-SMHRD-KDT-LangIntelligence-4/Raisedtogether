@@ -30,8 +30,8 @@
 
 			<!-- 각 장소를 카드로 출력 -->
 			<div class="card-list">
-				<c:forEach var="place" items="${carePlace}">
-					<div class="child-card">
+				<c:forEach var="place" items="${carePlace}" >
+					<div class="child-card" data-care-idx="${place.careIdx}">
 						<!-- 체크 버튼 -->
 						<button class="check-btn" onclick="toggleCheck(this)">
 							<svg viewBox="0 0 24 24" fill="none" class="check-icon">
@@ -44,7 +44,7 @@
 						<div class="child-info">
 							<div class="child-name">${place.carePlace}</div>
 							<div class="child-sub">
-								<c:out value="${place.careAddress2}" />
+								<c:out value="${place.careAddress}" />
 							</div>
 						</div>
 
@@ -53,9 +53,14 @@
 							<button class="icon-btn">
 								<img class="icon" src="${cpath}/images/Edit 3.svg" alt="수정하기" />
 							</button>
-							<button class="icon-btn">
-								<img class="icon" src="${cpath}/images/Trash 2.svg" alt="지우기" />
-							</button>
+							<form action="${cpath}/deletePlace" method="get"
+								onsubmit="return confirm('${place.carePlace} 정보를 정말 삭제하시겠습니까?');"
+								style="display: inline;">
+								<input type="hidden" name="careIdx" value="${place.careIdx}" />
+								<button type="submit" class="icon-btn">
+									<img class="icon" src="${cpath}/images/Trash 2.svg" alt="지우기" />
+								</button>
+							</form>
 						</div>
 					</div>
 				</c:forEach>

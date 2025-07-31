@@ -12,10 +12,7 @@ import lombok.NoArgsConstructor;
 public class Care {
 	private int CareIdx;
 	private String CarePlace;
-	private String CareAddress1;
-	private String CareAddress2;
-	private String CareAddress3;
-	private String CareAddress4;
+	private String CareAddress;
 	private String CareNotes;
 	
 	private LocalDateTime CareStDt;
@@ -28,8 +25,8 @@ public class Care {
 	private LocalDateTime CareCreatedAt;
 	
 	// 조인
-	private String parentId;
-	private String childName;
-	private int childIdx;
+	private String ParentId;
+	private String ChildName;
+	private int ChildIdx;
 	
 }

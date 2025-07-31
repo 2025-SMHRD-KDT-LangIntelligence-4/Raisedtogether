@@ -63,7 +63,7 @@
 								<img class="icon" src="${cpath}/images/Edit 3.svg" alt="수정하기" />
 							</button>
 
-							<form action="${cpath}/DeleteChild" method="get"
+							<form action="${cpath}/deleteChild" method="get"
 								onsubmit="return confirm('${child.childName} 정보를 정말 삭제하시겠습니까?');"
 								style="display: inline;">
 								<input type="hidden" name="childIdx" value="${child.childIdx}" />
