@@ -252,6 +252,10 @@ public class MainController {
 		return "카카오페이결제";
 	}
 	
+	@PostMapping("/Kakaopay") // 카카오페이결제 이후 창
+	public String Kakaopay() {
+		return "Kakaopay";
+	}
 	
 	
 	

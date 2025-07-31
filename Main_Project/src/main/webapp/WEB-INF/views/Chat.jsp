@@ -56,7 +56,7 @@
 		<!-- 반복문 써야할 듯 -->
 		<div class="chat-tile">
 				<div class="profile-img">
-					<img src="https://placehold.co/42x42" alt="Profile">
+					<img src="${cpath}/imageSitter/sitter10.png" alt="Profile">
 				</div>
 
 				<div class="chat-content">
@@ -65,37 +65,37 @@
 						<div class="chat-time">10:25</div>
 					</div>
 					<div class="chat-bottom">
-						<div class="chat-preview">감사합니다! 좋은하루 보내세요~</div>
+						<div class="chat-preview">저도 좋은 추억이었어요!!</div>
 						
 					</div>
 				</div>
 			</div><div class="chat-tile">
 				<div class="profile-img">
-					<img src="https://placehold.co/42x42" alt="Profile">
+					<img src="${cpath}/imageSitter/sitter5.png" alt="Profile">
 				</div>
 
 				<div class="chat-content">
 					<div class="chat-top">
-						<div class="chat-name">이희자 돌보미</div>
+						<div class="chat-name">김유라 돌보미</div>
 						<div class="chat-time">10:25</div>
 					</div>
 					<div class="chat-bottom">
-						<div class="chat-preview">감사합니다! 좋은하루 보내세요~</div>
+						<div class="chat-preview">다음에도 불러주시면 감사하겠습니다ㅎㅎ</div>
 						
 					</div>
 				</div>
 			</div><div class="chat-tile">
 				<div class="profile-img">
-					<img src="https://placehold.co/42x42" alt="Profile">
+					<img src="${cpath}/imageSitter/sitter8.png" alt="Profile">
 				</div>
 
 				<div class="chat-content">
 					<div class="chat-top">
-						<div class="chat-name">이희자 돌보미</div>
+						<div class="chat-name">오하영 돌보미</div>
 						<div class="chat-time">10:25</div>
 					</div>
 					<div class="chat-bottom">
-						<div class="chat-preview">감사합니다! 좋은하루 보내세요~</div>
+						<div class="chat-preview">입급 빨리 해주세용ㅋ.ㅋ</div>
 						
 					</div>
 				</div>

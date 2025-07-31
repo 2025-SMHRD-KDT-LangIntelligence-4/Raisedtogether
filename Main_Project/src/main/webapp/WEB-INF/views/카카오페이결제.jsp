@@ -25,7 +25,7 @@
     <p>최소 금액으로 선결제 후 돌봄 매칭이 모두 끝난 뒤,<br>추가비용 및 돌봄비 시급에 맞추어 추가 결제가 진행돼요</p>
   </div>
 
-  <form action="${cpath}/pay/ready" method="post">
+  <form action="${cpath}/Kakaopay" method="post">
     <button class="pay-btn">결제하기</button>
   </form>
 </div>
