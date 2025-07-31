@@ -21,16 +21,16 @@ public class CareApplyController {
 	@Autowired
 	CareApplyMapper mapper;
 	
-	@GetMapping("/CareApply")
-	public String CareApply() {
-		return "CareApply";
-	}
-
 	@GetMapping("/CareApply2")
 	public String CareApply2() {
 		return "CareApply2";
 	}
 
+	@GetMapping("/CareApply3")
+	public String CareApply3() {
+		return "CareApply3";
+	}
+	
 	@PostMapping("/CareApply3")
 	public String CareApply3(Child child, HttpSession session, Model model) {
 		// 세션에서 parent_id 가져오기
