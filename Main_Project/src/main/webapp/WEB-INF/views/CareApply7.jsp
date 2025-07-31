@@ -27,6 +27,8 @@
 					src="${cpath}/images/알림버튼.svg" alt="로고" /> </a>
 			</div>
 		</div>
+		
+		
 		<div class="title">방문 날짜 등록</div>
 
 		<form action="${cpath}/CareApply8" method="get">
@@ -52,6 +54,11 @@
 				    <input type="text" placeholder="까지">
 				  </div>
 				</div>
+				
+				
+				
+				
+				
 			<div class="notice-box">
 				<div class="notice-title">주의사항</div>
 				<div class="notice-line"></div>
@@ -61,8 +68,15 @@
 				</div>
 				<img class="warning-icon"src="${cpath}/images/Icon.png" alt="주의사항" />
 			</div>
-			<a href="${cpath}/CareApply3"><button type="submit"
-					class="btn-next">다음</button></a>
+			
+			
+			<button type="submit"
+					class="btn-next">다음</button>
+					
+					
+					
+					
+					
 		</form>
 	</div>
 	<script>

@@ -99,6 +99,7 @@ body {
 }
 
 .care-button {
+	all: unset;
 	width: 350px;
 	height: 50px;
 	position: absolute;

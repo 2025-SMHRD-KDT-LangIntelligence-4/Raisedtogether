@@ -27,6 +27,8 @@
 
     <div class="title">방문 장소 등록</div>
 
+
+<form action="${cpath}/CareApply4" method="post"> 
     <div class="input-group">
         <label>방문 장소 명칭</label>
         <input type="text" class="input-box" placeholder="방문장소의 명칭을 입력해주세요"required />
@@ -49,10 +51,20 @@
          <label>특이사항</label>
 		<textarea class="textarea-box" placeholder="예) CCTV가 있어요, 강아지가 있어요 등"></textarea>
     </div>
-	<a href="${cpath}/CareApply6">
-		<button class="confirm-btn">다음</button>
-	</a>
+	
+		<button class="confirm-btn" type="submit" >다음</button>
+	
+	
+	 </form>
+	
+	
 </div>
+
+
+
+
+
+
 	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
 function sample3_execDaumPostcode() {
