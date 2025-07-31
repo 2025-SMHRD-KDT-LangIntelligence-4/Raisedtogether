@@ -111,7 +111,7 @@
 			<div class="divider"></div>
 
 			<!-- 부모님 리뷰 -->
-			<div class="section-title" style="top: 540px;">부모님 리뷰</div>
+			<div class="section-title" style="top: 540px;">최근 부모님 리뷰</div>
 			<c:forEach var="review" items="${reviewList}">
 				<div class="review-card">
 					<div class="review-header">
@@ -143,7 +143,7 @@
 			</div>
 
 
-			<button onclick="location.href='${cpath}/CareApply3'"
+			<button onclick="location.href='${cpath}/CareApplyFinal'"
 				class="select-button">돌봄 신청하기</button>
 
 

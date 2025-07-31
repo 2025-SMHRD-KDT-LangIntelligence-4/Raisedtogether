@@ -28,8 +28,8 @@
 
 		<!-- 돌봄 유형 선택 + 검색창 -->
 		<div class="emergency-container">
-			<div class="emergency-title">돌봄 유형을 선택하세요</div>
-			<div class="emergency-subtitle">예상 금액은 쿠폰 적용 전 금액이에요</div>
+			<div class="emergency-title">긴급 돌봄 신청!</div>
+			<div class="emergency-subtitle">지도 상 가까운 위치의 대기 중인 돌보미와 자동으로 연결해요~</div>
 
 			<form class="search-bar"
 				action="${pageContext.request.contextPath}/search" method="get">

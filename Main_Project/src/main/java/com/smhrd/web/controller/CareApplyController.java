@@ -14,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.smhrd.web.entity.Care;
 import com.smhrd.web.entity.Child;
@@ -136,18 +137,41 @@ public class CareApplyController {
 		return "CareApply4";
 		}
 	}
-//----------------------------------------------------------------------------------------	
+//----------------------------------------------------------------------------------------
+//	@PostMapping("/CareApply4") // 등록한 아이 정보 가지고 가는 로직
+//	public String careApply4Post(@RequestParam(name = "childIdx", required = false) List<String> childIdxList, Model model) {
+//	    logger.info("받은 childIdx 리스트: {}", childIdxList);
+//
+//	    if (childIdxList != null && !childIdxList.isEmpty()) {
+//	        model.addAttribute("selectedChildIdxs", childIdxList.toArray(new String[0]));
+//	    } else {
+//	        model.addAttribute("selectedChildIdxs", new String[0]);
+//	    }
+//
+//	    return "CareApply4";
+//	}
+//----------------------------------------------------------------------------------------
 	@PostMapping("/CareApply4") // 등록한 아이 정보 가지고 가는 로직
-	public String careApply4Post(@RequestParam(name = "childIdx", required = false) List<String> childIdxList, Model model) {
-	    logger.info("받은 childIdx 리스트: {}", childIdxList);
+	public String careApply4Post(@RequestParam(name = "childIdx", required = false) List<String> childIdxList,
+			Model model, Care care, HttpSession session) {
+		logger.info("받은 childIdx 리스트: {}", childIdxList);
+		String parentId = (String) session.getAttribute("parentId");
+		if (parentId == null) {
+			model.addAttribute("message", "로그인이 필요합니다.");
+			return "redirect:/LoginParent";
+		} else {
+			care.setParentId(parentId);
+			List<Care> carePlace = mapper.selectCarePlace(care);
+			model.addAttribute("carePlace", carePlace);
 
-	    if (childIdxList != null && !childIdxList.isEmpty()) {
-	        model.addAttribute("selectedChildIdxs", childIdxList.toArray(new String[0]));
-	    } else {
-	        model.addAttribute("selectedChildIdxs", new String[0]);
-	    }
+			if (childIdxList != null && !childIdxList.isEmpty()) {
+				model.addAttribute("selectedChildIdxs", childIdxList.toArray(new String[0]));
+			} else {
+				model.addAttribute("selectedChildIdxs", new String[0]);
+			}
 
-	    return "CareApply4";
+		}
+		return "CareApply4";
 	}
 //----------------------------------------------------------------------------------------
 	@PostMapping("CareApplyPlace")
@@ -192,4 +216,9 @@ public class CareApplyController {
 		return "CareApply8"; // page1.jsp
 	}
 
+	@GetMapping("/CareApplyFinal")
+	public String CareApplyFinal(RedirectAttributes redirectAttributes) {
+		redirectAttributes.addFlashAttribute("message", "신청이 완료되었습니다!");
+		return "redirect:/Mainpage";
+	}
 }

@@ -46,7 +46,7 @@
 			</button>
 			<br>
 			
-			<input type="text" name="careAddress2" class="address" id="sample3_address"
+			<input type="text" name="careAddress" class="address" id="sample3_address"
 				placeholder="주소"><br>
 				
 			<input type="text" name="careAddress3" 

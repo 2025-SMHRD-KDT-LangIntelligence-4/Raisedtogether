@@ -29,8 +29,8 @@
 		<!-- 프로필 영역 -->
 		<div class="profile-container">
 			<div class="profile-top">
-				<div class="user-name">단하루 부모님</div>
-				<div class="care-time">돌봄 13시간</div>
+				<div class="user-name">김하람 부모님</div>
+				<div class="care-time">돌봄 28시간</div>
 			</div>
 			<div class="info-box">
 				<div class="info-set">
@@ -39,7 +39,7 @@
 				</div>
 				<div class="info-set">
 					<div class="info-label">포인트</div>
-					<div class="info-value">0P</div>
+					<div class="info-value">3500P</div>
 				</div>
 			</div>
 		</div>

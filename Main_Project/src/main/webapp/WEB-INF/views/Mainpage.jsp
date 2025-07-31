@@ -14,6 +14,12 @@
 <link rel="stylesheet" href="${cpath}/css/Mainpage.css">
 </head>
 <body>
+<!-- 필요시 메시지 띄우는 창. 평소에 안 보임 -->
+<c:if test="${not empty message}">
+    <script>
+        alert("${message}");
+    </script>
+</c:if>
 
 	<div class="content-container">
 
