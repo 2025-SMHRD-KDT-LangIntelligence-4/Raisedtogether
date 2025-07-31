@@ -77,7 +77,7 @@
 						<div class="reservation-info">성신여자대학교 • 유아교육과</div>
 					</div>
 					<div class="reservation-status">
-						<div>그림그리기</div>
+						<div>놀이시간</div>
 					</div>
 				</div>
 				<div class="reservation-address">전라남도 순천시 덕월동 자이아파트 101동 2091호</div>
