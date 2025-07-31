@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>긴급 돌봄</title>
 <link rel="stylesheet" href="${cpath}/css/SitterUrgent.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -28,11 +28,11 @@
 
 		<!-- 돌봄 유형 선택 + 검색창 -->
 		<div class="emergency-container">
-			<div class="emergency-title">긴급 돌봄 신청!</div>
-			<div class="emergency-subtitle">지도 상 가까운 위치의 대기 중인 돌보미와 자동으로 연결해요~</div>
-			<a href="${cpath}/SitterUrgentApply">
-				<button type="submit" class="next-button">돌봄 신청</button>
-			</a>
+			<div class="emergency-title">📢 긴급 돌봄 신청!</div>
+			<div class="emergency-subtitle">지도 상 가까운 위치에 대기 중인 돌보미와 자동으로 연결해요</div>
+			
+				<button class="next-button" onclick="location.href='${cpath}/SitterUrgentApply'">긴급 돌봄 신청</button>
+			
 		</div>
 
 		<div class="caregiver-card-list">

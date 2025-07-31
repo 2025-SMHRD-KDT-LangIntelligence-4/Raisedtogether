@@ -94,7 +94,7 @@ body {
 ---------------------*/
 .emergency-container {
 	width: 430px;
-	padding: 20px 20px 10px 20px;
+	padding: 20px ;
 	background-color: white;
 	box-sizing: border-box;
 }
@@ -116,11 +116,11 @@ body {
 .next-button{
 	width: 390px;
 	height: 60px;
-	background: #534DFA;
+	background: #DC5454;
 	border: none;
 	border-radius: 16px;
 	font-size: 20px;
-	font-weight: 800;
+	font-weight: 700;
 	color: #fff;
 	cursor: pointer;
 }
