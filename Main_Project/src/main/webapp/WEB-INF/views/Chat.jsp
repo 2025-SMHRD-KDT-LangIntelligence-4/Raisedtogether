@@ -61,7 +61,7 @@
 
 				<div class="chat-content">
 					<div class="chat-top">
-						<div class="chat-name">이희자 돌보미</div>
+						<div class="chat-name">조지민 돌보미</div>
 						<div class="chat-time">10:25</div>
 					</div>
 					<div class="chat-bottom">

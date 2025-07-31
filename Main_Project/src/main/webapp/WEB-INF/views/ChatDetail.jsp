@@ -20,7 +20,7 @@
 			<div class="backAlert">
 				<a href="${cpath}/Mainpage"><img class="back"
 					src="${cpath}/images/Arrow left.png" alt="뒤로가기버튼" /></a> <span
-					style="font-weight: 800;">이희자 돌보미</span> <img class="alert-image"
+					style="font-weight: 800;">정세린 돌보미</span> <img class="alert-image"
 					src="${cpath}/images/설정버튼.svg" alt="설정하기" />
 			</div>
 		</div>

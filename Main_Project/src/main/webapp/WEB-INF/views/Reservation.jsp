@@ -52,7 +52,7 @@
 					<div class="reservation-date-box">
 						<div class="reservation-label">방문 날짜</div>
 					</div>
-					<div class="reservation-date">2025년 07월 17일</div>
+					<div class="reservation-date">2025년 08월 01일</div>
 				</div>
 
 

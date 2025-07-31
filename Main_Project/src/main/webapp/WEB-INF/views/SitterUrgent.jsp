@@ -30,24 +30,9 @@
 		<div class="emergency-container">
 			<div class="emergency-title">긴급 돌봄 신청!</div>
 			<div class="emergency-subtitle">지도 상 가까운 위치의 대기 중인 돌보미와 자동으로 연결해요~</div>
-
-			<form class="search-bar"
-				action="${pageContext.request.contextPath}/search" method="get">
-				<input type="text" name="keyword" class="search-input"
-					placeholder="돌보미 이름, 돌봄 유형, 태그">
-				<button type="submit" class="search-button">
-					<img alt="검색버튼" src="${cpath}/images/Search.svg">
-				</button>
-			</form>
-
-			<div class="sort-wrapper">
-				<div class="sort-button">
-					<div class="sort-text">가까운 순</div>
-					<div class="sort-icon">
-						<div class="sort-arrow"></div>
-					</div>
-				</div>
-			</div>
+			<a href="${cpath}/SitterUrgentApply">
+				<button type="submit" class="next-button">돌봄 신청</button>
+			</a>
 		</div>
 
 		<div class="caregiver-card-list">
