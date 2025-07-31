@@ -2,6 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
 <c:set var="cpath" value="${pageContext.request.contextPath}" />
 <!-- 우빈 : 현재 줄 기준, 위 항목 복사해서 view 페이지에 기본으로 넣을 것 -->
 <!DOCTYPE html>
@@ -25,34 +27,29 @@
 			</div>
 		</div>
 
-<c:forEach items="${sitterList}" var="s">
-		<div class="caregiver-profile">
-			<div class="info-section">
-				<div class="name">${s.sitter_name} 돌보미</div>
-				<div class="university">${s.education} • ${s.education}</div>
-				<div class="tags">
-					<div class="tag">${s.sitterCareTypeTag}</div>
-					<div class="tag">${s.sitterCareTypeTag}</div>
-					<div class="tag">${s.sitterCareTypeTag}</div>
-					<div class="tag">${s.sitterCareTypeTag}</div>
+			<div class="caregiver-profile">
+				<div class="info-section">
+					<div class="name">${sitter.sitterName}돌보미</div>
+					<div class="university">${sitter.sitterEducation}</div>
+					<div class="tags">
+						<div class="tag">${fn:replace(sitter.sitterCareTypeTag, ",", " # ")}</div>
+					</div>
+				</div>
+				<div class="profile-img">
+					<img src="${cpath}/${sitter.sitterPhotoImg}" alt="프로필 이미지">
 				</div>
 			</div>
-			<div class="profile-img">
-				<img src="https://placehold.co/150x150" alt="프로필 이미지">
-			</div>
-		</div>
-	</c:forEach>
 
 
 
-	<div class="profile-container">
+		<div class="profile-container">
 
 
 		<!-- 누적 돌봄 시간 박스 -->
 		<div class="stat-container">
 			<div class="stat-box">
 				<div class="stat-value">
-					<span class="highlight">339</span><span class="unit">시간</span>
+					<span class="highlight">${randomCareTime}</span><span class="unit">시간</span>
 				</div>
 				<div class="stat-label">누적 돌봄 시간</div>
 			</div>
@@ -60,7 +57,7 @@
 			<!-- 평점 박스 -->
 			<div class="stat-box" style="left: 225px; top: 20px;">
 				<div class="stat-value">
-					<span class="highlight">9.5</span><span class="unit"> / 10</span>
+					<span class="highlight">${avgRating}</span><span class="unit"> / 10</span>
 				</div>
 				<div class="stat-label">평점</div>
 			</div>
@@ -112,46 +109,21 @@
 		<div class="divider"></div>
 
 		<!-- 부모님 리뷰 -->
-		<div class="section-title" style="top: 540px;">부모님 리뷰</div>
-
-		<%-- 여기에 리뷰 반복문 또는 직접 삽입 --%>
-		<div class="review-card">
-			<div class="review-header">
-				<div class="review-category">학습시간</div>
-				<div class="review-info">김 * 주 부모님 • 여아 6세</div>
-				<div class="review-stars">
-					<span class="star">★</span> <span class="star">★</span> <span
-						class="star">★</span> <span class="star">★</span> <span
-						class="star">★</span>
-				</div>
-			</div>
-			<div class="review-body">
-				아이가 첫 만남이지만 친근함을 느꼈나봐요~ 낯선사람을 장난감 방에 들어가게 하지 않거든요. 나중에는 선생님, 이모
-				섞어가면서 말할만큼 많이 따랐던 것도 좋았습니다^^ <br />아이가 깔깔대며 웃는 소리를 들으니 아이를 많이
-				좋아하시는구나를 느꼈습니다
-			</div>
-		</div>
-		<!-- jsp -->
-		<!-- 
-		<c:forEach var="review" items="${reviewList}">
-			<div class="review-card">
-				<div class="review-header">
-					<div class="review-category">${review.category}</div>
-					<div class="review-info">${review.parentName}•
-						${review.childGender} ${review.childAge}세</div>
-					<div class="review-stars">
-						<c:forEach var="i" begin="1" end="${review.rating}">
-							<span class="star">★</span>
-						</c:forEach>
+			<div class="section-title" style="top: 540px;">부모님 리뷰</div>
+			<c:forEach var="review" items="${reviewList}">
+				<div class="review-card">
+					<div class="review-header">
+						<div class="review-category">${randomCareTime2}시간</div>
+						<div class="review-info">${review.parentNickname}• ${review.childName}</div>
+						<div class="review-stars">
+							<span class="star">★</span> <span class="star">★</span> <span
+								class="star">★</span> <span class="star">★</span> <span
+								class="star">★</span>
+						</div>
 					</div>
+					<div class="review-body">${review.reviewOpinion}</div>
 				</div>
-				<div class="review-body">${review.content}</div>
-			</div>
-		</c:forEach>
- 		-->
-
-
-
+			</c:forEach>
 
 		<!-- 아이 감정리뷰 -->
 		<div class="section-title" style="top: 1061px;">아이 감정리뷰</div>
@@ -159,11 +131,11 @@
 		<div class="emotion-container">
 			<div class="emotion-box">
 				<img src="images/happy emoji with hearts.svg" />
-				<div class="emotion-text">100번 이상 선택</div>
+				<div class="emotion-text">${emotionCount}번 이상 선택</div>
 			</div>
 			<div class="emotion-box">
 				<img src="images/Sad Emoji.svg" />
-				<div class="emotion-text">10번 이하 선택</div>
+				<div class="emotion-text">${emotionCount2}번 이하 선택</div>
 			</div>
 		</div>
 
