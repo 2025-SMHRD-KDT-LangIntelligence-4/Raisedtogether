@@ -63,8 +63,14 @@ function selectOption(elem) {
 }
 
 function loadPopup1() {
-  $("#popupContainer").load("${cpath}/결제_쿠폰_등록하기");
-}
+	  if (selectedPage === "결제_쿠폰_등록하기") {
+	    // Ajax로 팝업에 다른 JSP를 로드
+	    $("#popupContainer").load("${cpath}/결제_쿠폰_등록하기");
+	  } else if (selectedPage === "SitterCare") {
+	    // 페이지 이동
+	    window.location.href = "${cpath}/SitterCare";
+	  }
+	}
 </script>
 </body>
 </html>

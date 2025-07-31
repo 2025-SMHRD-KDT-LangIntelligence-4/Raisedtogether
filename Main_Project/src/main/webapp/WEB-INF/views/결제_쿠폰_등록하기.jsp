@@ -56,22 +56,20 @@
     <!-- 다음 버튼 -->
 
     <button class="next-btn" onclick="loadPopup2()">다음</button>
-    
-    <div id="popupKakao"></div> <!-- 여기에 다음 팝업이 로드됨 -->
-  </div>
+</div>
+
+<!-- 다음 팝업이 들어올 영역 -->
+<div id="popupContainer"></div>
 
 
 <script>
-let selectedPage = "카카오페이결제"; // 기본값
-
-function closeOverlay() {
-  document.getElementById("matchingOverlay").style.display = "none";
-}
-
-function loadPopup(name) {
-	  $('#popupKakao').load(`/${cpath}/카카오페이결제`,
-			  function() {
-	    $('#popupKakao').show(); // 불러오고 나서 보이게 하기
+function loadPopup2() {
+	  $('#mainPopup').hide(); // 기존 팝업 숨기기
+	  $('#popupContainer').load('${cpath}/카카오페이결제', function(response, status, xhr) {
+	    if (status === "error") {
+	      console.error("AJAX 로드 실패:", xhr.status, xhr.statusText);
+	    } else {
+	    }
 	  });
 	}
 </script>

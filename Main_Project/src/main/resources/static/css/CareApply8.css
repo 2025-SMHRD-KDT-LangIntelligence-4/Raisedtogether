@@ -74,13 +74,13 @@ body {
 .card-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     justify-content: space-between;
     width: auto;
 }
 
 .card {
-    width: 185px;
+    width: 190px;
     height: 160px;
     border: 2px solid #D9D9D9;
     border-radius: 16px;
@@ -126,8 +126,8 @@ body {
 }
 
 .card-desc-bold {
-    margin-top: 30px;
-    font-size: 13px;
+    margin-top: 20px;
+    font-size: 12px;
     font-weight: 700;
     color: black;
 }

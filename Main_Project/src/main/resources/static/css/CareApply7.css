@@ -60,7 +60,7 @@ body {
 .container {
     height: 791px;
    width: 430px;
-   padding: 40px 40px 40px 40px;
+   padding: 20px;
    background: #ffffff;
    position: relative;
    top: 50px;
@@ -100,7 +100,7 @@ input, textarea, button {
 }
 
 #date {
-    width: 100%;
+    width: 390px;
     padding: 10px;
     font-size: 16px;
 }
@@ -177,7 +177,7 @@ input, textarea, button {
     position: absolute;
     top: 240px;
     left: 0px;
-    width: 350px;
+    width: 390px;
     height: 149px;
     background: #F2F2F7;
     border-radius: 16px;
@@ -187,7 +187,7 @@ input, textarea, button {
 .notice-title {
     position: absolute;
     top: 25px;
-    left: 20px;
+    left: 30px;
     color: #6E6E6E;
     font-size: 14px;
     font-weight: 400;
@@ -208,12 +208,13 @@ input, textarea, button {
     color: #6E6E6E;
     font-size: 12px;
     line-height: 18px;
+    width:330px;
 }
 
 .warning-icon {
     position: absolute;
     top: 20px;
-    left: 306px;
+    left: 336px;
     width: 24px;
     height: 25px;
 }

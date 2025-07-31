@@ -32,26 +32,16 @@
       <form action="${cpath}/CareApply8" method="get">
          <!-- 날짜선택 -->
          <div class="date-container">
-            <label class="label" for="date">날짜선택</label> <input type="date"
+            <label class="label" for="date">날짜선택 (시작시간)</label> <input type="datetime-local"
+               class="date" id="date" />
+         </div>
+         <!-- 날짜선택 -->
+         <div class="date-container">
+            <label class="label" for="date">날짜선택 (종료시간)</label> <input type="datetime-local"
                class="date" id="date" />
          </div>
 
-         <!-- 시간선택 -->
-         <label class="label" for="gender">시간선택</label>
-         <div class="time-buttons">
-            <div class="time-button active" data-gender="male"
-               onclick="toggleTime(this)">오전</div>
-            <div class="time-button" data-gender="female"
-               onclick="toggleTime(this)">오후</div>
-         </div>
-            <div class="date-input-wrapper">
-              <div class="date-input-container">
-                <input type="text" placeholder="부터">
-              </div>
-              <div class="date-input-container">
-                <input type="text" placeholder="까지">
-              </div>
-            </div>
+         
          <div class="notice-box">
             <div class="notice-title">주의사항</div>
             <div class="notice-line"></div>

@@ -90,7 +90,7 @@
 	  
 		</form>
 	
-	<button type="button" onclick="goNext()">다음</button>
+	<button class="next-btn"type="button" onclick="goNext()">다음</button>
 	
 	<script>
 	function goNext() {
