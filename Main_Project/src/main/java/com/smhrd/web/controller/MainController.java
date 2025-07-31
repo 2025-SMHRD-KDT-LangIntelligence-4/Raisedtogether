@@ -8,10 +8,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.smhrd.web.entity.Parent;
+import com.smhrd.web.entity.Child;
 import com.smhrd.web.entity.Sitter;
 import com.smhrd.web.entity.SitterReview;
 import com.smhrd.web.mapper.MainMapper;
+
+import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class MainController {
@@ -38,6 +43,20 @@ public class MainController {
 	}
 	
 	// 우빈 : PostMapping("/Mainpage") 로그인 컨트롤러에 만듦
+	
+	@GetMapping("/Logout")
+	public String Logout(HttpSession session, RedirectAttributes rttr) {
+		String parentNickname = (String) session.getAttribute("parentNickname");
+		if(parentNickname==null)
+		{
+			parentNickname = "사용자"; // 닉네임이 없을 경우 기본값
+		}
+	    rttr.addFlashAttribute("message", parentNickname + "님 로그아웃 되었습니다.");
+	    session.invalidate(); // 세션 무효화
+	    return "redirect:/LoginParent"; // 홈 또는 로그인 페이지로 이동
+	}
+
+
 	
 	@GetMapping("/Alert")
 	public String Alert() {

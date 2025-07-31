@@ -16,4 +16,12 @@
 		from t_sitter
 		where sitter_id = #{sitterId} and sitter_pw = #{sitterPw};
 	</select>
+
+	<select id="selectParentNicknameById" parameterType="string"
+		resultType="string">
+		SELECT parent_nickname
+		FROM t_parent
+		WHERE parent_id = #{parentId}
+	</select>
+	
 </mapper>

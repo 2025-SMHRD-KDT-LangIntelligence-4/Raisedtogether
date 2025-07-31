@@ -35,12 +35,31 @@
     </button>
 
     <!-- 아이 정보 -->
-    <div class="child-info">
-      <div class="child-name">김하람</div>
-      <div class="child-sub">2019년 5월 23일 생 • 6세 여아</div>
-    </div>
+    <!-- 
+			<div class="child-info">
+				<div class="child-name">김하람</div>
+				<div class="child-sub">2019년 5월 23일 생 • 6세 여아</div>
+			</div>
+	 -->		
+			<c:forEach var="child" items="${childList}">
+				<div class="child-info">
+					<div class="child-name">${child.childName}</div>
+					<div class="child-sub">
+						<c:out value="${child.childBirthdate}" />
+						생 •
+						<c:out value="${child.childAge}" />
+						세
+						<c:choose>
+							<c:when test="${child.childGender == 'male'}">남아</c:when>
+							<c:when test="${child.childGender == 'female'}">여아</c:when>
+						</c:choose>
+					</div>
+				</div>
+			</c:forEach>
 
-    <!-- 수정 버튼 -->
+
+
+			<!-- 수정 버튼 -->
     <button class="icon-btn">
         <img class="icon" src="${cpath}/images/Edit 3.svg" alt="수정하기" />
     </button>

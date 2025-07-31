@@ -1,5 +1,6 @@
 package com.smhrd.web.entity;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import lombok.AllArgsConstructor;
@@ -12,9 +13,12 @@ import lombok.NoArgsConstructor;
 public class Child {
 	private int childIdx;
 	private String childName;
-	private LocalDateTime childBirthdate;
+	private LocalDate childBirthdate;
 	private String childGender;
 	private String childNotes;
 	private String childBehavior;
 	private LocalDateTime childCreatedAt;
+	private Integer childAge;
+	
+	private String parentId;
 }

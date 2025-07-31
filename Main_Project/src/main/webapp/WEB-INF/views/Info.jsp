@@ -65,7 +65,7 @@
 			<div class="list-label">회원 혜택</div>
 			<img class="list-icon" src="/images/Chevron right.svg">
 		</div>
-		<div class="list-tile"  onclick="location.href='${cpath}/LoginParent'">
+		<div class="list-tile"  onclick="location.href='${cpath}/Logout'">
 			<div class="list-label">로그아웃</div>
 			<img class="list-icon" src="/images/Chevron right.svg">
 		</div>

@@ -16,6 +16,14 @@
 
 </head>
 <body>
+
+<!-- 필요시 메시지 출력하는 로직 -->
+<c:if test="${not empty message}">
+  <script>
+    alert("${message}");
+  </script>
+</c:if>
+
 	<div class="container">
 
 		<!-- 상태바 -->
@@ -29,7 +37,7 @@
 		</div>
 		<div class="title">아이 정보 등록</div>
 
-		<form action="${cpath}/CareApply3" method="get">
+		<form action="${cpath}/CareApply3" method="post">
 			<!-- 이름 -->
 			<label class="label" for="childName">이름</label>
 			<input type="text" name="childName" placeholder="아이의 이름을 입력해주세요"
@@ -38,16 +46,17 @@
 			<!-- 생년월일 -->
 			<div class="date-container">
 				<label class="label" for="birth">생년월일</label>
-				<input type="date" class="birth" name="childBirth" id="birth" />
+				<input type="date" class="birth" name="childBirthdate" id="birth" />
 			</div>
 
 			<!-- 성별 -->
+			<input type="hidden" name="childGender" id="childGender"/>
 			<label class="label" for="gender">성별</label>
 			<div class="gender-buttons">
 				<div class="gender-button active" data-gender="male"
-					onclick="toggleGender(this)">남아</div>
+					onclick="toggleGender(this)">남자</div>
 				<div class="gender-button" data-gender="female"
-					onclick="toggleGender(this)">여아</div>
+					onclick="toggleGender(this)">여자</div>
 			</div>
 
 			<!-- 주의사항 및 성향 -->
@@ -56,7 +65,7 @@
 			<label class="label" for="behavior">성향</label>
 			<textarea name="childBehavior" placeholder="예) 처음에 낯을 많이 가려요, 예민해요 등"></textarea>
 			
-			<a href="${cpath}/CareApply3"><button type="submit" class="btn-next">다음</button></a>
+			<button onclick="location.href='${cpath}/CareApply3'" type="submit" class="btn-next">다음</button>
 		</form>
 	</div>
 	<script>
@@ -67,6 +76,8 @@
       });
       // 선택한 버튼만 active
       element.classList.add('active');
+      // 성별값 데이터로 받기
+      document.getElementById("childGender").value = element.getAttribute("data-gender");
     }
   </script>
 </body>

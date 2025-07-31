@@ -10,4 +10,6 @@ public interface LoginMapper {
 	public int GoLoginParent(Parent parent);
 
 	public int GoLoginSitter(Sitter sitter);
+
+	public String selectParentNicknameById(String parentId);
 }
