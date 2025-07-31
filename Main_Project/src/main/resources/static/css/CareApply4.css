@@ -196,40 +196,7 @@ body {
 	height: 24px;
 }
 
-.notice-box {
-	background: #F2F2F7;
-	border-radius: 16px;
-	padding: 20px;
-	margin-bottom: 20px; /* 👉 다음 버튼과의 거리 확보 */
-	position: relative;
-	margin-top: auto;
-}
 
-.notice-title {
-	font-size: 14px;
-	color: #6E6E6E;
-	margin-bottom: 10px;
-}
-
-.notice-icon {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	width: 16px;
-	height: 16px;
-}
-
-.notice-divider {
-	height: 1px;
-	background: #D9D9D9;
-	margin: 10px 0;
-}
-
-.notice-content {
-	font-size: 12px;
-	color: #6E6E6E;
-	line-height: 18px;
-}
 
 .next-button {
 	position: fixed;
@@ -241,7 +208,7 @@ body {
 	font-size: 20px;
 	font-weight: 800;
 	color: #fff;
-	margin-bottom: 40px; /* 👉 핸드폰 하단에서 40px */
+	margin-bottom: 0px; /* 👉 핸드폰 하단에서 40px */
 	margin-left: 20px;
 	cursor: pointer;
 }

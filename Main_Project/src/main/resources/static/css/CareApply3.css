@@ -199,13 +199,15 @@ body {
 }
 
 .notice-box {
+	position: fixed;
+	bottom: 80px; /* next-btn 위에 배치 */
+	width:390px;
 	background: #F2F2F7;
 	border-radius: 16px;
 	padding: 20px;
-	margin-bottom: 20px; /* 👉 다음 버튼과의 거리 확보 */
-	position: relative;
-	margin-top: auto;
-	bottom: 100px;
+	cursor: pointer;
+	z-index: 999;
+	margin-bottom: 40px;
 }
 
 .notice-title {
@@ -234,17 +236,19 @@ body {
 	line-height: 18px;
 }
 
-.next-btn{
+.next-btn {
 	position: fixed;
+	bottom: 20px;
+	left: 20px;
 	width: 390px;
-    height: 60px;
-	margin-top:800px;
-    background: #534DFA;
-    color: white;
-    font-size: 20px;
-    font-weight: 800;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 16px;
-    cursor: pointer;
+	height: 60px;
+	background: #534DFA;
+	color: white;
+	font-size: 20px;
+	font-weight: 800;
+	text-align: center;
+	line-height: 60px;
+	border-radius: 16px;
+	cursor: pointer;
+	z-index: 1000;
 }
