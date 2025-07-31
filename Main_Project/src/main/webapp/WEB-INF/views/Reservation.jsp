@@ -35,15 +35,34 @@
 
 
 		<div class="tab-content" id="current">
-			<!-- 수업 신청 내역 내용 -->
-			<div class="reservation-empty-wrapper">
-			<div class="reservation-empty-box">
-				<img class="reservation-empty-image"
-					src="/images/lying cat.svg" />
-				<div class="reservation-empty-text">
-					수업을 신청해서<br /> 돌보미 선생님들과 만나보세요!
+			<!--  수업 신청 내역 카드 HTML -->
+			<div class="reservation-card" onclick="location.href='${cpath}/ReservationDetail'">
+				<div class="reservation-card-container">
+					<div>
+						<div class="reservation-name">정세린</div>
+						<div class="reservation-info">덕성여자대학교•아동가족학과</div>
+					</div>
+					<div class="reservation-status">
+						<div>놀이시간</div>
+					</div>
 				</div>
-			</div>
+				<div class="reservation-address">전라남도 순천시 덕월동 자이아파트 101동 2091호</div>
+
+				<div class="reservation-container">
+					<div class="reservation-date-box">
+						<div class="reservation-label">방문 날짜</div>
+					</div>
+					<div class="reservation-date">2025년 07월 17일</div>
+				</div>
+
+
+				<div class="reservation-container" style="padding-bottom: 20px;">
+					<div class="reservation-time-box">
+						<div class="reservation-label">수업 시간</div>
+					</div>
+					<div class="reservation-time">12 : 00 ~ 18 : 00</div>
+				</div>
+
 			</div>
 		</div>
 
@@ -54,11 +73,11 @@
 			<div class="reservation-card" onclick="location.href='${cpath}/ReservationDetail'">
 				<div class="reservation-card-container">
 					<div>
-						<div class="reservation-name">김하람</div>
-						<div class="reservation-info">2019년 5월 23일 생 • 6세 여아</div>
+						<div class="reservation-name">조지민</div>
+						<div class="reservation-info">성신여자대학교 • 유아교육과</div>
 					</div>
 					<div class="reservation-status">
-						<div>놀이시간</div>
+						<div>그림그리기</div>
 					</div>
 				</div>
 				<div class="reservation-address">전라남도 순천시 덕월동 자이아파트 101동 2091호</div>
