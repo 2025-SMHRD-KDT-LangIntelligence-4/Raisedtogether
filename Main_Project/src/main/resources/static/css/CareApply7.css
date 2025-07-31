@@ -2,9 +2,9 @@
 
 /* 또는 구글폰트 예시라면 이렇게 추가 */
 @font-face {
-	font-family: 'NanumSquare Neo';
-	src: url('...') format('woff2');
-	font-display: swap;
+   font-family: 'NanumSquare Neo';
+   src: url('...') format('woff2');
+   font-display: swap;
 }
 
 * {
@@ -12,29 +12,30 @@
 }
 
 body {
-	margin: 0;
-	padding: 0px; font-family : 'NanumSquare Neo', sans-serif;
-	background: #FFF;
-	font-family: 'NanumSquare Neo', sans-serif;
-	width: 430px;
-	border-radius: 60px;
-	position: relative;
+   margin: 0;
+   padding: 0px; font-family : 'NanumSquare Neo', sans-serif;
+   background: #FFF;
+   font-family: 'NanumSquare Neo', sans-serif;
+   width: 430px;
+   height: 947px;
+   border-radius: 60px;
+   position: relative;
 }
 
 .start-screen {
-	margin: 0;
-	background:#ffffff;
-	overflow: hidden;
-	font-family: 'NanumSquare Neo', sans-serif;
-	padding: 0px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	max-width: 430px;
-	justify-content: space-around;
-	align-items: center;
-	z-index: 1000; /* 항상 위에 */
+   margin: 0;
+   background:#ffffff;
+   overflow: hidden;
+   font-family: 'NanumSquare Neo', sans-serif;
+   padding: 0px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   max-width: 430px;
+   justify-content: space-around;
+   align-items: center;
+   z-index: 1000; /* 항상 위에 */
 }
 
 .logoAlert {
@@ -57,30 +58,29 @@ body {
 }
 
 .container {
-	padding: 20px;
-	max-width: 430px;
-	margin: 0 auto;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
+    height: 791px;
+   width: 430px;
+   padding: 40px 40px 40px 40px;
+   background: #ffffff;
+   position: relative;
+   top: 50px;
 }
 
 .title {
-    margin-top: 80px;
-	font-size: 22px;
-	font-weight: 800;
-	color: black;
-	margin-bottom: 40px;
+    margin-top: 20px;
+   font-size: 22px;
+   font-weight: 800;
+   color: black;
+   margin-bottom: 40px;
 }
 
 .label {
-	font-size: 12px;
-	font-weight: 700;
-	color: #6E6E6E;
-	margin-top: 10px;
-	margin-bottom: 8px;
-	display: block;
+   font-size: 12px;
+   font-weight: 700;
+   color: #6E6E6E;
+   margin-top: 10px;
+   margin-bottom: 8px;
+   display: block;
 }
 
 input, textarea, button {
@@ -96,6 +96,7 @@ input, textarea, button {
 
 .date-container {
     position: relative;
+    width: 350px;
 }
 
 #date {
@@ -104,7 +105,7 @@ input, textarea, button {
     font-size: 16px;
 }
 
-#calendar-icon {	
+#calendar-icon {   
     position: absolute;
     right: 10px;
     top: 50%;
@@ -126,19 +127,19 @@ input, textarea, button {
   flex: 1;
   text-align: center;
   padding: 12px;
-  border: 1.5px solid #534DFA;
+  border: 1.5px solid #5A4EF1;
   border-radius: 8px;
   cursor: pointer;
   font-size: 14px;
   position: relative;
   transition: 0.3s;
-  color: #534DFA;
+  color: #7A5FF5;
   background-color: white;
   margin-bottom:20px;
 }
 
 .time-button.active {
-  background-color: #534DFA;
+  background-color: #5A4EF1;
   color: white;
 }
 
@@ -156,7 +157,7 @@ input, textarea, button {
 }
 
 .date-input-container input {
-  width: 190px;
+  width: 170px;
   padding: 12px 12px 12px 16px;
   border: 1px solid #D9D9D9;
   border-radius: 8px;
@@ -174,7 +175,7 @@ input, textarea, button {
 
 .notice-box {
     position: absolute;
-    top: 153px;
+    top: 240px;
     left: 0px;
     width: 350px;
     height: 149px;
@@ -218,13 +219,13 @@ input, textarea, button {
 }
 
 .btn-next {
-  background-color: #534DFA;
+  background-color: #5A4EF1;
   color: white;
   font-size: 16px;
   border: none;
   border-radius: 12px;
   padding: 14px;
   cursor: pointer;
-  margin-top: 200px;
-  height:60px;
+  margin-top: 260px;
+  height: 60px;
 }
