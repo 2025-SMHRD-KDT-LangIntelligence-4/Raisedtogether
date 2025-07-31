@@ -26,7 +26,7 @@ public class LoginController {
 			session.setAttribute("parentId", parent.getParentId());
 			String parentNickname = mapper.selectParentNicknameById(parent.getParentId()); //DB에서 닉네임조회
 			session.setAttribute("parentNickname", parentNickname);
-			return "Mainpage";
+			return "redirect:/Mainpage";
 		} else {
 			rttr.addFlashAttribute("message", "아이디나 비밀번호가 틀립니다.");
 			return "redirect:/LoginParent";

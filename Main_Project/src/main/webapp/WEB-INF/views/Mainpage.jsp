@@ -29,8 +29,7 @@
 		<div class="container" style="padding-top: 20px">
 			<!-- 인삿말 및 신청 버튼 -->
 			<div class="care-card">
-				<div class="care-button"
-					onclick="location.href='${cpath}/CareApply'">
+				<div class="care-button" onclick="location.href='${cpath}/CareApply3'">
 					<div class="care-button-text">돌봄 신청하기</div>
 				</div>
 				<div class="care-description">

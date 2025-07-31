@@ -2,11 +2,13 @@ package com.smhrd.web.controller;
 
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -122,6 +124,25 @@ public class MainController {
 		model.addAttribute("sitterList", sitterList);
 		return "SitterUrgent";
 	}
+	
+	@GetMapping("/SitterDetail/{sitterId}")
+	public String SitterDetail(@PathVariable("sitterId") String sitterId, Model model) {
+		Sitter sitter = mapper.selectSitterById(sitterId);
+		Double avgRating = mapper.selectAverageRatingBySitterId(sitterId);
+		int randomCareTime = new Random().nextInt(301) + 100;  // (100~400시간)
+		int randomCareTime2 = new Random().nextInt(13) + 4;  // (4~12시간)
+		List<SitterReview> reviewList = mapper.selectReviewsBySitterId(sitterId);
+
+		model.addAttribute("sitter", sitter);
+		model.addAttribute("avgRating", avgRating != null ? avgRating : 0.0);
+		model.addAttribute("randomCareTime", randomCareTime);
+		model.addAttribute("randomCareTime2", randomCareTime2);
+		model.addAttribute("emotionCount", randomCareTime / 4);
+		model.addAttribute("emotionCount2", randomCareTime / 51);
+		model.addAttribute("reviewList", reviewList);
+		return "SitterDetail";
+	}
+	
 	
 	@GetMapping("/SitterDetail")
 	public String SitterDetail() {

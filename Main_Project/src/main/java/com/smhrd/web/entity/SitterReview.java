@@ -24,6 +24,10 @@ public class SitterReview {
     private String parentId;
     private String parentNickname;
     
+    private String childName;
+    private String childGender;
+    private int childAge;
+    
     private String formattedDate; // 날짜 형식 변환
 
 }
