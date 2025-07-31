@@ -34,7 +34,7 @@
 			<!-- 채팅타일 -->
 			<div class="chat-tile" onclick="location.href='${cpath}/ChatDetail'">
 				<div class="profile-img">
-					<img src="https://placehold.co/42x42" alt="Profile">
+					<img src="${cpath}/imageSitter/sitter6.png" alt="Profile">
 				</div>
 
 				<div class="chat-content">

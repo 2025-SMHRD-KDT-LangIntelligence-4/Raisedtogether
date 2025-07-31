@@ -80,5 +80,14 @@ window.onload = function () {
             title: positions[i].title,
             image: markerImage
         });
+		
+		// 클릭 시 sitterdetail로 이동
+		(function(marker, title) {
+		    kakao.maps.event.addListener(marker, 'click', function() {
+		        window.location.href = '/SitterDetail/sitter6@naver.com';
+		    });
+		})(marker, positions[i].title);
     }
 };
+
+
