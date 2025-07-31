@@ -43,14 +43,7 @@ body {
 	background: #FFF;
 	font-family: 'NanumSquareNeo', sans-serif;
 	width: 430px;
-	height: 932px;
-}
-
-.container {
-	padding: 20px;
-	max-width: 430px;
-	margin: 0 auto;
-	position: relative;
+	min-height: 932px; /* 💡 높이 고정 대신 최소 높이 */
 }
 
 .start-screen {
@@ -78,11 +71,27 @@ body {
 	cursor: pointer;
 }
 
+.container {
+	padding: 20px;
+	max-width: 430px;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.main-content {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
+
 .title {
 	margin-top: 80px;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 	font-size: 22px;
-	font-weight: 800;
+	font-weight: 700;
 	color: #000;
 }
 
@@ -93,9 +102,9 @@ body {
 	background: #F7F7FF;
 	border-radius: 20px;
 	padding: 20px;
-	margin: 20px 0;
 	text-decoration: none;
 	position: relative;
+	margin-bottom: 20px;
 }
 
 .register-icon {
@@ -115,6 +124,7 @@ body {
 	flex-direction: column;
 	gap: 16px;
 	margin-bottom: 20px;
+	padding-top: 20px;
 }
 
 .child-card {
@@ -190,8 +200,9 @@ body {
 	background: #F2F2F7;
 	border-radius: 16px;
 	padding: 20px;
-	margin-top: 20px;
+	margin-bottom: 20px; /* 👉 다음 버튼과의 거리 확보 */
 	position: relative;
+	margin-top: auto;
 }
 
 .notice-title {
@@ -204,8 +215,8 @@ body {
 	position: absolute;
 	top: 20px;
 	right: 20px;
-	width: 24px;
-	height: 25px;
+	width: 16px;
+	height: 16px;
 }
 
 .notice-divider {
@@ -229,7 +240,6 @@ body {
 	font-size: 20px;
 	font-weight: 800;
 	color: #fff;
-	margin-top: 20px;
+	margin-bottom: 40px; /* 👉 핸드폰 하단에서 40px */
 	cursor: pointer;
-	text-decoration: none; /* 밑줄 제거 */
 }

@@ -26,7 +26,7 @@
 		<!-- 상태바 -->
 		<div class="start-screen">
 			<div class="logoAlert">
-				<a href="${cpath}/CareApply"><img class="back"
+				<a href="${cpath}/CareApply3"><img class="back"
 					src="${cpath}/images/Arrow left.png" alt="뒤로가기버튼" /></a> <a
 					href="${cpath}/Alert"><img class="alert-image"
 					src="${cpath}/images/알림버튼.svg" alt="로고" /> </a>
@@ -62,7 +62,7 @@
 			<textarea name="childBehavior" placeholder="예) 처음에 낯을 많이 가려요, 예민해요 등"></textarea>
 			<div style="position: absolute; bottom:40px;">
 				<button onclick="location.href='${cpath}/CareApply3'" type="submit"
-					class="btn-next">다음</button>
+					class="next-button">다음</button>
 			</div>
 		</form>
 	</div>

@@ -26,10 +26,6 @@ public class CareApplyController {
 		return "CareApply2";
 	}
 
-	@GetMapping("/CareApply3")
-	public String CareApply3() {
-		return "CareApply3";
-	}
 	
 	@PostMapping("/CareApply3")
 	public String CareApply3(Child child, HttpSession session, Model model) {

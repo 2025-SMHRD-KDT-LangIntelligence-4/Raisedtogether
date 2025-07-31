@@ -29,9 +29,12 @@
 		<div class="container" style="padding-top: 20px">
 			<!-- 인삿말 및 신청 버튼 -->
 			<div class="care-card">
-				<div class="care-button" onclick="location.href='${cpath}/CareApply3'">
+			<form action="${cpath}/CareApply3" method="post">
+			<button class="care-button"  type="submit">
 					<div class="care-button-text">돌봄 신청하기</div>
-				</div>
+				</button>
+			</form>
+				
 				<div class="care-description">
 					오늘의 당신에게는 휴식을,<br />아이에게는 특별한 하루를 선물하세요!
 				</div>
