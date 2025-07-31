@@ -12,7 +12,43 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    const popupStack = [];
+
+    function openPopup(url) {
+      fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const popup = document.createElement('div');
+          popup.classList.add('popup', 'active');
+          popup.innerHTML = html;
+
+          const current = document.querySelector('#popupContainer .popup.active');
+          if (current) {
+            popupStack.push(current);
+            current.classList.remove('active');
+          }
+
+          document.getElementById('popupContainer').appendChild(popup);
+        });
+    }
+
+    function closePopup() {
+      const current = document.querySelector('#popupContainer .popup.active');
+      if (current) {
+        current.remove();
+      }
+
+      const previous = popupStack.pop();
+      if (previous) {
+        previous.classList.add('active');
+      }
+    }
+
+    window.openPopup = openPopup;
+    window.closePopup = closePopup;
+</script>
+
 </head>
 <body>
 	<div class="container">
@@ -76,8 +112,10 @@
         </div>
     </div>
 		<div class="next-button" id="nextBtn">다음</div>
+
 		
 		<div id="popupPage" class="popup-hidden"></div>
+		
 	</div>
 <script>
 	function selectCard(index) {

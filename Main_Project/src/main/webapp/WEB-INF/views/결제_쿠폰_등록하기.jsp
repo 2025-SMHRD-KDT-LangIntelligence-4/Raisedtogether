@@ -13,15 +13,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
+<div id="popupContainer" class="popup1";></div>
 <!-- 오버레이 배경 -->
-<div class="overlay" id="paymentOverlay">
-  <div class="popup">
+  <div class="popup1">
     <div class="popup-header">
       <span>결제 / 쿠폰등록</span>
-      <a href="{cpash}/CareApply8">
       	<button class="close-btn" onclick="closeOverlay()">×</button>
-      </a>
     </div>
 
     <!-- 쿠폰 선택 -->
@@ -57,21 +54,26 @@
     </div>
 
     <!-- 다음 버튼 -->
-    <a href="${cpath}/카카오페이결제">
-    <button class="next-btn">다음</button>
-    </a>
-  </div>
-</div>
 
+    <button class="next-btn" onclick="loadPopup2()">다음</button>
+    
+    <div id="popupKakao"></div> <!-- 여기에 다음 팝업이 로드됨 -->
+  </div>
 
 
 <script>
+let selectedPage = "카카오페이결제"; // 기본값
 
 function closeOverlay() {
-	  document.getElementById("paymentOverlay").style.display = "none";
+  document.getElementById("matchingOverlay").style.display = "none";
+}
+
+function loadPopup(name) {
+	  $('#popupKakao').load(`/${cpath}/카카오페이결제`,
+			  function() {
+	    $('#popupKakao').show(); // 불러오고 나서 보이게 하기
+	  });
 	}
-
-
 </script>
 
 

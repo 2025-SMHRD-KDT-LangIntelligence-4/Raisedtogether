@@ -13,14 +13,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<!-- 오버레이 배경 -->
+<!-- 오버레이 전체 -->
 <div class="overlay" id="matchingOverlay">
-  <!-- 팝업 박스 -->
+
+  <!-- 팝업 컨테이너 -->
   <div class="popup">
+    <!-- 닫기 + 타이틀 -->
     <div class="popup-header">
-      <span>돌보미 매칭 방식</span>
-      <button class="close-btn" onclick="closeOverlay()">×</button>
+      <span class="semi">돌보미 매칭 방식</span>
+      <button class="close-btn" onclick="closeOverlay()">x</button>
     </div>
+    <!-- 선택 영역 -->
     <div class="option active" onclick="selectOption(this)" data-target="결제_쿠폰_등록하기">
       <img src="/images/Stars.svg" alt="추천" />
       <div>
@@ -35,36 +38,32 @@
         <div class="desc">돌보미 선택 → 수업 신청 순으로 진행돼요</div>
       </div>
     </div>
-    <button class="next-btn" onclick="goNext()">다음</button>
+    <!-- 다음 버튼 -->
+    <button class="next-btn" onclick="loadPopup1()">다음</button>
+    
+    <!-- Ajax로 로딩될 팝업 내용 -->
+    <div id="popupContainer"></div>
   </div>
 </div>
 
 
 
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-let selectedPage = "결제_쿠폰_등록하기"; // 기본값은 첫 번째
+let selectedPage = "결제_쿠폰_등록하기"; // 기본값
 
 function closeOverlay() {
   document.getElementById("matchingOverlay").style.display = "none";
 }
 
 function selectOption(elem) {
-  const allOptions = document.querySelectorAll(".option");
-  allOptions.forEach(opt => opt.classList.remove("active"));
+  document.querySelectorAll(".option").forEach(opt => opt.classList.remove("active"));
   elem.classList.add("active");
-
-  // data-target 값 가져오기
   selectedPage = elem.getAttribute("data-target");
 }
 
-function goNext() {
-  if (!selectedPage) {
-    alert("옵션을 선택해주세요.");
-    return;
-  }
-  // 페이지 이동
-  window.location.href = "${cpath}/" + selectedPage;
+function loadPopup1() {
+  $("#popupContainer").load("${cpath}/결제_쿠폰_등록하기");
 }
 </script>
 </body>

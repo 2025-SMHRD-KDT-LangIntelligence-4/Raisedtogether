@@ -11,7 +11,7 @@
   z-index: 9999;
 }
 
-.popup {
+.popup2 {
   width: 320px;
   background: white;
   border-radius: 20px;
@@ -47,6 +47,7 @@
 .text-box {
   text-align: center;
   margin-top: 20px;
+  font-family: 'NanumSquare Neo', sans-serif;
 }
 
 .text-box h2 {
@@ -54,12 +55,14 @@
   font-weight: bold;
   margin-bottom: 10px;
   color: #222;
+  font-family: 'NanumSquare Neo', sans-serif;
 }
 
 .text-box p {
   font-size: 13px;
   color: #666;
   line-height: 1.5;
+  font-family: 'NanumSquare Neo', sans-serif;
 }
 
 /* 결제 버튼 */

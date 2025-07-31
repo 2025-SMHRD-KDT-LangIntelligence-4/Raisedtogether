@@ -77,27 +77,27 @@
 
 		<!-- 확인 안내 -->
 		<div class="confirmation-box">같이키움이 꼼꼼히 확인했어요</div>
-		<img class="illustration" src="images/female support person.svg"
+		<img class="illustration" src="${cpath}/images/female support person.svg"
 			alt="illustration" />
 
 		<!-- 인증 리스트 -->
 		<div class="check-container">
 			<div class="check-item">
-				<img class="check-icon" src="images/check2-square.svg" />
+				<img class="check-icon" src="${cpath}/images/check2-square.svg" />
 				<div class="check-text">
 					<div class="check-title">신원 증명 서류 확인</div>
 					<div class="check-sub">시스템으로 1차, 증빙 서류로 2차 신원을 확인합니다</div>
 				</div>
 			</div>
 			<div class="check-item">
-				<img class="check-icon" src="images/check2-square.svg" />
+				<img class="check-icon" src="${cpath}/images/check2-square.svg" />
 				<div class="check-text">
 					<div class="check-title">학력 및 경력 증명서 확인</div>
 					<div class="check-sub">돌보미가 제출한 증빙 서류 통해 직접 확인합니다</div>
 				</div>
 			</div>
 			<div class="check-item">
-				<img class="check-icon" src="images/check2-square.svg" />
+				<img class="check-icon" src="${cpath}/images/check2-square.svg" />
 				<div class="check-text">
 					<div class="check-title">행동 강령 서약서 확인</div>
 					<div class="check-sub">아동 보호/학대/괴롭힘 방지 행동 강령에 서명합니다</div>
@@ -130,11 +130,11 @@
 
 		<div class="emotion-container">
 			<div class="emotion-box">
-				<img src="images/happy emoji with hearts.svg" />
+				<img src="${cpath}/images/happy emoji with hearts.svg" />
 				<div class="emotion-text">${emotionCount}번 이상 선택</div>
 			</div>
 			<div class="emotion-box">
-				<img src="images/Sad Emoji.svg" />
+				<img src="${cpath}/images/Sad Emoji.svg" />
 				<div class="emotion-text">${emotionCount2}번 이하 선택</div>
 			</div>
 		</div>

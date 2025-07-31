@@ -13,12 +13,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
-	<!-- 카카오페이 결제 오버레이 -->
-	<div class="overlay" id="kakaoPayOverlay">
-		<div class="popup">
-			<button class="close-btn" onclick="closeKakaoPay()">×</button>
-
+<div id="popupKakao" class="popup2" style="display: none;"></div>
+<div class="overlay">
+  <div class="popup">
+    <div class="popup-header">
+      <button class="close-btn" onclick="closePopup()">×</button>
+    </div>
 			<!-- 이미지 -->
 			<div class="image-box">
 				<img src="/images/Paying online while shopping on smartphone.svg" alt="카카오페이 이미지">
@@ -26,7 +26,7 @@
 
 			<!-- 텍스트 -->
 			<div class="text-box">
-				<h2>결제는 카카오페이로 진행해요!</h2>
+				<span>결제는 카카오페이로 진행해요!</span>
 				<p>
 					최소 금액으로 선결제 후 돌봄 매칭이 모두 끝난 뒤,<br>추가비용 및 돌봄비 시급에 맞추어 추가 결제가
 					진행돼요
@@ -47,6 +47,12 @@
 		function closeKakaoPay() {
 			document.getElementById("kakaoPayOverlay").style.display = "none";
 		}
+		function loadPopup(name) {
+			  $('#popupContainer').load(`/${name}`);
+			}
+			function closePopup() {
+			  $('#popupContainer').html('');
+			}
 	</script>
 </body>
 </html>
