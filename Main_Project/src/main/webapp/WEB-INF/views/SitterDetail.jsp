@@ -69,7 +69,7 @@
 		<div class="comment-box">
 			<div class="quote-left">“</div>
 			<div class="comment">
-				화창하게 밝고 계획적이며 다재다능한 <br />돌보미입니다!
+				${sitter.sitterIntroduction}
 			</div>
 			<div class="quote-right">”</div>
 		</div>
@@ -140,7 +140,7 @@
 		</div>
 
 
-		<button onclick="location.href='${cpath}/CareApply'"
+		<button onclick="location.href='${cpath}/CareApply3'"
 			class="select-button">돌봄 신청하기</button>
 
 
