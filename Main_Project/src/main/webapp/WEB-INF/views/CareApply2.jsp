@@ -55,9 +55,9 @@
 					onclick="toggleGender(this)">여자</div>
 			</div>
 
-			<!-- 주의사항 및 성향 -->
-			<label class="label" for="notes">주의사항</label>
-			<textarea name="childNotes" placeholder="예) 알러지가 있어요, 먹는 약이 있어요 등"></textarea>
+			<!-- 주의사항 및 요청사항, 성향 -->
+			<label class="label" for="notes">주의사항 및 요청사항</label>
+			<textarea name="childNotes" placeholder="예) 알러지가 있어요, 아이 밥 먹여주세요 등"></textarea>
 			<label class="label" for="behavior">성향</label>
 			<textarea name="childBehavior" placeholder="예) 처음에 낯을 많이 가려요, 예민해요 등"></textarea>
 			<div style="position: absolute; bottom:40px;">
