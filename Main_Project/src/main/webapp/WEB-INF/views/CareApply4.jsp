@@ -25,6 +25,11 @@
 			</div>
 		</div>
 
+<<<<<<< HEAD
+=======
+    <!-- 제목 -->
+    <div class="title">돌보미와 만날 장소를 선택하세요</div>
+>>>>>>> branch 'master' of https://github.com/2025-SMHRD-KDT-LangIntelligence-4/Raisedtogether.git
 
 		<div class="main-content">
 			<!-- 타이틀 -->

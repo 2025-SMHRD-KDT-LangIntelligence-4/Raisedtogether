@@ -61,7 +61,7 @@
 			<label class="label" for="behavior">성향</label>
 			<textarea name="childBehavior" placeholder="예) 처음에 낯을 많이 가려요, 예민해요 등"></textarea>
 			<div style="position: absolute; bottom:40px;">
-				<button onclick="location.href='${cpath}/CareApply3'" type="submit"
+				<button type="submit"
 					class="next-button">다음</button>
 			</div>
 		</form>

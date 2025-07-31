@@ -29,7 +29,7 @@
 		<div class="container" style="padding-top: 20px">
 			<!-- 인삿말 및 신청 버튼 -->
 			<div class="care-card">
-			<form action="${cpath}/CareApply3" method="post">
+			<form action="${cpath}/CareApply3" method="get">
 			<button class="care-button"  type="submit">
 					<div class="care-button-text">돌봄 신청하기</div>
 				</button>
