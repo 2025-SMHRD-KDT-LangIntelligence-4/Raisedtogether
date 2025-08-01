@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.smhrd.web.entity.Parent;
-import com.smhrd.web.entity.Child;
 import com.smhrd.web.entity.Sitter;
 import com.smhrd.web.entity.SitterReview;
 import com.smhrd.web.mapper.MainMapper;
