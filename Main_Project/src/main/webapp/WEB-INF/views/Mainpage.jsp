@@ -89,7 +89,7 @@
 				</div>
 
 				<div class="cards-wrapper">
-					<c:forEach items="${reviewList}" var="r">
+					<c:forEach items="${reviewList2}" var="r">
 						<div class="card"
 							onclick="location.href='${cpath}/SitterDetail/${r.sitterId}'">
 							<img src="${cpath}/${r.sitterPhotoImg}" alt="돌보미 이미지">

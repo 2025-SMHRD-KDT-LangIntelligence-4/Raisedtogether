@@ -31,6 +31,7 @@ public class MainController {
 	@GetMapping("/Mainpage")
 	public String Mainpage(Model model) {
 		List<SitterReview> reviewList = mapper.selectSitterReviewTop6();
+		List<SitterReview> reviewList2 = mapper.selectSitterReviewBottom6();
 		
 	    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyMMdd");
 	    for (SitterReview review : reviewList) {
@@ -39,6 +40,7 @@ public class MainController {
 	    }
 	    
 		model.addAttribute("reviewList", reviewList);
+		model.addAttribute("reviewList2", reviewList2);
 		return "Mainpage";
 	}
 	
@@ -129,22 +131,26 @@ public class MainController {
 		Double avgRating = mapper.selectAverageRatingBySitterId(sitterId);
 		int randomCareTime = new Random().nextInt(301) + 100;  // (100~400시간)
 		int randomCareTime2 = new Random().nextInt(13) + 4;  // (4~12시간)
-		List<SitterReview> reviewList = mapper.selectReviewsBySitterId(sitterId);
-		
+		List<SitterReview> reviewList3 = mapper.selectReviewsBySitterId(sitterId);
+	    System.out.println("리뷰 개수: " + reviewList3.size());
+	    for (SitterReview r : reviewList3) {
+	        System.out.println(r.toString());
+	    }
 	    // 로그 출력 (콘솔에 찍힘)
-	    for (SitterReview review : reviewList) {
+	    for (SitterReview review : reviewList3) {
 	        System.out.println("parentNickname: " + review.getParentNickname()
 	            + ", childName: " + review.getChildName()
 	            + ", reviewOpinion: " + review.getReviewOpinion());
 	    }
-		
+
+
 		model.addAttribute("sitter", sitter);
 		model.addAttribute("avgRating", avgRating != null ? avgRating : 0.0);
 		model.addAttribute("randomCareTime", randomCareTime);
 		model.addAttribute("randomCareTime2", randomCareTime2);
 		model.addAttribute("emotionCount", randomCareTime / 4);
 		model.addAttribute("emotionCount2", randomCareTime / 51);
-		model.addAttribute("reviewList", reviewList);
+		model.addAttribute("reviewList3", reviewList3);
 		return "SitterDetail";
 	}
 	
@@ -180,7 +186,19 @@ public class MainController {
 	}
 	
 	@GetMapping("/Info")
-	public String Info() {
+	public String Info(Model model, HttpSession session) {
+		String infoParentNickname = (String) session.getAttribute("parentNickname");
+		int infoCareTime = new Random().nextInt(50 + 1) + 5;
+		int RandPoint = new Random().nextInt(500 + 1) + 10;
+		int infoPoint = 100 * RandPoint;
+		int infoCoupon = new Random().nextInt(3 + 1) + 1;
+		//System.out.println("세션 parentId: " + session.getAttribute("parentId"));
+		//System.out.println("세션 parentNickname: " + session.getAttribute("parentNickname"));
+		
+		model.addAttribute("infoCareTime", infoCareTime);
+		model.addAttribute("infoPoint", infoPoint);
+		model.addAttribute("infoCoupon", infoCoupon);
+		model.addAttribute("infoParentNickname", infoParentNickname);
 		return "Info";
 	}
 	

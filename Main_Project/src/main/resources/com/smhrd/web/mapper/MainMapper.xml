@@ -86,7 +86,29 @@
 		ORDER BY r.review_created_at DESC
 		LIMIT 6
 	</select>
+<!-- ======================================================================== -->
+	<select id="selectSitterReviewBottom6" resultMap="ReviewWith">
+		SELECT
+		r.review_idx,
+		r.review_ratings,
+		r.review_opinion,
+		r.review_created_at,
 	
+		s.sitter_id,
+		s.sitter_name,
+		s.sitter_photo_img,
+		s.sitter_region,
+		s.sitter_care_type_tag,
+	
+		p.parent_id,
+		p.parent_nickname
+	
+		FROM t_sitter_review r
+		JOIN t_sitter s ON r.sitter_id = s.sitter_id
+		JOIN t_parent p ON r.parent_id = p.parent_id
+		ORDER BY r.review_created_at
+		LIMIT 6
+	</select>
 <!-- ======================================================================== -->
 	<select id="selectSitterById" resultType="com.smhrd.web.entity.Sitter" parameterType="string" >
 		select *

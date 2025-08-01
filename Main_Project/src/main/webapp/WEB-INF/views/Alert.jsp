@@ -28,19 +28,69 @@
 
 <div class="notification-tile" onclick="location.href='${cpath}/ChatDetail'">
   <div class="notification-avatar">
-    <img src="https://placehold.co/38x38" alt="프로필">
+    <img src="${cpath}/imageSitter/sitter6.png" alt="프로필">
   </div>
   <div class="notification-main">
     <div class="notification-top">
-      <div class="notification-name">이희자 돌보미</div>
+      <div class="notification-name">정세린 돌보미</div>
       <div class="notification-meta">
         <div class="notification-time">9:41 AM</div>
         <div class="notification-badge">N</div>
       </div>
     </div>
-    <div class="notification-message">네 그럼 그때 뵙겠습니다~!</div>
+    <div class="notification-message">네 오빠! 그럼 조금 이따 만나요❤️</div>
   </div>
-</div>
+</div><br>
+
+<div class="notification-tile" onclick="location.href='${cpath}/ChatDetail'">
+  <div class="notification-avatar">
+    <img src="${cpath}/imageSitter/sitter1.png" alt="프로필">
+  </div>
+  <div class="notification-main">
+    <div class="notification-top">
+      <div class="notification-name">서유리 돌보미</div>
+      <div class="notification-meta">
+        <div class="notification-time">9:57 AM</div>
+        <div class="notification-badge">N</div>
+      </div>
+    </div>
+    <div class="notification-message">오빠 보고 싶어요ㅜㅜ</div>
+    <div class="notification-message">언제 만나주실 거예요!</div>
+  </div>
+</div><br>
+
+<div class="notification-tile" onclick="location.href='${cpath}/ChatDetail'">
+  <div class="notification-avatar">
+    <img src="${cpath}/imageSitter/sitter7.png" alt="프로필">
+  </div>
+  <div class="notification-main">
+    <div class="notification-top">
+      <div class="notification-name">임윤아 돌보미</div>
+      <div class="notification-meta">
+        <div class="notification-time">10:28 AM</div>
+        <div class="notification-badge">N</div>
+      </div>
+    </div>
+    <div class="notification-message">저 오늘 한가한뎅~~~</div>
+    <div class="notification-message">맛있는 거 사드릴까욤!!</div>
+  </div>
+</div><br>
+
+<div class="notification-tile" onclick="location.href='${cpath}/ChatDetail'">
+  <div class="notification-avatar">
+    <img src="${cpath}/imageSitter/sitter8.png" alt="프로필">
+  </div>
+  <div class="notification-main">
+    <div class="notification-top">
+      <div class="notification-name">오하영 돌보미</div>
+      <div class="notification-meta">
+        <div class="notification-time">10:48 AM</div>
+        <div class="notification-badge">N</div>
+      </div>
+    </div>
+    <div class="notification-message">주말에 시간 되세요??</div>
+  </div>
+</div><br>
 
 </div>
 

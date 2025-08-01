@@ -15,10 +15,13 @@ public interface MainMapper {
 	
 	List<SitterReview> selectSitterReviewTop6();
 
+	List<SitterReview> selectSitterReviewBottom6();
+	
 	Sitter selectSitterById(@Param("sitterId") String sitterId);
 	
 	Double selectAverageRatingBySitterId(String sitterId);
 	
 	List<SitterReview> selectReviewsBySitterId(@Param("sitterId") String sitterId);
+
 
 }

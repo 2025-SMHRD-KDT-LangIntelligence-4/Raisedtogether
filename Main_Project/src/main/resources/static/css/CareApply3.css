@@ -105,6 +105,7 @@ body {
 	text-decoration: none;
 	position: relative;
 	margin-bottom: 20px;
+	cursor: pointer;
 }
 
 .register-icon {
@@ -191,8 +192,6 @@ body {
 	padding: 0;
 }
 
-
-
 .icon {
 	width: 24px;
 	height: 24px;
@@ -201,7 +200,7 @@ body {
 .notice-box {
 	position: fixed;
 	bottom: 80px; /* next-btn 위에 배치 */
-	width:390px;
+	width: 390px;
 	background: #F2F2F7;
 	border-radius: 16px;
 	padding: 20px;
@@ -237,6 +236,7 @@ body {
 }
 
 .next-btn {
+	all: unset;
 	position: fixed;
 	bottom: 20px;
 	left: 20px;

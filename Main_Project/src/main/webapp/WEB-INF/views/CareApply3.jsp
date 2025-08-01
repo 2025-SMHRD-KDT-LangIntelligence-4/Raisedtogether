@@ -92,32 +92,7 @@
 	
 	<button class="next-btn"type="button" onclick="goNext()">다음</button>
 	
-	<script>
-	function goNext() {
-	  const selectedCards = document.querySelectorAll(".child-card.selected");
-	  if (selectedCards.length === 0) {
-	    alert("한 명 이상의 아이를 선택해주세요");
-	    return;
-	  }
-	
-	  const form = document.getElementById('childForm');
-	  // 기존 hidden input 초기화
-	  form.querySelectorAll('input[name="childIdx"]').forEach(e => e.remove());
-	
-	  // 선택한 아이들 childIdx input 생성
-	  selectedCards.forEach(card => {
-	    const childIdx = card.getAttribute("data-child-idx");
-	    const input = document.createElement("input");
-	    input.type = "hidden";
-	    input.name = "childIdx";  // 서버에서 배열로 받을 파라미터 이름
-	    input.value = childIdx;
-	    form.appendChild(input);
-	  });
-	
-	  // 폼 제출 (POST)
-	  form.submit();
-	}
-	</script>
+
 	<!-- 여기까지 다음버튼 -->
 	
 	
@@ -143,6 +118,35 @@
 	</div>
 	
 	</div>
+	
+	
+		<script>
+	function goNext() {
+	  const selectedCards = document.querySelectorAll(".child-card.selected");
+	  if (selectedCards.length === 0) {
+	    alert("한 명 이상의 아이를 선택해주세요");
+	    return;
+	  }
+	
+	  const form = document.getElementById('childForm');
+	  // 기존 hidden input 초기화
+	  form.querySelectorAll('input[name="childIdx"]').forEach(e => e.remove());
+	
+	  // 선택한 아이들 childIdx input 생성
+	  selectedCards.forEach(card => {
+	    const childIdx = card.getAttribute("data-child-idx");
+	    const input = document.createElement("input");
+	    input.type = "hidden";
+	    input.name = "childIdx";  // 서버에서 배열로 받을 파라미터 이름
+	    input.value = childIdx;
+	    form.appendChild(input);
+	  });
+	
+	  // 폼 제출 (POST)
+	  form.submit();
+	}
+	</script>
+	
 	
 	<script>
 		function toggleCheck(button) {
