@@ -24,6 +24,8 @@
 				</a>
 			</div>
 		</div>
+		
+		
 		<!-- 타이틀 -->
 		<div class="title">돌보미와 만날 장소를 선택하세요</div>
 
@@ -74,13 +76,18 @@
 		</div>
 		
 		
-		<!-- 다음 버튼 -->
-		<button class="next-button"
+
+
+
+
+<!-- 다음 버튼 -->
+		<button class="next-btn"
 			onclick="location.href='${cpath}/CareApply7'">다음</button>
 
+
+
+
 	</div>
-
-
 
 
 
