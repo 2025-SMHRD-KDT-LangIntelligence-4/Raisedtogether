@@ -24,7 +24,7 @@
 		<div class="start-screen">
 			<div class="logoAlert">
 				<img class="logo-image" src="${cpath}/images/같이키움 로고.svg" alt="로고" />
-				<span style="font-weight: 800;">실시간 영상</span>
+				<span style="font-weight: 800;">근처 돌보미 지도</span>
 				<a href="${cpath}/Alert"><img class="alert-image"
 					src="${cpath}/images/알림버튼.svg" alt="로고" /> </a>
 			</div>
