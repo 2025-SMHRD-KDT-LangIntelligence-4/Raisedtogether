@@ -13,62 +13,57 @@
 
 
 body {
-    margin: 0;
-    font-family: 'NanumSquare Neo', sans-serif;
-    background: white;
-    width: 430px;
+	margin: 0;
+	padding: 0;
+	background: #FFF;
+	font-family: 'NanumSquareNeo', sans-serif;
+	width: 430px;
+	min-height: 932px; /* 💡 높이 고정 대신 최소 높이 */
 }
 
 
 
 .container {
-    width: 430px;
-    height: 932px;
-    padding: 20px;
-    padding-top:82px;
-    
+	padding: 20px;
+	max-width: 430px;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 .start-screen {
-	margin: 0;
-	background:#ffffff;
-	overflow: hidden;
-	font-family: 'NanumSquare Neo', sans-serif;
-	padding: 0px;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+	background-color: #fff;
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
-	max-width: 430px;
-	justify-content: space-around;
-	align-items: center;
-	z-index: 1000; /* 항상 위에 */
+	right: 0;
+	z-index: 1000;
 }
 
 .logoAlert {
-   max-width: 430px;
-   padding: 20px 20px 0px 20px ;
-   display: flex;
-   justify-content: space-between; /* 좌우 끝으로 배치 */
-   align-items: center; /* 수직 가운데 정렬 */
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.logo-image {
-   width: 36px;
-   height: 36px;
-}
-
-.alert-image {
-   width: 28px;
-   height: 28px;
-   cursor: pointer;
+.alert-image, .back {
+	width: 28px;
+	height: 28px;
+	cursor: pointer;
 }
 
 .title {
-    font-size: 22px;
-    font-weight: 800;
-    color: black;
-    margin-bottom: 20px;
+	margin-top: 80px;
+	margin-bottom: 20px;
+	font-size: 22px;
+	font-weight: 700;
+	color: #000;
 }
 
 .card-list {
@@ -140,21 +135,25 @@ body {
 }
 
 .next-button {
-    width: 100%;
-    height: 60px;
-    margin-top: 350px;
-    background: #534DFA;
-    color: white;
-    font-size: 20px;
-    font-weight: 800;
-    text-align: center;
-    line-height: 60px;
-    border-radius: 16px;
-    cursor: pointer;
+	all: unset;
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	width: 390px;
+	height: 60px;
+	background: #534DFA;
+	color: white;
+	font-size: 20px;
+	font-weight: 800;
+	text-align: center;
+	line-height: 60px;
+	border-radius: 16px;
+	cursor: pointer;
+	z-index: 1000;
 }
 #popupContainer {
-      position: fixed;
-	  bottom: 0;
+      position: absolute;
+	  bottom: -20px;
 	  left: 0;
 	  width: 100%;
 	  z-index: 1001;

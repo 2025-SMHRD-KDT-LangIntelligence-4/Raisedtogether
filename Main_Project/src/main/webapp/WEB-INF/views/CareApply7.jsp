@@ -44,15 +44,15 @@
          
          <div class="notice-box">
             <div class="notice-title">주의사항</div>
+            <img class="notice-icon" src="${cpath}/images/Icon.png" alt="주의사항" />
             <div class="notice-line"></div>
             <div class="notice-content">
-               2시간 미만의 수업 신청 시 선생님 이동 거리에 따라서 <br> 추가비용(5,000원)이 발생할 수 있습니다.<br>
+               2시간 미만의 수업 신청 시 선생님 이동 거리에 따라서 추가비용 (5,000원)이 발생할 수 있습니다.<br>
                수업 신청 후 시간 연장 시 환불되지 않습니다.
             </div>
-            <img class="warning-icon"src="${cpath}/images/Icon.png" alt="주의사항" />
          </div>
-         <a href="${cpath}/CareApply3"><button type="submit"
-               class="btn-next">다음</button></a>
+         <button type="submit"
+               class="btn-next">다음</button>
       </form>
    </div>
    <script>

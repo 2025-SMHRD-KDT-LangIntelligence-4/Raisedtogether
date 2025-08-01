@@ -15,7 +15,7 @@
 /* 팝업 */
 .popup1 {
   width: 340px;
-  height: 350px;
+  height: 360px;
   background: white;
   border-radius: 20px;
   padding: 20px;
@@ -23,8 +23,8 @@
   animation: fadeIn 0.3s ease;
   display: flex;
   flex-direction: column;
-  position: relative;
-  bottom: 0px;
+  position: absolute;
+  bottom: -20px;
   left:0px;
   z-index: 1021;
 }
