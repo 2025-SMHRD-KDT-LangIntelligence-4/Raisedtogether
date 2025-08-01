@@ -112,7 +112,7 @@
 
 			<!-- 부모님 리뷰 -->
 			<div class="section-title" style="top: 540px;">최근 부모님 리뷰</div>
-			<c:forEach var="review" items="${reviewList}">
+			<c:forEach var="review" items="${reviewList3}">
 				<div class="review-card">
 					<div class="review-header">
 						<div class="review-category">${randomCareTime2}시간</div>

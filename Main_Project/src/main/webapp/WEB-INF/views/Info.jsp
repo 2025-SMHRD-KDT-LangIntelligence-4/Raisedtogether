@@ -29,17 +29,17 @@
 		<!-- 프로필 영역 -->
 		<div class="profile-container">
 			<div class="profile-top">
-				<div class="user-name">김하람 부모님</div>
-				<div class="care-time">돌봄 28시간</div>
+				<div class="user-name">${infoParentNickname } 부모님</div>
+				<div class="care-time">돌봄 ${infoCareTime }시간</div>
 			</div>
 			<div class="info-box">
 				<div class="info-set">
 					<div class="info-label">쿠폰함</div>
-					<div class="info-value">3장</div>
+					<div class="info-value">${infoCoupon }장</div>
 				</div>
 				<div class="info-set">
 					<div class="info-label">포인트</div>
-					<div class="info-value">3500P</div>
+					<div class="info-value">${infoPoint }P</div>
 				</div>
 			</div>
 		</div>
@@ -49,7 +49,7 @@
 			<div class="list-label">내 아이 정보</div>
 			<img class="list-icon" src="/images/Chevron right.svg">
 		</div>
-		<div class="list-tile" onclick="location.href='${cpath}/Destination'">
+		<div class="list-tile" onclick="'#'"> 
 			<div class="list-label">방문 돌봄 장소</div>
 			<img class="list-icon" src="/images/Chevron right.svg">
 		</div>

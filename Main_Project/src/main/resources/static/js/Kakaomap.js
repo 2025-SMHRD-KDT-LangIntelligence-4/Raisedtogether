@@ -63,8 +63,22 @@ window.onload = function () {
 	    { title: '강서아 돌보미', latlng: new kakao.maps.LatLng(34.951900, 127.488800) },
 	    { title: '이하은 돌보미', latlng: new kakao.maps.LatLng(34.949800, 127.496500) },
 	    { title: '장하율 돌보미', latlng: new kakao.maps.LatLng(34.947700, 127.495200) },
-	    { title: '서다온 돌보미', latlng: new kakao.maps.LatLng(34.947400, 127.489300) }
+	    { title: '서다온 돌보미', latlng: new kakao.maps.LatLng(34.947400, 127.489300) },
+		
+		
+		{ title: '박지우 돌보미', latlng: new kakao.maps.LatLng(34.936192, 127.494488) },
+		{ title: '김서윤 돌보미', latlng: new kakao.maps.LatLng(34.926354, 127.493420) },
+		{ title: '이하준 돌보미', latlng: new kakao.maps.LatLng(34.932946, 127.488676) },
+		{ title: '최지아 돌보미', latlng: new kakao.maps.LatLng(34.937715, 127.490718) },
+		{ title: '윤도윤 돌보미', latlng: new kakao.maps.LatLng(34.939907, 127.495342) },
+		{ title: '장하은 돌보미', latlng: new kakao.maps.LatLng(34.941220, 127.485281) },
+		{ title: '백민준 돌보미', latlng: new kakao.maps.LatLng(34.943544, 127.484118) },
+		{ title: '서예린 돌보미', latlng: new kakao.maps.LatLng(34.939380, 127.503833) }
+
+		
 	];
+	
+	
 
 
 
