@@ -51,7 +51,6 @@ body {
     background: white;
     overflow: hidden;
     padding: 20px;
-    box-sizing: border-box;
 }
 
 .title {

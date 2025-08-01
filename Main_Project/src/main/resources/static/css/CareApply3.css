@@ -237,6 +237,7 @@ body {
 }
 
 .next-btn {
+	all : unset;
 	position: fixed;
 	bottom: 20px;
 	left: 20px;
