@@ -45,7 +45,7 @@
 		</div>
 
 		<!-- 리스트 타일 -->
-		<div class="list-tile" onclick="location.href='${cpath}/KidInfo'">
+		<div class="list-tile" onclick="'#'">
 			<div class="list-label">내 아이 정보</div>
 			<img class="list-icon" src="/images/Chevron right.svg">
 		</div>
