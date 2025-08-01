@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<div id="popupContainer" class="popup1";></div>
+<div id="popupContainer" class="popup1"></div>
 <!-- 오버레이 배경 -->
   <div class="popup1">
     <div class="popup-header">
